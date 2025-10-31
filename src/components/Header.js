@@ -1,12 +1,12 @@
 import './Header.css'
 
-export function Header() {
+export function Header(t) {
   const header = document.createElement('header')
   header.className = 'header'
 
   header.innerHTML = `
-    <h1>No Question Mark</h1>
-    <h2>Please don't just respond with "?" in chat</h2>
+    <h1>${t.header.title}</h1>
+    <h2>${t.header.subtitle}</h2>
   `
 
   return header
