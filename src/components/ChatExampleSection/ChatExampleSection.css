@@ -1,0 +1,23 @@
+.chat-example-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.chat-example-section__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.chat-example-section__column {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .chat-example-section__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

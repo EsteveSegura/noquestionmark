@@ -1,6 +1,7 @@
 import './style.css'
 import { Header } from './components/Header/Header.js'
 import { IntroText } from './components/IntroText/IntroText.js'
+import { ChatExampleSection } from './components/ChatExampleSection/ChatExampleSection.js'
 import { translations, defaultLanguage } from './translations.js'
 import { getCurrentLanguage } from './router.js'
 
@@ -15,6 +16,7 @@ function render() {
   // Render components
   app.appendChild(Header(t))
   app.appendChild(IntroText(t))
+  app.appendChild(ChatExampleSection(t))
 }
 
 // Initial render

@@ -1,0 +1,11 @@
+.explanation-text {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+.explanation-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
