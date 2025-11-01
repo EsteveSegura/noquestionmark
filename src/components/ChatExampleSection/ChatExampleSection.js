@@ -16,7 +16,7 @@ export function ChatExampleSection(t, sectionKey) {
 
   const rightColumn = document.createElement('div')
   rightColumn.className = 'chat-example-section__column'
-  rightColumn.appendChild(ExplanationText(t[sectionKey]))
+  rightColumn.appendChild(ExplanationText(t[sectionKey], isPositive))
 
   container.appendChild(leftColumn)
   container.appendChild(rightColumn)

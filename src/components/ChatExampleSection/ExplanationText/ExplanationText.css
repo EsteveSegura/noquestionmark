@@ -25,6 +25,14 @@
   margin-bottom: 0.5rem;
 }
 
+.explanation-text-positive li {
+  list-style-type: "\2705";
+}
+
+.explanation-text-negative li {
+  list-style-type: "\274C";
+}
+
 .explanation-text li:last-child {
   margin-bottom: 0;
 }
