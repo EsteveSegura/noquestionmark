@@ -1,75 +1,75 @@
 export const translations = {
   en: {
     header: {
-      title: 'No Question Mark',
-      subtitle: 'Please don\'t just respond with "?" in chat'
+      title: 'No ? - No just ? - No sólo ?',
+      subtitle: 'please don\'t reply with just a question mark in chat'
     },
     intro: {
-      text: 'Imagine someone asks you something, and you just stare, raise an eyebrow, and say "?".'
+      text: 'Imagine someone asks you something, and you just stare, raise an eyebrow, and say "?". That\'s what replying with only a question mark feels like online. 😩 It doesn\'t make you look mysterious — it makes you look like you couldn\'t be bothered to communicate clearly.'
     },
     dontDoThis: {
       title: 'Don\'t do this',
       chat: {
         messages: [
-          { name: 'Alice', text: 'Hey, can you help me with the deployment process?' },
-          { name: 'Bob', text: '?' },
-          { name: 'Alice', text: 'The deployment... you know, to production?' },
-          { name: 'Bob', text: '?' }
+          { name: 'Sam', text: 'hey, can you check the report?', time: '2:15 PM' },
+          { name: 'Alex', text: '?', time: '2:16 PM' },
+          { name: 'Sam', text: 'the weekly one, from Monday', time: '2:17 PM' },
+          { name: 'Alex', text: 'ah right — yep, on it', time: '2:18 PM' }
         ]
       },
       explanation: {
-        text: 'Responding with just "?" is unhelpful and frustrating. It forces the other person to guess what you\'re confused about. Instead, ask a specific question or explain what you need clarification on.'
+        text: 'Alex thought they were being efficient — one character, job done. But that tiny "?" forces the other person to explain themselves again, slowing the whole exchange down. Most people who do this don\'t mean to be rude. It\'s a reflex — "I didn\'t understand, so I\'ll just reply with a question mark." But in text conversations, "?" doesn\'t give context. It adds friction, confusion, and sometimes even passive-aggressive vibes. The same goes for: "??", "¿?", "?", "???", "¿?". Just say what\'s unclear! 🫶'
       }
     },
     doThis: {
-      title: 'Try this instead',
+      title: 'Instead, try this',
       chat: {
         messages: [
-          { name: 'Alice', text: 'Hey, can you help me with the deployment process?' },
-          { name: 'Bob', text: 'Sure! Which part do you need help with? The build step or the actual deployment?' },
-          { name: 'Alice', text: 'The deployment to production, I\'m not sure about the commands.' },
-          { name: 'Bob', text: 'Got it! You need to run "npm run deploy:prod" from the root directory.' }
+          { name: 'Sam', text: 'hey, can you check the report?', time: '2:15 PM' },
+          { name: 'Alex', text: 'which one? weekly or the Monday update?', time: '2:16 PM' },
+          { name: 'Sam', text: 'weekly one :)', time: '2:16 PM' },
+          { name: 'Alex', text: 'got it — checking now', time: '2:17 PM' }
         ]
       },
       explanation: {
-        text: 'Being specific about what you need clarification on keeps the conversation flowing. Ask targeted questions that show you\'re engaged and help the other person understand exactly what information you\'re looking for.'
+        text: 'Being clear takes maybe two more seconds, but it makes the whole conversation smoother. Instead of "?", try one of these: "Do you mean the weekly one?", "Not sure what you\'re referring to 😅", "Could you clarify what part you mean?", "I don\'t get it — can you explain a bit more?". Clarity is kindness — and async-friendly. If someone comes back later, they\'ll understand exactly what you needed. When done right — everyone saves time. ⏳💬'
       }
     }
   },
   es: {
     header: {
-      title: 'Sin Signos de Interrogación',
-      subtitle: 'Por favor no respondas solo con "?" en el chat'
+      title: 'No ? - No just ? - No sólo ?',
+      subtitle: 'por favor no respondas solo con un signo de interrogación en el chat'
     },
     intro: {
-      text: 'Imagina que alguien te pregunta algo, y tú solo miras, levantas una ceja, y dices "?".'
+      text: 'Imagina que alguien te pregunta algo, y tú solo miras, levantas una ceja, y dices "?". Así se siente cuando respondes solo con un signo de interrogación online. 😩 No te hace ver misterioso — te hace ver como si no te importara comunicarte claramente.'
     },
     dontDoThis: {
       title: 'No hagas esto',
       chat: {
         messages: [
-          { name: 'Alice', text: '¿Puedes ayudarme con el proceso de despliegue?' },
-          { name: 'Bob', text: '?' },
-          { name: 'Alice', text: 'El despliegue... ya sabes, a producción?' },
-          { name: 'Bob', text: '?' }
+          { name: 'Sam', text: 'oye, ¿puedes revisar el reporte?', time: '2:15 PM' },
+          { name: 'Alex', text: '?', time: '2:16 PM' },
+          { name: 'Sam', text: 'el semanal, del lunes', time: '2:17 PM' },
+          { name: 'Alex', text: 'ah claro — ya lo veo', time: '2:18 PM' }
         ]
       },
       explanation: {
-        text: 'Responder solo con "?" es inútil y frustrante. Obligas a la otra persona a adivinar qué es lo que no entiendes. En su lugar, haz una pregunta específica o explica qué necesitas que te aclaren.'
+        text: 'Alex pensó que estaba siendo eficiente — un carácter, trabajo hecho. Pero ese pequeño "?" obliga a la otra persona a explicarse de nuevo, haciendo más lento todo el intercambio. La mayoría de las personas que hacen esto no intentan ser groseras. Es un reflejo — "no entendí, así que responderé con un signo de interrogación." Pero en conversaciones de texto, "?" no da contexto. Añade fricción, confusión, y a veces incluso un tono pasivo-agresivo. Lo mismo va para: "??", "¿?", "?", "???", "¿?". ¡Solo di qué no está claro! 🫶'
       }
     },
     doThis: {
-      title: 'Intenta esto en su lugar',
+      title: 'En su lugar, intenta esto',
       chat: {
         messages: [
-          { name: 'Alice', text: '¿Puedes ayudarme con el proceso de despliegue?' },
-          { name: 'Bob', text: '¡Claro! ¿Con qué parte necesitas ayuda? ¿El build o el despliegue en sí?' },
-          { name: 'Alice', text: 'El despliegue a producción, no estoy segura de los comandos.' },
-          { name: 'Bob', text: '¡Entendido! Necesitas ejecutar "npm run deploy:prod" desde el directorio raíz.' }
+          { name: 'Sam', text: 'oye, ¿puedes revisar el reporte?', time: '2:15 PM' },
+          { name: 'Alex', text: '¿cuál? ¿el semanal o la actualización del lunes?', time: '2:16 PM' },
+          { name: 'Sam', text: 'el semanal :)', time: '2:16 PM' },
+          { name: 'Alex', text: 'entendido — revisándolo ahora', time: '2:17 PM' }
         ]
       },
       explanation: {
-        text: 'Ser específico sobre lo que necesitas aclarar mantiene la conversación fluida. Haz preguntas concretas que demuestren que estás involucrado y ayuda a la otra persona a entender exactamente qué información estás buscando.'
+        text: 'Ser claro toma tal vez dos segundos más, pero hace que toda la conversación sea más fluida. En lugar de "?", intenta alguna de estas: "¿Te refieres al semanal?", "No estoy seguro a qué te refieres 😅", "¿Podrías aclarar qué parte?", "No lo entiendo — ¿puedes explicar un poco más?". La claridad es amabilidad — y amigable para comunicación asíncrona. Si alguien vuelve más tarde, entenderá exactamente qué necesitabas. Cuando se hace bien — todos ahorran tiempo. ⏳💬'
       }
     }
   }

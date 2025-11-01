@@ -20,7 +20,8 @@ export function ChatExample(section, isPositive = false) {
     chatContainer.appendChild(ChatMessage({
       name: msg.name,
       text: msg.text,
-      avatar: avatar
+      avatar: avatar,
+      time: msg.time
     }))
   })
 

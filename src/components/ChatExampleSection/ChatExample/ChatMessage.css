@@ -27,11 +27,22 @@
   flex: 1;
 }
 
+.chat-message__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
 .chat-message__name {
   font-weight: 600;
   font-size: 0.9rem;
-  margin-bottom: 0.25rem;
   color: #333;
+}
+
+.chat-message__time {
+  font-size: 0.75rem;
+  color: #999;
 }
 
 .chat-message__text {
