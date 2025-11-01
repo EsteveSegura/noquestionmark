@@ -6,12 +6,8 @@
 .chat-example__title {
   font-size: 20px;
   margin-bottom: 1rem;
-  color: #e74c3c;
+  color: #333;
   font-weight: 600;
-}
-
-.chat-example__title--positive {
-  color: #27ae60;
 }
 
 .chat-example__messages {

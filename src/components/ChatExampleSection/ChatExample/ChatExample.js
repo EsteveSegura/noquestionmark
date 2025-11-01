@@ -6,9 +6,7 @@ export function ChatExample(section, isPositive = false) {
   chatExample.className = 'chat-example'
 
   const title = document.createElement('h3')
-  title.className = isPositive
-    ? 'chat-example__title chat-example__title--positive'
-    : 'chat-example__title'
+  title.className = 'chat-example__title'
   title.textContent = section.title
 
   const chatContainer = document.createElement('div')

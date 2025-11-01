@@ -1,6 +1,4 @@
 .explanation-text {
-  display: flex;
-  align-items: center;
   padding: 2rem;
 }
 
@@ -8,4 +6,30 @@
   font-size: 1.1rem;
   line-height: 1.8;
   color: #555;
+  margin-bottom: 1rem;
+}
+
+.explanation-text p:last-child {
+  margin-bottom: 0;
+}
+
+.explanation-text ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.explanation-text li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.explanation-text li:last-child {
+  margin-bottom: 0;
+}
+
+.explanation-text strong {
+  font-weight: 600;
+  color: #333;
 }

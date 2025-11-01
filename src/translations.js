@@ -5,10 +5,10 @@ export const translations = {
       subtitle: 'please don\'t reply with just a question mark in chat'
     },
     intro: {
-      text: 'Imagine someone asks you something, and you just stare, raise an eyebrow, and say "?".'
+      text: 'Imagine someone asks you something, and you just stare, raise an eyebrow, and say "?"... 🤦‍♀️'
     },
     dontDoThis: {
-      title: 'Don\'t do this',
+      title: '❌ Don\'t do this',
       chat: {
         messages: [
           { name: 'Sam', text: 'hey, can you check the report?', time: '2:15 PM' },
@@ -18,11 +18,26 @@ export const translations = {
         ]
       },
       explanation: {
-        text: 'Alex thought they were being efficient — one character, job done. But that tiny "?" forces the other person to explain themselves again, slowing the whole exchange down. Most people who do this don\'t mean to be rude. It\'s a reflex — "I didn\'t understand, so I\'ll just reply with a question mark." But in text conversations, "?" doesn\'t give context. It adds friction, confusion, and sometimes even passive-aggressive vibes. The same goes for: "??", "¿?", "?", "???", "¿?". Just say what\'s unclear! 🫶'
+        text: `<p>Alex thought they were being efficient — one character, job done.</p>
+
+<p>But that tiny "?" forces the other person to explain themselves again, slowing the whole exchange down.</p>
+
+<p>Most people who do this don't mean to be rude. It's a reflex — "I didn't understand, so I'll just reply with a question mark."</p>
+
+<p>But in text conversations, <strong>"?" doesn't give context.</strong> It adds friction, confusion, and sometimes even passive-aggressive vibes.</p>
+
+<p>The same goes for:</p>
+<ul>
+  <li>"??"</li>
+  <li>"¿?"</li>
+  <li>"???"</li>
+</ul>
+
+<p>Just say what's unclear! 🫶</p>`
       }
     },
     doThis: {
-      title: 'Instead, try this',
+      title: '✅ Instead, try this',
       chat: {
         messages: [
           { name: 'Sam', text: 'hey, can you check the report?', time: '2:15 PM' },
@@ -32,20 +47,32 @@ export const translations = {
         ]
       },
       explanation: {
-        text: 'Being clear takes maybe two more seconds, but it makes the whole conversation smoother. Instead of "?", try one of these: "Do you mean the weekly one?", "Not sure what you\'re referring to 😅", "Could you clarify what part you mean?", "I don\'t get it — can you explain a bit more?". Clarity is kindness — and async-friendly. If someone comes back later, they\'ll understand exactly what you needed. When done right — everyone saves time. ⏳💬'
+        text: `<p>Being clear takes maybe two more seconds, but it makes the whole conversation smoother.</p>
+
+<p>Instead of "?", try one of these:</p>
+<ul>
+  <li>"Do you mean the weekly one?"</li>
+  <li>"Not sure what you're referring to 😅"</li>
+  <li>"Could you clarify what part you mean?"</li>
+  <li>"I don't get it — can you explain a bit more?"</li>
+</ul>
+
+<p>Clarity is kindness — and async-friendly. If someone comes back later, they'll understand exactly what you needed.</p>
+
+<p>When done right — everyone saves time. ⏳💬</p>`
       }
     }
   },
   es: {
     header: {
-      title: 'No ? - No just ? - No sólo ?',
+      title: 'No ? ',
       subtitle: 'por favor no respondas solo con un signo de interrogación en el chat'
     },
     intro: {
-      text: 'Imagina que alguien te pregunta algo, y tú solo miras, levantas una ceja, y dices "?". Así se siente cuando respondes solo con un signo de interrogación online. 😩 No te hace ver misterioso — te hace ver como si no te importara comunicarte claramente.'
+      text: 'Imagina que alguien te pregunta algo, y tú solo miras, levantas una ceja, y dices "?"... 🤦‍♀️'
     },
     dontDoThis: {
-      title: 'No hagas esto',
+      title: '❌ No hagas esto',
       chat: {
         messages: [
           { name: 'Sam', text: 'oye, ¿puedes revisar el reporte?', time: '2:15 PM' },
@@ -55,11 +82,26 @@ export const translations = {
         ]
       },
       explanation: {
-        text: 'Alex pensó que estaba siendo eficiente — un carácter, trabajo hecho. Pero ese pequeño "?" obliga a la otra persona a explicarse de nuevo, haciendo más lento todo el intercambio. La mayoría de las personas que hacen esto no intentan ser groseras. Es un reflejo — "no entendí, así que responderé con un signo de interrogación." Pero en conversaciones de texto, "?" no da contexto. Añade fricción, confusión, y a veces incluso un tono pasivo-agresivo. Lo mismo va para: "??", "¿?", "?", "???", "¿?". ¡Solo di qué no está claro! 🫶'
+        text: `<p>Alex pensó que estaba siendo eficiente — un carácter, trabajo hecho.</p>
+
+<p>Pero ese pequeño "?" obliga a la otra persona a explicarse de nuevo, haciendo más lento todo el intercambio.</p>
+
+<p>La mayoría de las personas que hacen esto no intentan ser groseras. Es un reflejo — "no entendí, así que responderé con un signo de interrogación."</p>
+
+<p>Pero en conversaciones de texto, <strong>"?" no da contexto.</strong> Añade fricción, confusión, y a veces incluso un tono pasivo-agresivo.</p>
+
+<p>Lo mismo va para:</p>
+<ul>
+  <li>"??"</li>
+  <li>"¿?"</li>
+  <li>"???"</li>
+</ul>
+
+<p>¡Solo di qué no está claro! 🫶</p>`
       }
     },
     doThis: {
-      title: 'En su lugar, intenta esto',
+      title: '✅ En su lugar, intenta esto',
       chat: {
         messages: [
           { name: 'Sam', text: 'oye, ¿puedes revisar el reporte?', time: '2:15 PM' },
@@ -69,7 +111,19 @@ export const translations = {
         ]
       },
       explanation: {
-        text: 'Ser claro toma tal vez dos segundos más, pero hace que toda la conversación sea más fluida. En lugar de "?", intenta alguna de estas: "¿Te refieres al semanal?", "No estoy seguro a qué te refieres 😅", "¿Podrías aclarar qué parte?", "No lo entiendo — ¿puedes explicar un poco más?". La claridad es amabilidad — y amigable para comunicación asíncrona. Si alguien vuelve más tarde, entenderá exactamente qué necesitabas. Cuando se hace bien — todos ahorran tiempo. ⏳💬'
+        text: `<p>Ser claro toma tal vez dos segundos más, pero hace que toda la conversación sea más fluida.</p>
+
+<p>En lugar de "?", intenta alguna de estas:</p>
+<ul>
+  <li>"¿Te refieres al semanal?"</li>
+  <li>"No estoy seguro a qué te refieres 😅"</li>
+  <li>"¿Podrías aclarar qué parte?"</li>
+  <li>"No lo entiendo — ¿puedes explicar un poco más?"</li>
+</ul>
+
+<p>La claridad es amabilidad — y amigable para comunicación asíncrona. Si alguien vuelve más tarde, entenderá exactamente qué necesitabas.</p>
+
+<p>Cuando se hace bien — todos ahorran tiempo. ⏳💬</p>`
       }
     }
   }
