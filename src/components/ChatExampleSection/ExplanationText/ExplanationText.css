@@ -3,7 +3,6 @@
 }
 
 .explanation-text p {
-  font-size: 1.1rem;
   line-height: 1.8;
   color: #555;
   margin-bottom: 1rem;
@@ -19,10 +18,10 @@
 }
 
 .explanation-text li {
-  font-size: 1.1rem;
   line-height: 1.8;
-  color: #555;
-  margin-bottom: 0.5rem;
+  color: #777;
+  margin-bottom: -3px;
+  font-size: 0.95rem;
 }
 
 .explanation-text-positive li {
