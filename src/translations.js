@@ -34,7 +34,7 @@ export const translations = {
   <li>¿¿??</li>
 </ul>
 
-<p><strong>Just say what's unclear!</strong> 🫶</p>`
+<p><strong>Just say what's unclear!</strong> 😫</p>`
       }
     },
     doThis: {
@@ -60,7 +60,7 @@ export const translations = {
 
 <p><strong>Clarity is kindness</strong>, and <em>async-friendly</em>. If someone comes back later, they'll understand <strong>exactly what you needed</strong>.</p>
 
-<p>When done right, <strong>everyone saves time</strong>. ⏳💬</p>`
+<p>When done right, <strong>everyone saves time</strong>. 🎉</p>`
       }
     }
   },
@@ -84,13 +84,11 @@ export const translations = {
         ]
       },
       explanation: {
-        text: `<p>Thomas Middleditch pensó que estaba siendo eficiente: un carácter, trabajo hecho.</p>
+        text: `<p>Thomas Middleditch pensó que estaba siendo eficiente: <em>un carácter, trabajo hecho</em>. <strong>Pero ese pequeño "?" obliga a la otra persona a explicarse de nuevo</strong>, haciendo más lento todo el intercambio.</p>
 
-<p>Pero ese pequeño "?" obliga a la otra persona a explicarse de nuevo, haciendo más lento todo el intercambio.</p>
+<p>La mayoría de las personas que hacen esto <strong>no intentan ser groseras</strong>. Es un reflejo: <em>"no entendí, así que responderé con un signo de interrogación."</em></p>
 
-<p>La mayoría de las personas que hacen esto no intentan ser groseras. Es un reflejo: "no entendí, así que responderé con un signo de interrogación."</p>
-
-<p>Pero en conversaciones de texto, <strong>"?" no da contexto.</strong> Añade fricción, confusión, y a veces incluso un tono pasivo-agresivo.</p>
+<p>Pero en conversaciones de texto, <strong>"?" no da contexto.</strong> Añade <strong>fricción, confusión</strong>, y a veces incluso <em>un tono pasivo-agresivo</em>.</p>
 
 <p>Lo mismo va para:</p>
 <ul>
@@ -101,7 +99,7 @@ export const translations = {
   <li>¿¿??</li>
 </ul>
 
-<p>¡Solo di qué no está claro! 🫶</p>`
+<p><strong>¡Solo di qué no está claro!</strong> 😫</p>`
       }
     },
     doThis: {
@@ -115,19 +113,19 @@ export const translations = {
         ]
       },
       explanation: {
-        text: `<p>Ser claro toma tal vez dos segundos más, pero hace que toda la conversación sea más fluida.</p>
+        text: `<p><strong>Ser claro toma tal vez dos segundos más</strong>, pero hace que toda la conversación sea más fluida.</p>
 
 <p>En lugar de "?", intenta alguna de estas:</p>
 <ul>
-  <li>"¿Te refieres al semanal?"</li>
-  <li>"No estoy seguro a qué te refieres 😅"</li>
-  <li>"¿Podrías aclarar qué parte?"</li>
-  <li>"No lo entiendo, ¿puedes explicar un poco más?"</li>
+  <li>¿Te refieres al semanal?</li>
+  <li>No estoy seguro a qué te refieres</li>
+  <li>¿Podrías aclarar qué parte?</li>
+  <li>No lo entiendo, ¿puedes explicar un poco más?</li>
 </ul>
 
-<p>La claridad es amabilidad, y amigable para comunicación asíncrona. Si alguien vuelve más tarde, entenderá exactamente qué necesitabas.</p>
+<p><strong>La claridad es amabilidad</strong>, y <em>amigable para comunicación asíncrona</em>. Si alguien vuelve más tarde, entenderá <strong>exactamente qué necesitabas</strong>.</p>
 
-<p>Cuando se hace bien, todos ahorran tiempo. ⏳💬</p>`
+<p>Cuando se hace bien, <strong>todos ahorran tiempo</strong>. 🎉</p>`
       }
     }
   }
