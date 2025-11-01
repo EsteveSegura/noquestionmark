@@ -18,31 +18,19 @@ export function Header(t) {
     setTimeout(async () => {
       try {
         const TypeIt = (await import('typeit')).default
-        new TypeIt('#typeit-question', {
+        const instance = new TypeIt('#typeit-question', {
           speed: 150,
           waitUntilVisible: true,
           loop: true,
           cursor: false
         })
-          .type('?')
-          .pause(2000)
-          .delete()
-          .type('...?')
-          .pause(2000)
-          .delete()
-          .type('rlly?')
-          .pause(2000)
-          .delete()
-          .type('uh?')
-          .pause(2000)
-          .delete()
-          .type('?????')
-          .pause(2000)
-          .delete()
-          .type('¿¿??')
-          .pause(2000)
-          .delete()
-          .go()
+
+        // Build animation sequence from translations
+        t.header.animations.forEach((text) => {
+          instance.type(text).pause(2000).delete()
+        })
+
+        instance.go()
       } catch (e) {
         // TypeIt failed, do nothing
       }

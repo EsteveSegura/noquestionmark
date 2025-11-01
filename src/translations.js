@@ -2,7 +2,8 @@ export const translations = {
   en: {
     header: {
       title: 'No ?',
-      subtitle: 'please don\'t reply with just a question mark in chat'
+      subtitle: 'please don\'t reply with just a question mark in chat',
+      animations: ['?', '...?', 'rlly?', 'uh?', '?????', '¿¿??']
     },
     intro: {
       text: 'Imagine someone asks you something, and you just stare, raise an eyebrow, and say "?"... 🤦‍♀️'
@@ -26,9 +27,11 @@ export const translations = {
 
 <p>The same goes for:</p>
 <ul>
-  <li>??</li>
-  <li>¿?</li>
-  <li>??"</li>
+  <li>...?</li>
+  <li>rlly?</li>
+  <li>uh?</li>
+  <li>?????</li>
+  <li>¿¿??</li>
 </ul>
 
 <p><strong>Just say what's unclear!</strong> 🫶</p>`
@@ -64,7 +67,8 @@ export const translations = {
   es: {
     header: {
       title: 'No ? ',
-      subtitle: 'por favor no respondas solo con un signo de interrogación en el chat'
+      subtitle: 'por favor no respondas solo con un signo de interrogación en el chat',
+      animations: ['?', '...?', 'enserio?', 'eh?', '?????', '¿¿??']
     },
     intro: {
       text: 'Imagina que alguien te pregunta algo, y tú solo miras, levantas una ceja, y dices "?"... 🤦‍♀️'
@@ -90,9 +94,11 @@ export const translations = {
 
 <p>Lo mismo va para:</p>
 <ul>
-  <li>"??"</li>
-  <li>"¿?"</li>
-  <li>"???"</li>
+  <li>...?</li>
+  <li>enserio?</li>
+  <li>eh?</li>
+  <li>?????</li>
+  <li>¿¿??</li>
 </ul>
 
 <p>¡Solo di qué no está claro! 🫶</p>`
