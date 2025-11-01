@@ -1,11 +1,11 @@
 export const translations = {
   en: {
     header: {
-      title: 'No ? - No just ? - No sólo ?',
+      title: 'No ?',
       subtitle: 'please don\'t reply with just a question mark in chat'
     },
     intro: {
-      text: 'Imagine someone asks you something, and you just stare, raise an eyebrow, and say "?". That\'s what replying with only a question mark feels like online. 😩 It doesn\'t make you look mysterious — it makes you look like you couldn\'t be bothered to communicate clearly.'
+      text: 'Imagine someone asks you something, and you just stare, raise an eyebrow, and say "?".'
     },
     dontDoThis: {
       title: 'Don\'t do this',

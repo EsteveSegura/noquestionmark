@@ -1,15 +1,17 @@
 .header {
-  padding: 12rem 0 4rem 0;
+  padding: 10rem 0 4.3rem 0;
 }
 
 .header h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 60px;
+  font-weight: 900;
+  margin-bottom: 9px;
   color: #333;
 }
 
 .header h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 200;
   color: #666;
+  letter-spacing: -1px;
 }
