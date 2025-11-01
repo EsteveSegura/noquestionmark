@@ -68,7 +68,8 @@ export const translations = {
         'This is kinda only half serious (kinda 👀) so please don\'t get mad at the person who sent you here.',
         'That said, if you see this site\'s URL as someone\'s status/bio, be prepared to be ignored if you only reply with "?".',
         'Inspired by the wonderful <a href="https://nohello.net" target="_blank" rel="noopener noreferrer">nohello.net</a>. Avatars taken from Silicon Valley. Open-source on <a href="https://github.com/EsteveSegura/noquestionmark" target="_blank" rel="noopener noreferrer">GitHub</a>.',
-        'This site is available in: English, Español'
+        'Made by <a href="https://girlazo.com" target="_blank" rel="noopener noreferrer">Esteve Segura</a>.',
+        'This site is available in: <a href="/en">English</a>, <a href="/es">Español</a>'
       ]
     }
   },
@@ -141,7 +142,8 @@ export const translations = {
         'Esto es solo medio en serio (medio 👀), así que no te enojes con la persona que te envió aquí.',
         'Dicho esto, si ves la URL de este sitio en el estado/bio de alguien, prepárate para ser ignorado si solo respondes con "?".',
         'Inspirado en el maravilloso <a href="https://nohello.net" target="_blank" rel="noopener noreferrer">nohello.net</a>. Avatares tomados de Silicon Valley. Código abierto en <a href="https://github.com/EsteveSegura/noquestionmark" target="_blank" rel="noopener noreferrer">GitHub</a>.',
-        'Este sitio está disponible en: English, Español'
+        'Hecho por <a href="https://girlazo.com" target="_blank" rel="noopener noreferrer">Esteve Segura</a>.',
+        'Este sitio está disponible en: <a href="/en">English</a>, <a href="/es">Español</a>'
       ]
     }
   }
