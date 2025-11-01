@@ -26,11 +26,19 @@
 }
 
 .explanation-text-positive li {
-  list-style-type: "\2705";
+  list-style-type: "\2713";
+}
+
+.explanation-text-positive li::marker {
+  color: #22c55e;
 }
 
 .explanation-text-negative li {
-  list-style-type: "\274C";
+  list-style-type: "\2715";
+}
+
+.explanation-text-negative li::marker {
+  color: #ef4444;
 }
 
 .explanation-text li:last-child {
