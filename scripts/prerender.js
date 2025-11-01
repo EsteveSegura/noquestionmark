@@ -14,6 +14,7 @@ const indexHtmlTemplate = fs.readFileSync(path.join(distPath, 'index.html'), 'ut
 const { Header } = await import(path.join('file://', srcPath, 'components/Header/Header.js'))
 const { IntroText } = await import(path.join('file://', srcPath, 'components/IntroText/IntroText.js'))
 const { ChatExampleSection } = await import(path.join('file://', srcPath, 'components/ChatExampleSection/ChatExampleSection.js'))
+const { Footer } = await import(path.join('file://', srcPath, 'components/Footer/Footer.js'))
 const { translations, defaultLanguage } = await import(path.join('file://', srcPath, 'translations.js'))
 
 // Function to render content
@@ -34,6 +35,7 @@ function renderContent(lang) {
     app.appendChild(IntroText(t))
     app.appendChild(ChatExampleSection(t, 'dontDoThis'))
     app.appendChild(ChatExampleSection(t, 'doThis'))
+    app.appendChild(Footer(t))
   } catch (error) {
     console.warn(`Warning rendering ${lang}:`, error.message)
   }

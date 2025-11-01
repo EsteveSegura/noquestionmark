@@ -1,0 +1,27 @@
+.footer {
+  padding: 3rem 1rem 2rem;
+}
+
+.footer p {
+  font-size: 11px;
+  color: #666;
+  margin: 0 0 10px 0;
+  line-height: 1.6;
+}
+
+.footer p:last-child {
+  margin-bottom: 0;
+}
+
+.footer a {
+  color: #ef4444;
+  text-decoration: underline;
+}
+
+.footer a:visited {
+  color: #ef4444;
+}
+
+.footer a:hover {
+  color: #dc2626;
+}
