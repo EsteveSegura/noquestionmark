@@ -27,6 +27,7 @@
 
 .explanation-text-positive li {
   list-style-type: "\2713";
+  padding-left: 0.5rem;
 }
 
 .explanation-text-positive li::marker {
@@ -35,6 +36,7 @@
 
 .explanation-text-negative li {
   list-style-type: "\2715";
+  padding-left: 0.5rem;
 }
 
 .explanation-text-negative li::marker {
