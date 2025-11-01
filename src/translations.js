@@ -34,7 +34,7 @@ export const translations = {
   <li>¿¿??</li>
 </ul>
 
-<p><strong>Just say what's unclear!</strong> 😫</p>`
+<p><strong>Just say what's unclear!</strong></p>`
       }
     },
     doThis: {
@@ -99,7 +99,7 @@ export const translations = {
   <li>¿¿??</li>
 </ul>
 
-<p><strong>¡Solo di qué no está claro!</strong> 😫</p>`
+<p><strong>¡Solo di qué no está claro!</strong></p>`
       }
     },
     doThis: {
