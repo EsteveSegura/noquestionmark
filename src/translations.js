@@ -11,16 +11,14 @@ export const translations = {
       title: '❌ Don\'t do this',
       chat: {
         messages: [
-          { name: 'Sam', text: 'hey, can you check the report?', time: '2:15 PM' },
-          { name: 'Alex', text: '?', time: '2:16 PM' },
-          { name: 'Sam', text: 'the weekly one, from Monday', time: '2:17 PM' },
-          { name: 'Alex', text: 'ah right — yep, on it', time: '2:18 PM' }
+          { name: 'T.J Miller', text: 'hey, can you check the report?', time: '2:15 PM' },
+          { name: 'Thomas Middleditch', text: '?', time: '2:16 PM' },
+          { name: 'T.J Miller', text: 'the weekly one, from Monday', time: '2:17 PM' },
+          { name: 'Thomas Middleditch', text: 'ah right — yep, on it', time: '2:18 PM' }
         ]
       },
       explanation: {
-        text: `<p>Alex thought they were being efficient — one character, job done.</p>
-
-<p>But that tiny "?" forces the other person to explain themselves again, slowing the whole exchange down.</p>
+        text: `<p>Thomas Middleditch thought he was being efficient, one character, job done.<strong> But that tiny "?" forces the other person to explain themselves again</strong>, slowing the whole exchange down.</p>
 
 <p>Most people who do this don't mean to be rude. It's a reflex — "I didn't understand, so I'll just reply with a question mark."</p>
 
@@ -40,10 +38,10 @@ export const translations = {
       title: '✅ Instead, try this',
       chat: {
         messages: [
-          { name: 'Sam', text: 'hey, can you check the report?', time: '2:15 PM' },
-          { name: 'Alex', text: 'which one? weekly or the Monday update?', time: '2:16 PM' },
-          { name: 'Sam', text: 'weekly one :)', time: '2:16 PM' },
-          { name: 'Alex', text: 'got it — checking now', time: '2:17 PM' }
+          { name: 'T.J Miller', text: 'hey, can you check the report?', time: '2:15 PM' },
+          { name: 'Thomas Middleditch', text: 'which one? weekly or the Monday update?', time: '2:16 PM' },
+          { name: 'T.J Miller', text: 'weekly one :)', time: '2:16 PM' },
+          { name: 'Thomas Middleditch', text: 'got it — checking now', time: '2:17 PM' }
         ]
       },
       explanation: {
@@ -75,14 +73,14 @@ export const translations = {
       title: '❌ No hagas esto',
       chat: {
         messages: [
-          { name: 'Sam', text: 'oye, ¿puedes revisar el reporte?', time: '2:15 PM' },
-          { name: 'Alex', text: '?', time: '2:16 PM' },
-          { name: 'Sam', text: 'el semanal, del lunes', time: '2:17 PM' },
-          { name: 'Alex', text: 'ah claro — ya lo veo', time: '2:18 PM' }
+          { name: 'T.J Miller', text: 'oye, ¿puedes revisar el reporte?', time: '2:15 PM' },
+          { name: 'Thomas Middleditch', text: '?', time: '2:16 PM' },
+          { name: 'T.J Miller', text: 'el semanal, del lunes', time: '2:17 PM' },
+          { name: 'Thomas Middleditch', text: 'ah claro — ya lo veo', time: '2:18 PM' }
         ]
       },
       explanation: {
-        text: `<p>Alex pensó que estaba siendo eficiente — un carácter, trabajo hecho.</p>
+        text: `<p>Thomas Middleditch pensó que estaba siendo eficiente — un carácter, trabajo hecho.</p>
 
 <p>Pero ese pequeño "?" obliga a la otra persona a explicarse de nuevo, haciendo más lento todo el intercambio.</p>
 
@@ -104,10 +102,10 @@ export const translations = {
       title: '✅ En su lugar, intenta esto',
       chat: {
         messages: [
-          { name: 'Sam', text: 'oye, ¿puedes revisar el reporte?', time: '2:15 PM' },
-          { name: 'Alex', text: '¿cuál? ¿el semanal o la actualización del lunes?', time: '2:16 PM' },
-          { name: 'Sam', text: 'el semanal :)', time: '2:16 PM' },
-          { name: 'Alex', text: 'entendido — revisándolo ahora', time: '2:17 PM' }
+          { name: 'T.J Miller', text: 'oye, ¿puedes revisar el reporte?', time: '2:15 PM' },
+          { name: 'Thomas Middleditch', text: '¿cuál? ¿el semanal o la actualización del lunes?', time: '2:16 PM' },
+          { name: 'T.J Miller', text: 'el semanal :)', time: '2:16 PM' },
+          { name: 'Thomas Middleditch', text: 'entendido — revisándolo ahora', time: '2:17 PM' }
         ]
       },
       explanation: {

@@ -5,7 +5,9 @@ export function ChatMessage({ name, text, avatar, time }) {
   message.className = 'chat-message'
 
   message.innerHTML = `
-    <div class="chat-message__avatar">${avatar}</div>
+    <div class="chat-message__avatar">
+      <img src="${avatar}" alt="${name}" />
+    </div>
     <div class="chat-message__content">
       <div class="chat-message__header">
         <span class="chat-message__name">${name}</span>
