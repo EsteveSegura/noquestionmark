@@ -11,10 +11,7 @@ const srcPath = path.resolve(__dirname, '../src')
 const indexHtmlTemplate = fs.readFileSync(path.join(distPath, 'index.html'), 'utf-8')
 
 // Import modules for rendering
-const { Header } = await import(path.join('file://', srcPath, 'components/Header/Header.js'))
-const { IntroText } = await import(path.join('file://', srcPath, 'components/IntroText/IntroText.js'))
-const { ChatExampleSection } = await import(path.join('file://', srcPath, 'components/ChatExampleSection/ChatExampleSection.js'))
-const { Footer } = await import(path.join('file://', srcPath, 'components/Footer/Footer.js'))
+const { App } = await import(path.join('file://', srcPath, 'components/App/App.js'))
 const { translations, defaultLanguage } = await import(path.join('file://', srcPath, 'translations.js'))
 
 // Function to render content
@@ -29,13 +26,9 @@ function renderContent(lang) {
   const t = translations[lang] || translations[defaultLanguage]
   const app = dom.window.document.querySelector('#app')
 
-  // Render components
+  // Render app
   try {
-    app.appendChild(Header(t))
-    app.appendChild(IntroText(t))
-    app.appendChild(ChatExampleSection(t, 'dontDoThis'))
-    app.appendChild(ChatExampleSection(t, 'doThis'))
-    app.appendChild(Footer(t))
+    app.appendChild(App(t))
   } catch (error) {
     console.warn(`Warning rendering ${lang}:`, error.message)
   }

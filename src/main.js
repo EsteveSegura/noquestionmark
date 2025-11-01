@@ -1,8 +1,5 @@
 import './style.css'
-import { Header } from './components/Header/Header.js'
-import { IntroText } from './components/IntroText/IntroText.js'
-import { ChatExampleSection } from './components/ChatExampleSection/ChatExampleSection.js'
-import { Footer } from './components/Footer/Footer.js'
+import { App } from './components/App/App.js'
 import { translations, defaultLanguage } from './translations.js'
 import { getCurrentLanguage } from './router.js'
 
@@ -14,12 +11,8 @@ function render() {
   // Clear app
   app.innerHTML = ''
 
-  // Render components
-  app.appendChild(Header(t))
-  app.appendChild(IntroText(t))
-  app.appendChild(ChatExampleSection(t, 'dontDoThis'))
-  app.appendChild(ChatExampleSection(t, 'doThis'))
-  app.appendChild(Footer(t))
+  // Render app
+  app.appendChild(App(t))
 }
 
 // Initial render
