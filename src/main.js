@@ -1,6 +1,6 @@
 import './style.css'
-import { Header } from './components/Header.js'
-import { IntroText } from './components/IntroText.js'
+import { Header } from './components/Header/Header.js'
+import { IntroText } from './components/IntroText/IntroText.js'
 import { translations, defaultLanguage } from './translations.js'
 import { getCurrentLanguage } from './router.js'
 
