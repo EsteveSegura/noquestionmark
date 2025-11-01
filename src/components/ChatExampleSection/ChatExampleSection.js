@@ -2,7 +2,7 @@ import './ChatExampleSection.css'
 import { ChatExample } from './ChatExample/ChatExample.js'
 import { ExplanationText } from './ExplanationText/ExplanationText.js'
 
-export function ChatExampleSection(t) {
+export function ChatExampleSection(t, sectionKey) {
   const section = document.createElement('section')
   section.className = 'chat-example-section'
 
@@ -11,11 +11,12 @@ export function ChatExampleSection(t) {
 
   const leftColumn = document.createElement('div')
   leftColumn.className = 'chat-example-section__column'
-  leftColumn.appendChild(ChatExample(t))
+  const isPositive = sectionKey === 'doThis'
+  leftColumn.appendChild(ChatExample(t[sectionKey], isPositive))
 
   const rightColumn = document.createElement('div')
   rightColumn.className = 'chat-example-section__column'
-  rightColumn.appendChild(ExplanationText(t))
+  rightColumn.appendChild(ExplanationText(t[sectionKey]))
 
   container.appendChild(leftColumn)
   container.appendChild(rightColumn)

@@ -1,11 +1,11 @@
 import './ExplanationText.css'
 
-export function ExplanationText(t) {
+export function ExplanationText(section) {
   const explanation = document.createElement('div')
   explanation.className = 'explanation-text'
 
   explanation.innerHTML = `
-    <p>${t.dontDoThis.explanation.text}</p>
+    <p>${section.explanation.text}</p>
   `
 
   return explanation

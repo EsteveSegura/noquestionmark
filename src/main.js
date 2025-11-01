@@ -16,7 +16,8 @@ function render() {
   // Render components
   app.appendChild(Header(t))
   app.appendChild(IntroText(t))
-  app.appendChild(ChatExampleSection(t))
+  app.appendChild(ChatExampleSection(t, 'dontDoThis'))
+  app.appendChild(ChatExampleSection(t, 'doThis'))
 }
 
 // Initial render
