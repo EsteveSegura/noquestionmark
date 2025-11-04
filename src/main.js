@@ -4,7 +4,12 @@ import { pages, defaultLanguage } from './translations.js'
 import { getCurrentLanguage } from './router.js'
 
 function render() {
-  const path = window.location.pathname
+  // Normalize path: remove trailing slash except for root
+  let path = window.location.pathname
+  if (path !== '/' && path.endsWith('/')) {
+    path = path.slice(0, -1)
+  }
+
   const route = routes[path] || routes['/']
   const lang = getCurrentLanguage()
   const t = pages[route.page][lang] || pages[route.page][defaultLanguage]
