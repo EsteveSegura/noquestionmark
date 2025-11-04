@@ -1,18 +1,17 @@
 import './style.css'
-import { App } from './components/App/App.js'
-import { translations, defaultLanguage } from './translations.js'
+import { routes } from './routes.js'
+import { pages, defaultLanguage } from './translations.js'
 import { getCurrentLanguage } from './router.js'
 
 function render() {
-  const app = document.querySelector('#app')
+  const path = window.location.pathname
+  const route = routes[path] || routes['/']
   const lang = getCurrentLanguage()
-  const t = translations[lang] || translations[defaultLanguage]
+  const t = pages[route.page][lang] || pages[route.page][defaultLanguage]
 
-  // Clear app
+  const app = document.querySelector('#app')
   app.innerHTML = ''
-
-  // Render app
-  app.appendChild(App(t))
+  app.appendChild(route.view(t))
 }
 
 // Initial render

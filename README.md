@@ -53,13 +53,17 @@ This command:
 Output in `dist/`:
 ```
 dist/
-├── index.html           # Root (English)
+├── index.html           # Root route (/)
 ├── en/
-│   └── index.html      # English version
+│   └── index.html      # /en route
 ├── es/
-│   └── index.html      # Spanish version
+│   └── index.html      # /es route
 └── assets/             # Compiled CSS and JS
+    ├── index-*.css
+    └── index-*.js
 ```
+
+The pre-render script generates an HTML file for each route defined in `src/routes.js`.
 
 ### Preview Production Build
 
@@ -69,33 +73,60 @@ npm run preview
 
 ## 🏗️ Architecture
 
-### i18n System
+### Pages, Routes, and Views System
 
-Simple object-based internationalization without external libraries:
+The architecture uses three key concepts:
 
+**1. Pages** (`src/translations.js`):
 ```javascript
-// translations.js
-export const translations = {
-  en: { /* English content */ },
-  es: { /* Spanish content */ }
+export const pages = {
+  noquestionmark: {
+    en: { /* English content */ },
+    es: { /* Spanish content */ }
+  },
+  mypage: {
+    en: { /* English content */ },
+    es: { /* Spanish content */ }
+  }
 }
 ```
 
-Components receive the translation object and access content:
+**2. Views** (`src/views/`):
+Views define the layout and structure of a page:
 ```javascript
-function MyComponent(t) {
-  return `<h1>${t.mySection.title}</h1>`
+// src/views/StandardView.js
+export function StandardView(t) {
+  const container = document.createElement('div')
+  container.appendChild(Header(t))
+  container.appendChild(IntroText(t))
+  container.appendChild(Footer(t))
+  return container
 }
 ```
 
-### Routing
+**3. Routes** (`src/routes.js`):
+Maps URLs to pages and views:
+```javascript
+export const routes = {
+  '/': { page: 'noquestionmark', view: StandardView },
+  '/en': { page: 'noquestionmark', view: StandardView },
+  '/es': { page: 'noquestionmark', view: StandardView }
+}
+```
 
-Client-side routing based on URL path:
-- `/` → English (default)
-- `/en` → English
-- `/es` → Spanish
+### How It Works Together
 
-The router reads `window.location.pathname` and renders the appropriate language.
+Example: User visits `/en/about`
+
+1. Router extracts language from URL: `en` (from first path segment)
+2. Router finds route in `routes.js`: `{ page: 'about', view: MinimalView }`
+3. System loads translations: `pages.about.en`
+4. View renders with translations: `MinimalView(t)`
+5. Both SSR and client use the same flow
+
+**Route Structure:** `/{lang}/{page}` (e.g., `/en/about`, `/es/contact`)
+- Root route `/` defaults to English
+- Special routes like `/en` or `/es` can also be defined
 
 ## 🔄 Server-Side Rendering (SSR)
 
@@ -103,49 +134,96 @@ The router reads `window.location.pathname` and renders the appropriate language
 
 1. **Build Process**: `npm run build` executes:
    - `vite build` → Generates optimized assets
-   - `node scripts/prerender.js` → Renders HTML with content
+   - `node scripts/prerender.js` → Renders HTML with content for all routes
 
 2. **Pre-render Script** (`scripts/prerender.js`):
-   - Uses jsdom to create a DOM environment in Node.js
-   - Imports source components
-   - Renders each language version
-   - Injects rendered HTML into the Vite template
-   - Outputs static HTML files for `/`, `/en/`, `/es/`
+   - Imports `routes.js` and `translations.js`
+   - Iterates over all defined routes
+   - For each route:
+     - Uses jsdom to create a DOM environment in Node.js
+     - Gets the appropriate view and translations
+     - Renders the view with translations
+     - Injects rendered HTML into the Vite template
+     - Outputs static HTML file
 
 3. **Client Hydration**:
    - Browser loads pre-rendered HTML (instant content)
    - JavaScript loads and "hydrates" the page
    - Interactive features activate (TypeIt animation, routing)
 
-### Adding a New Component
+### Creating a New Page
 
-**Step 1: Create your component**
+**Step 1: Add translations**
 ```javascript
-// src/components/Footer/Footer.js
-export function Footer(t) {
-  const footer = document.createElement('footer')
-  footer.innerHTML = `<p>${t.footer.text}</p>`
-  return footer
+// src/translations.js
+export const pages = {
+  noquestionmark: { /* existing */ },
+  mynewpage: {
+    en: {
+      header: { title: 'My Page', subtitle: 'Subtitle', animations: ['?'] },
+      content: { text: 'Content here' },
+      footer: { paragraphs: ['Footer text'] }
+    },
+    es: {
+      header: { title: 'Mi Página', subtitle: 'Subtítulo', animations: ['?'] },
+      content: { text: 'Contenido aquí' },
+      footer: { paragraphs: ['Texto del footer'] }
+    }
+  }
 }
 ```
 
-**Step 2: Add to pre-render script**
-```javascript
-// scripts/prerender.js (line ~14-17)
-const { Footer } = await import(path.join('file://', srcPath, 'components/Footer/Footer.js'))
+**Step 2: Create or reuse a view**
 
-// scripts/prerender.js (line ~32-37)
-app.appendChild(Header(t))
-app.appendChild(IntroText(t))
-app.appendChild(ChatExampleSection(t, 'dontDoThis'))
-app.appendChild(ChatExampleSection(t, 'doThis'))
-app.appendChild(Footer(t))  // Add new component
+**Option A: Reuse existing view** (recommended if layout is the same)
+```javascript
+// src/routes.js
+import { StandardView } from './views/StandardView.js'
+
+export const routes = {
+  // ... existing routes
+  '/mynewpage': { page: 'mynewpage', view: StandardView },
+  '/en/mynewpage': { page: 'mynewpage', view: StandardView },
+  '/es/mynewpage': { page: 'mynewpage', view: StandardView }
+}
+```
+
+**Note:** Route structure is `/{lang}/{page}` (e.g., `/en/about`, `/es/about`), where the language comes first.
+
+**Option B: Create custom view** (if you need different layout)
+```javascript
+// src/views/CustomView.js
+import { Header } from '../components/Header/Header.js'
+import { CustomContent } from '../components/CustomContent/CustomContent.js'
+import { Footer } from '../components/Footer/Footer.js'
+
+export function CustomView(t) {
+  const container = document.createElement('div')
+  container.appendChild(Header(t))
+  container.appendChild(CustomContent(t))
+  container.appendChild(Footer(t))
+  return container
+}
+```
+
+Then add to routes:
+```javascript
+// src/routes.js
+import { CustomView } from './views/CustomView.js'
+
+export const routes = {
+  '/mynewpage': { page: 'mynewpage', view: CustomView },
+  '/en/mynewpage': { page: 'mynewpage', view: CustomView },
+  '/es/mynewpage': { page: 'mynewpage', view: CustomView }
+}
 ```
 
 **Step 3: Build**
 ```bash
 npm run build
 ```
+
+The pre-render script will automatically generate HTML for all routes defined in `routes.js`. **No modifications to `prerender.js` needed!**
 
 ### SSR-Compatible Component Guidelines
 
@@ -183,14 +261,161 @@ if (!isSSR) {
 }
 ```
 
-### Modifying Existing Components
+### Adding a Component to an Existing View
 
-Just edit the component and run:
+**Step 1: Create your component**
+```javascript
+// src/components/NewComponent/NewComponent.js
+export function NewComponent(t) {
+  const element = document.createElement('div')
+  element.className = 'new-component'
+  element.innerHTML = `<p>${t.newComponent.text}</p>`
+  return element
+}
+```
+
+**Step 2: Add to view**
+```javascript
+// src/views/StandardView.js
+import { NewComponent } from '../components/NewComponent/NewComponent.js'
+
+export function StandardView(t) {
+  const container = document.createElement('div')
+  container.appendChild(Header(t))
+  container.appendChild(IntroText(t))
+  container.appendChild(NewComponent(t))  // Add here
+  container.appendChild(Footer(t))
+  return container
+}
+```
+
+**Step 3: Add translations**
+```javascript
+// src/translations.js
+export const pages = {
+  noquestionmark: {
+    en: {
+      // ... existing
+      newComponent: { text: 'New component text' }
+    },
+    es: {
+      // ... existing
+      newComponent: { text: 'Texto del nuevo componente' }
+    }
+  }
+}
+```
+
+**Step 4: Build**
 ```bash
 npm run build
 ```
 
-The pre-render script automatically picks up changes. No modifications needed to `prerender.js`.
+### Modifying Existing Code
+
+- **Edit a component**: Just modify the file and run `npm run build`
+- **Edit translations**: Just modify `translations.js` and run `npm run build`
+- **Edit a view**: Just modify the view file and run `npm run build`
+
+The pre-render script automatically picks up all changes. **No modifications to `prerender.js` or `main.js` needed!**
+
+## 📄 Creating Views
+
+Views are layout templates that define how components are arranged on a page. They're the bridge between routes and components.
+
+### When to Create a New View
+
+- **Same layout, different content**: Reuse existing view (e.g., StandardView)
+- **Different layout**: Create a new view
+
+### View Structure
+
+A view is a function that:
+1. Receives translations object `t`
+2. Creates a container element
+3. Appends components in desired order
+4. Returns the container
+
+### Example: Creating a Simple View
+
+```javascript
+// src/views/MinimalView.js
+import { Header } from '../components/Header/Header.js'
+import { Footer } from '../components/Footer/Footer.js'
+
+export function MinimalView(t) {
+  const container = document.createElement('div')
+  container.className = 'minimal-view'
+
+  container.appendChild(Header(t))
+  container.appendChild(Footer(t))
+
+  return container
+}
+```
+
+### Example: View with Custom Layout
+
+```javascript
+// src/views/TwoColumnView.js
+import { Header } from '../components/Header/Header.js'
+import { Sidebar } from '../components/Sidebar/Sidebar.js'
+import { MainContent } from '../components/MainContent/MainContent.js'
+import { Footer } from '../components/Footer/Footer.js'
+
+export function TwoColumnView(t) {
+  const container = document.createElement('div')
+  container.className = 'two-column-view'
+
+  container.appendChild(Header(t))
+
+  // Create two-column layout
+  const columns = document.createElement('div')
+  columns.className = 'columns'
+
+  const leftColumn = document.createElement('div')
+  leftColumn.className = 'column-left'
+  leftColumn.appendChild(Sidebar(t))
+
+  const rightColumn = document.createElement('div')
+  rightColumn.className = 'column-right'
+  rightColumn.appendChild(MainContent(t))
+
+  columns.appendChild(leftColumn)
+  columns.appendChild(rightColumn)
+  container.appendChild(columns)
+
+  container.appendChild(Footer(t))
+
+  return container
+}
+```
+
+### Using the View
+
+Once created, add it to `routes.js`:
+
+```javascript
+// src/routes.js
+import { StandardView } from './views/StandardView.js'
+import { MinimalView } from './views/MinimalView.js'
+
+export const routes = {
+  '/': { page: 'noquestionmark', view: StandardView },
+  '/about': { page: 'about', view: MinimalView },
+  '/en/about': { page: 'about', view: MinimalView },
+  '/es/about': { page: 'about', view: MinimalView }
+}
+```
+
+**Note:** Routes follow the pattern `/{lang}/{page}` where language comes first (e.g., `/en/about`), except for the root route `/`.
+
+### View Best Practices
+
+1. **Keep views simple**: Views should only arrange components, not contain business logic
+2. **Reuse views**: Multiple pages can share the same view with different content
+3. **SSR-compatible**: Views must work in both Node.js (SSR) and browser
+4. **No side effects**: Views should be pure functions that return DOM elements
 
 ## 🌐 Deployment
 

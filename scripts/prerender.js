@@ -11,11 +11,23 @@ const srcPath = path.resolve(__dirname, '../src')
 const indexHtmlTemplate = fs.readFileSync(path.join(distPath, 'index.html'), 'utf-8')
 
 // Import modules for rendering
-const { App } = await import(path.join('file://', srcPath, 'components/App/App.js'))
-const { translations, defaultLanguage } = await import(path.join('file://', srcPath, 'translations.js'))
+const routesModule = await import(path.join('file://', srcPath, 'routes.js'))
+const translationsModule = await import(path.join('file://', srcPath, 'translations.js'))
 
-// Function to render content
-function renderContent(lang) {
+const routes = routesModule.routes
+const pages = translationsModule.pages
+const defaultLanguage = translationsModule.defaultLanguage
+
+// Helper function to extract language from path
+function getLangFromPath(routePath) {
+  if (routePath === '/') return 'en'
+  if (routePath.startsWith('/en')) return 'en'
+  if (routePath.startsWith('/es')) return 'es'
+  return defaultLanguage
+}
+
+// Function to render content for a specific route
+function renderContent(routePath, route) {
   const dom = new JSDOM('<!DOCTYPE html><html><body><div id="app"></div></body></html>')
 
   // Mark that we're in SSR mode
@@ -23,14 +35,15 @@ function renderContent(lang) {
   global.document = dom.window.document
   global.window = dom.window
 
-  const t = translations[lang] || translations[defaultLanguage]
+  const lang = getLangFromPath(routePath)
+  const t = pages[route.page][lang] || pages[route.page][defaultLanguage]
   const app = dom.window.document.querySelector('#app')
 
-  // Render app
+  // Render view
   try {
-    app.appendChild(App(t))
+    app.appendChild(route.view(t))
   } catch (error) {
-    console.warn(`Warning rendering ${lang}:`, error.message)
+    console.warn(`Warning rendering ${routePath}:`, error.message)
   }
 
   // Clean up SSR flag
@@ -39,19 +52,19 @@ function renderContent(lang) {
   return app.innerHTML
 }
 
-// Create directories and files for each language
-const languages = ['en', 'es']
-
-languages.forEach(lang => {
-  const langDir = path.join(distPath, lang)
+// Generate HTML for each route
+Object.entries(routes).forEach(([routePath, route]) => {
+  const outputPath = routePath === '/' ? 'index.html' : path.join(routePath, 'index.html')
+  const fullPath = path.join(distPath, outputPath)
+  const dirPath = path.dirname(fullPath)
 
   // Create directory if it doesn't exist
-  if (!fs.existsSync(langDir)) {
-    fs.mkdirSync(langDir, { recursive: true })
+  if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath, { recursive: true })
   }
 
   // Render content
-  const content = renderContent(lang)
+  const content = renderContent(routePath, route)
 
   // Insert content into the template
   const htmlWithContent = indexHtmlTemplate.replace(
@@ -60,18 +73,9 @@ languages.forEach(lang => {
   )
 
   // Write file
-  fs.writeFileSync(path.join(langDir, 'index.html'), htmlWithContent, 'utf-8')
+  fs.writeFileSync(fullPath, htmlWithContent, 'utf-8')
 
-  console.log(`✓ Generated /${lang}/index.html with content`)
+  console.log(`✓ Generated ${routePath} -> ${outputPath}`)
 })
-
-// Also generate the root index.html with English content
-const rootContent = renderContent('en')
-const rootHtmlWithContent = indexHtmlTemplate.replace(
-  '<div id="app"></div>',
-  `<div id="app">${rootContent}</div>`
-)
-fs.writeFileSync(path.join(distPath, 'index.html'), rootHtmlWithContent, 'utf-8')
-console.log('✓ Generated /index.html with content')
 
 console.log('✓ Pre-rendering complete!')
