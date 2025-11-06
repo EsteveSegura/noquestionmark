@@ -1,0 +1,114 @@
+# Explicación del proyecto
+El proyecto de ChatCrimes.com recopila malas practicas en el chat, ya bien sea comunicación corporativa o mas informal. Se intenta mantener un tono con toques de humor pero seriedad.
+Es altamente inspirada en nohello.net y noquestionmark.com
+
+Si tienes capacidades de poner visitar una web, visita alguna de estas dos webs  `nohello.net, noquestionmark.com` para ver el tono de la web
+
+## Tu misión
+Tu misión es crear contenido para estas paginas web. De un tema que se te proporcionara en la sección "Topic".
+Hay unas normas que debes de cumplir de forma estricta, para que el CMS entienda de forma correcta lo que estas intentando enviar.
+
+### Formato
+las paginas las debes formatear con json siguiendo la siguiente estructura.,
+
+Solo utiliza HTML en la sección de explanation, y no uses mas tags de los que vas a ver en el ejemplo.
+Tambien utiliza el siguiente ejemplo como guia del tono para escribir el contenido
+
+```json
+{
+    "no-question-mark": { // aqui va el path de la url con un nombre de articulo, por ejemplo no-question-mark
+        "en": { // Idionma de la pagina
+            "header": {
+                title: 'No ?', // titulo principal de la pagina
+                subtitle: 'please don\'t reply with just a question mark in chat', // subtitulo de la pagina
+                animations: ['?', '...?', 'rlly?', 'uh?', '?????', '¿¿??'] // animaciones para el titulo principal (se simular una escritra como una maquina de escribir) . Este texto tiene que ser especialmente relevante para la pagina que estamos creando.
+            },
+            intro: {
+                text: 'Imagine someone asks you something, and you just stare, raise an eyebrow, and say "?"... 🤦‍♀️' // texto de introduccion de la pagina no debes de ser muy larga e intenta que termine siempre en  "... 🤦‍♀️"
+            },
+                  dontDoThis: { // Esto no puede cambiar no modifiques
+        title: '❌ Don\'t do this', // Titulo de la sección, no lo modifiques tiene que ser este
+        chat: { // aqui debes poner un ejemplo de como se ve el chat, puedes poner 4 mensajes o mas de lo que NO se debe de hacer en un chat Lo que no puedes hacer es cambiar los name de quien habla en el chat.
+          messages: [
+            { name: 'T.J Miller', text: 'hey, can you check the report?', time: '2:15 PM' },
+            { name: 'Thomas Middleditch', text: '?', time: '2:16 PM' },
+            { name: 'T.J Miller', text: 'the weekly one, from Monday', time: '2:17 PM' },
+            { name: 'Thomas Middleditch', text: 'ah right, yep, on it', time: '2:18 PM' }
+          ]
+        },
+        explanation: { // aqui hay una estructura HTML muy clara, puede poner al principio parrafos, usa strong, em para mejor lectura, despues debes añadir <p>The same foes for:</p> añadir un <ul> con ejemplos y terminar con un <p><strong> que sea corto y conciso
+          text: `<p>Thomas Middleditch thought he was being efficient: <em>one character, job done</em>. <strong>But that tiny "?" forces the other person to explain themselves again</strong>, slowing the whole exchange down.</p>
+
+<p>Most people who do this <strong>don't mean to be rude</strong>. It's a reflex: <em>"I didn't understand, so I'll just reply with a question mark."</em></p>
+
+<p>But in text conversations, <strong>"?" doesn't give context.</strong> It adds <strong>friction, confusion</strong>, and sometimes even <em>passive-aggressive vibes</em>.</p>
+
+<p>The same goes for:</p>
+<ul>
+  <li>...?</li>
+  <li>rlly?</li>
+  <li>uh?</li>
+  <li>?????</li>
+  <li>¿¿??</li>
+</ul>
+
+<p><strong>Just say what's unclear!</strong></p>` 
+        }
+         },
+         doThis: { // Esto no puede cambiar no modifiques
+          title: '✅ Instead, try this', // Esto no puede cambiar no modifiques
+          chat: { // aqui debes poner un ejemplo de como se ve el chat, puedes poner 4 mensajes o mas de lo que SI se debe de hacer en un chat. Lo que no puedes hacer es cambiar los name de quien habla en el chat.
+            messages: [
+              { name: 'T.J Miller', text: 'hey, can you check the report?', time: '2:15 PM' },
+              { name: 'Thomas Middleditch', text: 'which one? weekly or the Monday update?', time: '2:16 PM' },
+              { name: 'T.J Miller', text: 'weekly one :)', time: '2:16 PM' },
+              { name: 'Thomas Middleditch', text: 'got it, checking now', time: '2:17 PM' }
+            ]
+          },
+          explanation: { // aqui hay una estructura HTML muy clara, puede poner al principio parrafos, usa strong, em para mejor lectura, despues debes añadir <p>The same foes for:</p> añadir un <ul> con ejemplos y terminar con un <p><strong> que sea corto y conciso
+            text: `<p><strong>Being clear takes maybe two more seconds</strong>, but it makes the whole conversation smoother.</p>
+  
+  <p>Instead of "?", try one of these:</p>
+  <ul>
+    <li>Do you mean the weekly one?</li>
+    <li>Not sure what you're referring to</li>
+    <li>Could you clarify what part you mean?</li>
+    <li>I don't get it, can you explain a bit more?</li>
+  </ul>
+  
+  <p><strong>Clarity is kindness</strong>, and <em>async-friendly</em>. If someone comes back later, they'll understand <strong>exactly what you needed</strong>.</p>
+  
+  <p>When done right, <strong>everyone saves time</strong>. 🎉</p>`
+          }
+        },
+    }
+}
+```
+
+#### Path
+el path de esta url es `/no-question-mark`
+
+#### Langs
+Solo genera en
+
+## Topic
+
+Quiero que escribas sobre esas personas que no dan el motivo real de por que escriben un mensaje en un chat.
+
+```plaintext
+Ejemplo:
+- La pagina esta funcionando?
+- Si
+- Seguro?
+- Si por que?
+- Estoy intentando scrapear con la herramienta de SEO y me dan errores 500
+- Vale... Me das mas información?
+- Si...
+- Vale me espero.
+- Hoy he empezado a scrapear a las 9.00 todo iba bien a partir de las 9.45 me han empezado a dar 500 errores, te envio el log de todas las URLS
+[LOG_FILE_SCAPIRING.txt Attached]
+```
+
+Como puedes ver el ultimo mensaje deberia de ser el primero, por que al empezar la conversación ya tenia toda la información. El resto de mensajes son inutiles y ademas entre los mensaje hay lapsos de tiempo de 20 minutos entre cada mensaje.
+
+Genera el JSON con el formato ```json<PAYLOAD>```
