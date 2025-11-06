@@ -4,8 +4,182 @@ export const pages = {
       test: 'test'
     }
   },
+  nopublicshaming: {
+    en: {
+      header: {
+        title: "No public shaming",
+        subtitle: "please don't call people out in public channels",
+        animations: [
+          "@here",
+          "we're waiting",
+          "public callout",
+          "name and shame",
+          "why didn't you join?",
+          "join or not?"
+        ]
+      },
+      intro: {
+        text: "Imagine posting a megaphone ping to pressure someone in front of everyone, instead of solving the problem directly... 🤦‍♀️"
+      },
+      dontDoThis: {
+        title: "❌ Don't do this",
+        chat: {
+          messages: [
+            {
+              name: "T.J Miller",
+              text: "@channel Thomas, are you joining the meeting or not? It is important",
+              time: "9:00 AM"
+            },
+            {
+              name: "Thomas Middleditch",
+              text: "I do not think I can today",
+              time: "9:01 AM"
+            },
+            {
+              name: "T.J Miller",
+              text: "It is really important, we are all waiting",
+              time: "9:02 AM"
+            },
+            {
+              name: "Thomas Middleditch",
+              text: "Maybe we should take this to DM or a thread",
+              time: "9:03 AM"
+            }
+          ]
+        },
+        explanation: {
+          text: "<p>Public shaming feels fast, but it is a shortcut that <strong>burns trust</strong>. Calling someone out in front of the whole channel adds <strong>pressure, noise</strong>, and turns a simple check in into a spectacle.</p>\n\n<p>Most people who do this <strong>do not mean harm</strong>, it is a reflex, <em>we are blocked, so I will ping loudly</em>.</p>\n\n<p>But in group chats, <strong>a public callout rarely gives context</strong>. It creates <strong>defensiveness</strong>, invites <em>pile ons</em>, and wastes time while everyone watches.</p>\n\n<p>The same foes for:</p>\n<ul>\n  <li>@here Thomas, why did you miss the standup?</li>\n  <li>We are all waiting on you</li>\n  <li>Can you explain in front of everyone why this is late?</li>\n  <li>Name and shame lists</li>\n  <li>Posting screenshots of private DMs in a channel</li>\n</ul>\n\n<p><strong>Respect in public, feedback in private</strong></p>"
+        }
+      },
+      doThis: {
+        title: "✅ Instead, try this",
+        chat: {
+          messages: [
+            {
+              name: "T.J Miller",
+              text: "hey Thomas, quick DM: can you join standup? If not, I can share a short update in channel",
+              time: "9:05 AM"
+            },
+            {
+              name: "Thomas Middleditch",
+              text: "Running late, cannot join, feel free to post that I will read updates later",
+              time: "9:06 AM"
+            },
+            {
+              name: "T.J Miller",
+              text: "No problem, I will summarize and move details to a thread",
+              time: "9:07 AM"
+            },
+            {
+              name: "Thomas Middleditch",
+              text: "Thanks",
+              time: "9:08 AM"
+            }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Choose private first</strong>, or start a thread. Ask clearly, give context, and offer a next step. It takes a few more words, and it saves the whole team minutes.</p>\n\n<p>Instead of a public callout, try:</p>\n<p>The same foes for:</p>\n<ul>\n  <li>DM: can you join the standup? If not, share a quick update I can post</li>\n  <li>Neutral channel note: We will start, Thomas will catch up later</li>\n  <li>Threading follow ups so the channel stays clear</li>\n  <li>Assume positive intent, ask for status, suggest an option</li>\n</ul>\n\n<p><strong>Clarity with kindness scales</strong></p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "This is kinda only half serious (kinda 👀) so please don't get mad at the person who sent you here.",
+          "That said, if you see this site's URL as someone's status/bio, be prepared to be ignored if you only reply with \"?\".",
+          "Inspired by the wonderful <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatars taken from Silicon Valley. Open-source on <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Made by <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "This site is available in: <a href=\"/en\">English</a>, <a href=\"/es\">Español</a>"
+        ]
+      }
+    },
+    es: {
+      header: {
+        title: "No public shaming",
+        subtitle: "por favor no señales a la gente en canales públicos",
+        animations: [
+          "@aqui",
+          "estamos esperando",
+          "llamada pública",
+          "name and shame",
+          "por qué no viniste?",
+          "vienes o no?"
+        ]
+      },
+      intro: {
+        text: "Imagina lanzar un ping con megáfono para presionar a alguien delante de todos, en vez de resolverlo directo y con calma... 🤦‍♀️"
+      },
+      dontDoThis: {
+        title: "❌ Don't do this",
+        chat: {
+          messages: [
+            {
+              name: "T.J Miller",
+              text: "@channel Thomas, vas a entrar a la reunión o no? Es importante",
+              time: "9:00 AM"
+            },
+            {
+              name: "Thomas Middleditch",
+              text: "Creo que hoy no puedo",
+              time: "9:01 AM"
+            },
+            {
+              name: "T.J Miller",
+              text: "Es muy importante, todos estamos esperando",
+              time: "9:02 AM"
+            },
+            {
+              name: "Thomas Middleditch",
+              text: "Quizás esto es mejor hablarlo por DM o en un hilo",
+              time: "9:03 AM"
+            }
+          ]
+        },
+        explanation: {
+          text: "<p>El public shaming parece rápido, pero es un atajo que <strong>rompe la confianza</strong>. Señalar a alguien delante de todo el canal añade <strong>presión y ruido</strong>, y convierte un simple check en un espectáculo.</p>\n\n<p>La mayoría no lo hace con mala intención, es un reflejo, <em>estamos bloqueados, así que haré un ping fuerte</em>.</p>\n\n<p>Pero en chats grupales, <strong>una llamada pública rara vez da contexto</strong>. Genera <strong>defensiva</strong>, invita a <em>pile ons</em>, y hace perder tiempo mientras todos miran.</p>\n\n<p>The same foes for:</p>\n<ul>\n  <li>@here Thomas, por qué faltaste al standup?</li>\n  <li>Todos estamos esperando por ti</li>\n  <li>Puedes explicar delante de todos por qué está tarde?</li>\n  <li>Listas de name and shame</li>\n  <li>Publicar capturas de DMs privados en un canal</li>\n</ul>\n\n<p><strong>Respeto en público, feedback en privado</strong></p>"
+        }
+      },
+      doThis: {
+        title: "✅ Instead, try this",
+        chat: {
+          messages: [
+            {
+              name: "T.J Miller",
+              text: "hola Thomas, por DM rápido, puedes venir al standup? Si no, comparto un breve update en el canal",
+              time: "9:05 AM"
+            },
+            {
+              name: "Thomas Middleditch",
+              text: "Voy tarde, no puedo entrar, publica que leeré los updates luego",
+              time: "9:06 AM"
+            },
+            {
+              name: "T.J Miller",
+              text: "Sin problema, lo resumo y muevo los detalles a un hilo",
+              time: "9:07 AM"
+            },
+            {
+              name: "Thomas Middleditch",
+              text: "Gracias",
+              time: "9:08 AM"
+            }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Elige primero lo privado</strong>, o abre un hilo. Pregunta con claridad, da contexto y ofrece un siguiente paso. Son unas palabras más, y le ahorras minutos a todo el equipo.</p>\n\n<p>En lugar de avergonzar en público, prueba:</p>\n<p>The same foes for:</p>\n<ul>\n  <li>DM: puedes venir al standup? Si no, dame un breve update para publicar</li>\n  <li>Nota neutral en canal: Empezamos, Thomas se pondrá al día luego</li>\n  <li>Usar hilos para los seguimientos y mantener el canal limpio</li>\n  <li>Asume buena intención, pide estado, sugiere una opción</li>\n</ul>\n\n<p><strong>Claridad con amabilidad escala</strong></p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "Esto es solo medio en serio (medio 👀), así que no te enojes con la persona que te envió aquí.",
+          "Dicho esto, si ves la URL de este sitio en el estado/bio de alguien, prepárate para ser ignorado si solo respondes con \"?\".",
+          "Inspirado en el maravilloso <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatares tomados de Silicon Valley. Código abierto en <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Hecho por <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "Este sitio está disponible en: <a href=\"/en\">English</a>, <a href=\"/es\">Español</a>"
+        ]
+      }
+    }
+  },
   nochannelonly: {
-  en: {
+    en: {
       header: {
         title: "No #channel-only",
         subtitle: "please don't reply with just a channel name in chat",

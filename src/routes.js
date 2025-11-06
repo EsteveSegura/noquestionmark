@@ -10,6 +10,10 @@ export const routes = {
   '/no-channel-only': { page: 'nochannelonly', view: StandardView },
   '/en/no-channel-only': { page: 'nochannelonly', view: StandardView },
   '/es/no-channel-only': { page: 'nochannelonly', view: StandardView },
+  // nopublicshaming
+  '/no-public-shaming': { page: 'nopublicshaming', view: StandardView },
+  '/en/no-public-shaming': { page: 'nopublicshaming', view: StandardView },
+  '/es/no-public-shaming': { page: 'nopublicshaming', view: StandardView },
   // test
   '/test': {page: 'test', view: TestView }
 }
