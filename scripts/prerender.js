@@ -32,6 +32,7 @@ function renderContent(routePath, route) {
 
   // Mark that we're in SSR mode
   global.__SSR__ = true
+  global.__CURRENT_ROUTE__ = routePath  // Store current route for SSR
   global.document = dom.window.document
   global.window = dom.window
 
@@ -46,8 +47,9 @@ function renderContent(routePath, route) {
     console.warn(`Warning rendering ${routePath}:`, error.message)
   }
 
-  // Clean up SSR flag
+  // Clean up SSR flags
   delete global.__SSR__
+  delete global.__CURRENT_ROUTE__
 
   return app.innerHTML
 }
