@@ -80,4 +80,31 @@ Object.entries(routes).forEach(([routePath, route]) => {
   console.log(`✓ Generated ${routePath} -> ${outputPath}`)
 })
 
+// Generate sitemap.xml
+function generateSitemap() {
+  const baseUrl = process.env.VITE_BASE_URL || 'https://noquestionmark.com'
+
+  const urls = Object.keys(routes).map(routePath => {
+    const url = routePath === '/' ? baseUrl : `${baseUrl}${routePath}`
+    const priority = routePath === '/' ? '1.0' : '0.8'
+
+    return `  <url>
+    <loc>${url}</loc>
+    <changefreq>weekly</changefreq>
+    <priority>${priority}</priority>
+  </url>`
+  }).join('\n')
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls}
+</urlset>`
+
+  const sitemapPath = path.join(distPath, 'sitemap.xml')
+  fs.writeFileSync(sitemapPath, sitemap, 'utf-8')
+  console.log('✓ Generated sitemap.xml')
+}
+
+generateSitemap()
+
 console.log('✓ Pre-rendering complete!')
