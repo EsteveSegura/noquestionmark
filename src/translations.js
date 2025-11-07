@@ -1,7 +1,59 @@
 export const pages = {
-  test: {
+  // TODO: Split pages in separated files
+  home: {
     en: {
-      test: 'test'
+      header: {
+        title: "ChatCrimes",
+        subtitle: "From the lonely \"hi\" to the haunting \"?\", explore the tiny crimes ruining every chat.",
+      },
+      // TODO: This is not used, we can remove
+      intro: {
+        text: "Everyday chats, countless crimes.<br />Learn to message better, before it's too late."
+      },
+      crimesList: {
+        title: "Explore some ChatCrimes",
+        items: [
+          { url: "/no-question-mark", text: "No ? - Don't reply with just a question mark" },
+          { url: "/no-channel-only", text: "No #channel-only - Don't reply with just a channel name" },
+          { url: "/no-public-shaming", text: "No public shaming - Don't call people out in public channels" }
+        ]
+      },
+      footer: {
+        paragraphs: [
+          "This is kinda only half serious (kinda 👀) so please don't get mad at the person who sent you here.",
+          "That said, if you see this site's URL as someone's status/bio, be prepared to be ignored if you only reply with \"?\".",
+          "Inspired by the wonderful <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatars taken from Silicon Valley. Open-source on <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Made by <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "This site is available in: <a href=\"/en\">English</a>, <a href=\"/es\">Español</a>"
+        ]
+      }
+    },
+    es : {
+      header: {
+        title: "ChatCrimes",
+        subtitle: "Desde el solitario \"hola\" hasta el inquietante \"?\", explora los pequeños crímenes que arruinan cada chat.",
+      },
+      // TODO: This is not used, we can remove
+      intro: {
+        text: "Chats de todos los días, crímenes incontables.<br />Aprende a mensajear mejor, antes de que sea demasiado tarde."
+      },
+      crimesList: {
+        title: "Explora algunos ChatCrimes",
+        items: [
+          { url: "/no-question-mark", text: "No ? - No respondas solo con un signo de interrogación" },
+          { url: "/no-channel-only", text: "No solo #canal - No respondas solo con un nombre de canal" },
+          { url: "/no-public-shaming", text: "No public shaming - No señales a la gente en canales públicos" }
+        ]
+      },
+      footer: {
+        paragraphs: [
+          "Esto es solo medio en serio (medio 👀), así que no te enojes con la persona que te envió aquí.",
+          "Dicho esto, si ves la URL de este sitio en el estado/bio de alguien, prepárate para ser ignorado si solo respondes con \"?\".",
+          "Inspirado en el maravilloso <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatares tomados de Silicon Valley. Código abierto en <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Hecho por <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "Este sitio está disponible en: <a href=\"/en\">English</a>, <a href=\"/es\">Español</a>"
+        ]
+      }
     }
   },
   nopublicshaming: {

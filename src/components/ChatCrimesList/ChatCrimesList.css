@@ -1,0 +1,38 @@
+.chat-crimes-list {
+  max-width: 600px;
+  padding: 1rem 0;
+}
+
+.chat-crimes-list h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+.chat-crimes-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chat-crimes-list li {
+  margin-bottom: 1rem;
+}
+
+.chat-crimes-list a {
+  display: block;
+  padding: 1rem 1.5rem;
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+  color: #dc2626;
+  text-decoration: underline;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.chat-crimes-list a:hover {
+  background-color: #e5e5e5;
+  transform: translateX(4px);
+  color: #b91c1c;
+}
