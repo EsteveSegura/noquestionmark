@@ -82,7 +82,7 @@ Object.entries(routes).forEach(([routePath, route]) => {
 
 // Generate sitemap.xml
 function generateSitemap() {
-  const baseUrl = process.env.VITE_BASE_URL || 'https://noquestionmark.com'
+  const baseUrl = process.env.VITE_BASE_URL || 'https://chatcrimes.com'
 
   const urls = Object.keys(routes).map(routePath => {
     const url = routePath === '/' ? baseUrl : `${baseUrl}${routePath}`
