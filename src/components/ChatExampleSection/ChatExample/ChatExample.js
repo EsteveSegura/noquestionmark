@@ -24,7 +24,8 @@ export function ChatExample(section, isPositive = false) {
       text: msg.text,
       avatar: avatarImage,
       time: msg.time,
-      reaction: msg.reaction || null
+      reaction: msg.reaction || null,
+      thread: msg.thread || null
     }))
   })
 

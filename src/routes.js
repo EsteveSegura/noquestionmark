@@ -20,4 +20,8 @@ export const routes = {
   '/no-reaction-as-answer': { page: 'noreactionasanswer', view: StandardView },
   '/en/no-reaction-as-answer': { page: 'noreactionasanswer', view: StandardView },
   '/es/no-reaction-as-answer': { page: 'noreactionasanswer', view: StandardView },
+  // usethethread
+  '/use-the-thread': { page: 'usethethread', view: StandardView },
+  '/en/use-the-thread': { page: 'usethethread', view: StandardView },
+  '/es/use-the-thread': { page: 'usethethread', view: StandardView },
 }

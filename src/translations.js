@@ -16,7 +16,8 @@ export const pages = {
           { url: "/no-question-mark", text: "No ? - Don't reply with just a question mark" },
           { url: "/no-channel-only", text: "No #channel-only - Don't reply with just a channel name" },
           { url: "/no-public-shaming", text: "No public shaming - Don't call people out in public channels" },
-          { url: "/no-reaction-as-answer", text: "No reaction as answer - Don't use reactions instead of actual replies" }
+          { url: "/no-reaction-as-answer", text: "No reaction as answer - Don't use reactions instead of actual replies" },
+          { url: "/use-the-thread", text: "Use the thread - Don't ignore existing threads with answers" }
         ]
       },
       footer: {
@@ -44,7 +45,8 @@ export const pages = {
           { url: "/no-question-mark", text: "No ? - No respondas solo con un signo de interrogación" },
           { url: "/no-channel-only", text: "No solo #canal - No respondas solo con un nombre de canal" },
           { url: "/no-public-shaming", text: "No public shaming - No señales a la gente en canales públicos" },
-          { url: "/no-reaction-as-answer", text: "No reacción como respuesta - No uses reacciones en lugar de respuestas reales" }
+          { url: "/no-reaction-as-answer", text: "No reacción como respuesta - No uses reacciones en lugar de respuestas reales" },
+          { url: "/use-the-thread", text: "Usa el thread - No ignores threads que ya tienen respuestas" }
         ]
       },
       footer: {
@@ -689,6 +691,140 @@ export const pages = {
 <p><strong>Las palabras clarifican, las reacciones solo confirman.</strong> Usa reacciones <em>después</em> de haber respondido realmente, como un extra amigable, no como la respuesta en sí.</p>
 
 <p>Cuando se hace bien, <strong>todos saben qué está pasando</strong>. 🎉</p>`
+        }
+      },
+      footer: {
+        paragraphs: [
+          'Esto es solo medio en serio (medio 👀), así que no te enojes con la persona que te envió aquí.',
+          'Dicho esto, si ves la URL de este sitio en el estado/bio de alguien, prepárate para ser ignorado si solo respondes con "?".',
+          'Inspirado en el maravilloso <a href="https://nohello.net" target="_blank" rel="noopener noreferrer">nohello.net</a>. Avatares tomados de Silicon Valley. Código abierto en <a href="https://github.com/EsteveSegura/noquestionmark" target="_blank" rel="noopener noreferrer">GitHub</a>.',
+          'Hecho por <a href="https://girlazo.com" target="_blank" rel="noopener noreferrer">Esteve Segura</a>.',
+          'Este sitio está disponible en: <a href="/en">English</a>, <a href="/es">Español</a>'
+        ]
+      }
+    }
+  },
+  usethethread: {
+    en: {
+      header: {
+        title: 'Use the thread',
+        subtitle: 'please check existing threads before asking again',
+        animations: ['tldr?', 'pls summary', 'can you summarize?', 'too long', 'just tell me', 'didn\'t read']
+      },
+      intro: {
+        text: 'Imagine someone already documented the answer in a thread, and you ask the same question in the main channel anyway... 🤦‍♀️'
+      },
+      dontDoThis: {
+        title: '❌ Don\'t do this',
+        chat: {
+          messages: [
+            { name: 'T.J Miller', text: 'Deploy process for production', time: '9:00 AM', thread: { replies: 7, lastReply: 'Last reply 2 hours ago' } },
+            { name: 'Thomas Middleditch', text: 'hey, can someone explain how to do a deploy?', time: '11:30 AM' }
+          ]
+        },
+        explanation: {
+          text: `<p>Thomas Middleditch didn't notice the thread with <strong>7 replies</strong> explaining exactly what he asked. Now someone has to repeat the same information, or worse, point him to the thread he should have checked.</p>
+
+<p>Most people who do this <strong>don't mean to waste anyone's time</strong>. It's a reflex: <em>"I have a question, I'll ask in the channel."</em></p>
+
+<p>But in busy channels, <strong>threads exist to keep information organized</strong>. Ignoring them means:</p>
+<ul>
+  <li>Duplicated explanations</li>
+  <li>Fragmented knowledge</li>
+  <li>Frustrated teammates who already answered</li>
+  <li>Important context gets lost in the main channel noise</li>
+</ul>
+
+<p><strong>Check the threads first!</strong></p>`
+        }
+      },
+      doThis: {
+        title: '✅ Instead, try this',
+        chat: {
+          messages: [
+            { name: 'T.J Miller', text: 'Deploy process for production', time: '9:00 AM', thread: { replies: 7, lastReply: 'Last reply 2 hours ago' } },
+            { name: 'Thomas Middleditch', text: 'Great, I\'m going to read the entire thread', time: '11:30 AM' }
+          ]
+        },
+        explanation: {
+          text: `<p><strong>Before asking, look for threads</strong>. That little "7 replies" indicator is a goldmine of context and answers.</p>
+
+<p>If you read the thread and still have questions:</p>
+<ul>
+  <li>Reply in the thread itself, not the main channel</li>
+  <li>Reference what you already read: "I saw X in the thread, but..."</li>
+  <li>Ask for clarification on specific points</li>
+</ul>
+
+<p><strong>Threads keep conversations organized</strong>. Using them shows respect for everyone's time and keeps the channel clean.</p>
+
+<p>When done right, <strong>knowledge stays findable</strong>. 🎉</p>`
+        }
+      },
+      footer: {
+        paragraphs: [
+          'This is kinda only half serious (kinda 👀) so please don\'t get mad at the person who sent you here.',
+          'That said, if you see this site\'s URL as someone\'s status/bio, be prepared to be ignored if you only reply with "?".',
+          'Inspired by the wonderful <a href="https://nohello.net" target="_blank" rel="noopener noreferrer">nohello.net</a>. Avatars taken from Silicon Valley. Open-source on <a href="https://github.com/EsteveSegura/noquestionmark" target="_blank" rel="noopener noreferrer">GitHub</a>.',
+          'Made by <a href="https://girlazo.com" target="_blank" rel="noopener noreferrer">Esteve Segura</a>.',
+          'This site is available in: <a href="/en">English</a>, <a href="/es">Español</a>'
+        ]
+      }
+    },
+    es: {
+      header: {
+        title: 'Usa el thread',
+        subtitle: 'por favor revisa los threads existentes antes de preguntar de nuevo',
+        animations: ['tldr?', 'resumen pls', '¿me lo resumes?', 'muy largo', 'dime directo', 'no lo leí']
+      },
+      intro: {
+        text: 'Imagina que alguien ya documentó la respuesta en un thread, y tú preguntas lo mismo en el canal principal... 🤦‍♀️'
+      },
+      dontDoThis: {
+        title: '❌ No hagas esto',
+        chat: {
+          messages: [
+            { name: 'T.J Miller', text: 'Proceso de deploy a producción', time: '9:00 AM', thread: { replies: 7, lastReply: 'Última respuesta hace 2 horas' } },
+            { name: 'Thomas Middleditch', text: 'oye, ¿alguien me explica cómo hacer un deploy?', time: '11:30 AM' }
+          ]
+        },
+        explanation: {
+          text: `<p>Thomas Middleditch no vio el thread con <strong>7 respuestas</strong> explicando exactamente lo que preguntó. Ahora alguien tiene que repetir la misma información, o peor, señalarle el thread que debería haber revisado.</p>
+
+<p>La mayoría de las personas que hacen esto <strong>no quieren hacer perder el tiempo a nadie</strong>. Es un reflejo: <em>"Tengo una pregunta, la haré en el canal."</em></p>
+
+<p>Pero en canales activos, <strong>los threads existen para mantener la información organizada</strong>. Ignorarlos significa:</p>
+<ul>
+  <li>Explicaciones duplicadas</li>
+  <li>Conocimiento fragmentado</li>
+  <li>Compañeros frustrados que ya respondieron</li>
+  <li>Contexto importante que se pierde en el ruido del canal principal</li>
+</ul>
+
+<p><strong>¡Revisa los threads primero!</strong></p>`
+        }
+      },
+      doThis: {
+        title: '✅ En su lugar, intenta esto',
+        chat: {
+          messages: [
+            { name: 'T.J Miller', text: 'Proceso de deploy a producción', time: '9:00 AM', thread: { replies: 7, lastReply: 'Última respuesta hace 2 horas' } },
+            { name: 'Thomas Middleditch', text: 'Genial, voy a leerme el thread entero', time: '11:30 AM' }
+          ]
+        },
+        explanation: {
+          text: `<p><strong>Antes de preguntar, busca threads</strong>. Ese pequeño indicador de "7 replies" es una mina de oro de contexto y respuestas.</p>
+
+<p>Si lees el thread y aún tienes preguntas:</p>
+<ul>
+  <li>Responde en el thread mismo, no en el canal principal</li>
+  <li>Menciona lo que ya leíste: "Vi X en el thread, pero..."</li>
+  <li>Pide aclaraciones sobre puntos específicos</li>
+</ul>
+
+<p><strong>Los threads mantienen las conversaciones organizadas</strong>. Usarlos muestra respeto por el tiempo de todos y mantiene el canal limpio.</p>
+
+<p>Cuando se hace bien, <strong>el conocimiento sigue siendo encontrable</strong>. 🎉</p>`
         }
       },
       footer: {

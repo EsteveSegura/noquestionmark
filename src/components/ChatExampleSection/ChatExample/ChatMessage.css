@@ -72,3 +72,38 @@
   font-weight: 500;
   color: #71717A;
 }
+
+.chat-message__thread {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.chat-message__thread-avatars {
+  display: flex;
+}
+
+.chat-message__thread-avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1.5px solid #FFFFFF;
+  object-fit: cover;
+  margin-left: -6px;
+}
+
+.chat-message__thread-avatar:first-child {
+  margin-left: 0;
+}
+
+.chat-message__thread-replies {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1D4ED8;
+}
+
+.chat-message__thread-last {
+  font-size: 12px;
+  color: #71717A;
+}
