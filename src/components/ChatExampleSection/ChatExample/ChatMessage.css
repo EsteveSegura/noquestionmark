@@ -49,3 +49,26 @@
   font-size: 14px;
   color: #333;
 }
+
+.chat-message__reaction {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #F4F4F5;
+  border: 1px solid #E4E4E7;
+  border-radius: 12px;
+  padding: 4px 8px;
+  margin-top: 6px;
+}
+
+.chat-message__reaction-image {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.chat-message__reaction-count {
+  font-size: 12px;
+  font-weight: 500;
+  color: #71717A;
+}

@@ -16,4 +16,8 @@ export const routes = {
   '/no-public-shaming': { page: 'nopublicshaming', view: StandardView },
   '/en/no-public-shaming': { page: 'nopublicshaming', view: StandardView },
   '/es/no-public-shaming': { page: 'nopublicshaming', view: StandardView },
+  // noreactionasanswer
+  '/no-reaction-as-answer': { page: 'noreactionasanswer', view: StandardView },
+  '/en/no-reaction-as-answer': { page: 'noreactionasanswer', view: StandardView },
+  '/es/no-reaction-as-answer': { page: 'noreactionasanswer', view: StandardView },
 }

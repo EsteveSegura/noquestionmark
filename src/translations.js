@@ -15,7 +15,8 @@ export const pages = {
         items: [
           { url: "/no-question-mark", text: "No ? - Don't reply with just a question mark" },
           { url: "/no-channel-only", text: "No #channel-only - Don't reply with just a channel name" },
-          { url: "/no-public-shaming", text: "No public shaming - Don't call people out in public channels" }
+          { url: "/no-public-shaming", text: "No public shaming - Don't call people out in public channels" },
+          { url: "/no-reaction-as-answer", text: "No reaction as answer - Don't use reactions instead of actual replies" }
         ]
       },
       footer: {
@@ -42,7 +43,8 @@ export const pages = {
         items: [
           { url: "/no-question-mark", text: "No ? - No respondas solo con un signo de interrogación" },
           { url: "/no-channel-only", text: "No solo #canal - No respondas solo con un nombre de canal" },
-          { url: "/no-public-shaming", text: "No public shaming - No señales a la gente en canales públicos" }
+          { url: "/no-public-shaming", text: "No public shaming - No señales a la gente en canales públicos" },
+          { url: "/no-reaction-as-answer", text: "No reacción como respuesta - No uses reacciones en lugar de respuestas reales" }
         ]
       },
       footer: {
@@ -531,6 +533,162 @@ export const pages = {
 <p><strong>La claridad es amabilidad</strong>, y <em>amigable para comunicación asíncrona</em>. Si alguien vuelve más tarde, entenderá <strong>exactamente qué necesitabas</strong>.</p>
 
 <p>Cuando se hace bien, <strong>todos ahorran tiempo</strong>. 🎉</p>`
+        }
+      },
+      footer: {
+        paragraphs: [
+          'Esto es solo medio en serio (medio 👀), así que no te enojes con la persona que te envió aquí.',
+          'Dicho esto, si ves la URL de este sitio en el estado/bio de alguien, prepárate para ser ignorado si solo respondes con "?".',
+          'Inspirado en el maravilloso <a href="https://nohello.net" target="_blank" rel="noopener noreferrer">nohello.net</a>. Avatares tomados de Silicon Valley. Código abierto en <a href="https://github.com/EsteveSegura/noquestionmark" target="_blank" rel="noopener noreferrer">GitHub</a>.',
+          'Hecho por <a href="https://girlazo.com" target="_blank" rel="noopener noreferrer">Esteve Segura</a>.',
+          'Este sitio está disponible en: <a href="/en">English</a>, <a href="/es">Español</a>'
+        ]
+      }
+    }
+  },
+  noreactionasanswer: {
+    en: {
+      header: {
+        title: 'No reaction as answer',
+        subtitle: 'please don\'t use reactions instead of actual replies',
+        animations: ['👍', '✅', '👀', '🙏', '👌', '🤔']
+      },
+      intro: {
+        text: 'Imagine someone asks you a question, and you just drop a thumbs up emoji instead of actually answering... 🤦‍♀️'
+      },
+      dontDoThis: {
+        title: '❌ Don\'t do this',
+        chat: {
+          messages: [
+            { name: 'T.J Miller', text: 'hey, were you able to get the API key?', time: '2:15 PM', reaction: { image: '/img/reaction_yes.png', count: 1 } },
+            { name: 'T.J Miller', text: 'did you have any problems?', time: '2:45 PM', reaction: { image: '/img/reaction_yes.png', count: 1 } },
+            { name: 'T.J Miller', text: 'is it working now?', time: '3:15 PM', reaction: { image: '/img/reaction_yes.png', count: 1 } },
+            { name: 'T.J Miller', text: 'please let me know when everything is ready', time: '3:45 PM', reaction: { image: '/img/reaction_yes.png', count: 1 } }
+          ]
+        },
+        explanation: {
+          text: `<p>Thomas Middleditch thought a "yes" reaction was enough: <em>one click, job done</em>. <strong>But that reaction doesn't actually answer the question</strong>, it just acknowledges receipt.</p>
+
+<p>Most people who do this <strong>don't mean to ignore you</strong>. It's a reflex: <em>"I saw your message, so I'll react to show I'm on it."</em></p>
+
+<p>But in text conversations, <strong>reactions don't provide enough information.</strong> They add <strong>ambiguity, confusion</strong>, and leave the other person <em>guessing what you actually meant</em>.</p>
+
+<p>Even worse: <strong>reactions don't trigger sound notifications</strong>. So that "yes" you clicked? The other person might not even see it until hours later when they check the chat again.</p>
+
+<p>The same goes for:</p>
+<ul>
+  <li>👍 instead of "yes, I'll do it"</li>
+  <li>✅ instead of "done, here's the link"</li>
+  <li>👀 instead of "I'm looking at it now"</li>
+  <li>🙏 instead of "thanks, I appreciate it"</li>
+  <li>👌 instead of "sounds good, I agree"</li>
+</ul>
+
+<p><strong>Reactions are supplements, not substitutes!</strong></p>`
+        }
+      },
+      doThis: {
+        title: '✅ Instead, try this',
+        chat: {
+          messages: [
+            { name: 'T.J Miller', text: 'hey, were you able to get the API key?', time: '2:15 PM' },
+            { name: 'Thomas Middleditch', text: 'yes! it\'s in the shared vault, check the "prod-keys" folder', time: '2:16 PM' },
+            { name: 'T.J Miller', text: 'did you have any problems?', time: '2:17 PM' },
+            { name: 'Thomas Middleditch', text: 'had to request access from DevOps, took about an hour', time: '2:18 PM' }
+          ]
+        },
+        explanation: {
+          text: `<p><strong>A short message takes maybe five more seconds</strong>, but it makes the whole conversation productive.</p>
+
+<p>Instead of just reacting, try:</p>
+<ul>
+  <li>On it, will update you in X minutes</li>
+  <li>Done! Here's what I found...</li>
+  <li>Looking at it now, one sec</li>
+  <li>Got it, thanks for the heads up</li>
+  <li>Agree, let's go with that approach</li>
+</ul>
+
+<p><strong>Words clarify, reactions just acknowledge.</strong> Use reactions <em>after</em> you've actually responded, as a friendly extra, not as the response itself.</p>
+
+<p>When done right, <strong>everyone knows what's happening</strong>. 🎉</p>`
+        }
+      },
+      footer: {
+        paragraphs: [
+          'This is kinda only half serious (kinda 👀) so please don\'t get mad at the person who sent you here.',
+          'That said, if you see this site\'s URL as someone\'s status/bio, be prepared to be ignored if you only reply with "?".',
+          'Inspired by the wonderful <a href="https://nohello.net" target="_blank" rel="noopener noreferrer">nohello.net</a>. Avatars taken from Silicon Valley. Open-source on <a href="https://github.com/EsteveSegura/noquestionmark" target="_blank" rel="noopener noreferrer">GitHub</a>.',
+          'Made by <a href="https://girlazo.com" target="_blank" rel="noopener noreferrer">Esteve Segura</a>.',
+          'This site is available in: <a href="/en">English</a>, <a href="/es">Español</a>'
+        ]
+      }
+    },
+    es: {
+      header: {
+        title: 'No reacción como respuesta',
+        subtitle: 'por favor no uses reacciones en lugar de respuestas reales',
+        animations: ['👍', '✅', '👀', '🙏', '👌', '🤔']
+      },
+      intro: {
+        text: 'Imagina que alguien te hace una pregunta, y tú solo dejas un emoji de pulgar arriba en vez de responder... 🤦‍♀️'
+      },
+      dontDoThis: {
+        title: '❌ No hagas esto',
+        chat: {
+          messages: [
+            { name: 'T.J Miller', text: 'oye, ¿pudiste conseguir la API key?', time: '2:15 PM', reaction: { image: '/img/reaction_yes.png', count: 1 } },
+            { name: 'T.J Miller', text: '¿tuviste algún problema?', time: '2:45 PM', reaction: { image: '/img/reaction_yes.png', count: 1 } },
+            { name: 'T.J Miller', text: '¿ya está funcionando?', time: '3:15 PM', reaction: { image: '/img/reaction_yes.png', count: 1 } },
+            { name: 'T.J Miller', text: 'por favor avísame cuando esté todo listo', time: '3:45 PM', reaction: { image: '/img/reaction_yes.png', count: 1 } }
+          ]
+        },
+        explanation: {
+          text: `<p>Thomas Middleditch pensó que una reacción de "yes" era suficiente: <em>un clic, trabajo hecho</em>. <strong>Pero esa reacción no responde realmente la pregunta</strong>, solo confirma recepción.</p>
+
+<p>La mayoría de las personas que hacen esto <strong>no intentan ignorarte</strong>. Es un reflejo: <em>"Vi tu mensaje, así que reaccionaré para mostrar que estoy en ello."</em></p>
+
+<p>Pero en conversaciones de texto, <strong>las reacciones no dan suficiente información.</strong> Añaden <strong>ambigüedad, confusión</strong>, y dejan a la otra persona <em>adivinando qué quisiste decir</em>.</p>
+
+<p>Peor aún: <strong>las reacciones no lanzan notificaciones sonoras</strong>. Así que ese "yes" que clicaste, la otra persona puede que no lo vea hasta horas después cuando revise el chat de nuevo.</p>
+
+<p>Lo mismo va para:</p>
+<ul>
+  <li>👍 en lugar de "sí, lo haré"</li>
+  <li>✅ en lugar de "listo, aquí está el enlace"</li>
+  <li>👀 en lugar de "lo estoy revisando ahora"</li>
+  <li>🙏 en lugar de "gracias, te lo agradezco"</li>
+  <li>👌 en lugar de "suena bien, estoy de acuerdo"</li>
+</ul>
+
+<p><strong>¡Las reacciones son complementos, no sustitutos!</strong></p>`
+        }
+      },
+      doThis: {
+        title: '✅ En su lugar, intenta esto',
+        chat: {
+          messages: [
+            { name: 'T.J Miller', text: 'oye, ¿pudiste conseguir la API key?', time: '2:15 PM' },
+            { name: 'Thomas Middleditch', text: '¡sí! está en el vault compartido, revisa la carpeta "prod-keys"', time: '2:16 PM' },
+            { name: 'T.J Miller', text: '¿tuviste algún problema?', time: '2:17 PM' },
+            { name: 'Thomas Middleditch', text: 'tuve que pedir acceso a DevOps, tardó como una hora', time: '2:18 PM' }
+          ]
+        },
+        explanation: {
+          text: `<p><strong>Un mensaje corto toma quizás cinco segundos más</strong>, pero hace que toda la conversación sea productiva.</p>
+
+<p>En lugar de solo reaccionar, intenta:</p>
+<ul>
+  <li>En ello, te actualizo en X minutos</li>
+  <li>¡Listo! Esto es lo que encontré...</li>
+  <li>Lo estoy viendo ahora, un momento</li>
+  <li>Entendido, gracias por avisar</li>
+  <li>De acuerdo, vamos con ese enfoque</li>
+</ul>
+
+<p><strong>Las palabras clarifican, las reacciones solo confirman.</strong> Usa reacciones <em>después</em> de haber respondido realmente, como un extra amigable, no como la respuesta en sí.</p>
+
+<p>Cuando se hace bien, <strong>todos saben qué está pasando</strong>. 🎉</p>`
         }
       },
       footer: {

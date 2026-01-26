@@ -23,7 +23,8 @@ export function ChatExample(section, isPositive = false) {
       name: msg.name,
       text: msg.text,
       avatar: avatarImage,
-      time: msg.time
+      time: msg.time,
+      reaction: msg.reaction || null
     }))
   })
 
