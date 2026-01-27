@@ -3,6 +3,10 @@ import { routes } from './routes.js'
 import { pages, defaultLanguage } from './translations.js'
 import { getCurrentLanguage } from './router.js'
 
+function toTitleCase(str) {
+  return str.replace(/\b\w/g, char => char.toUpperCase())
+}
+
 function render() {
   // Normalize path: remove trailing slash except for root
   let path = window.location.pathname
@@ -13,6 +17,10 @@ function render() {
   const route = routes[path] || routes['/']
   const lang = getCurrentLanguage()
   const t = pages[route.page][lang] || pages[route.page][defaultLanguage]
+
+  // Update page title
+  const pageTitle = t.header?.title || 'ChatCrimes'
+  document.title = toTitleCase(pageTitle)
 
   const app = document.querySelector('#app')
   app.innerHTML = ''

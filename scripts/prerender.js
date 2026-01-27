@@ -26,6 +26,11 @@ function getLangFromPath(routePath) {
   return defaultLanguage
 }
 
+// Helper function to capitalize first letter of each word
+function toTitleCase(str) {
+  return str.replace(/\b\w/g, char => char.toUpperCase())
+}
+
 // Function to render content for a specific route
 function renderContent(routePath, route) {
   const dom = new JSDOM('<!DOCTYPE html><html><body><div id="app"></div></body></html>')
@@ -65,13 +70,22 @@ Object.entries(routes).forEach(([routePath, route]) => {
     fs.mkdirSync(dirPath, { recursive: true })
   }
 
+  // Get page title
+  const lang = getLangFromPath(routePath)
+  const t = pages[route.page][lang] || pages[route.page][defaultLanguage]
+  const pageTitle = toTitleCase(t.header?.title || 'ChatCrimes')
+
   // Render content
   const content = renderContent(routePath, route)
 
-  // Insert content into the template
-  const htmlWithContent = indexHtmlTemplate.replace(
+  // Insert content and title into the template
+  let htmlWithContent = indexHtmlTemplate.replace(
     '<div id="app"></div>',
     `<div id="app">${content}</div>`
+  )
+  htmlWithContent = htmlWithContent.replace(
+    /<title>.*<\/title>/,
+    `<title>${pageTitle}</title>`
   )
 
   // Write file
