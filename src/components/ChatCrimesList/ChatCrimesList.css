@@ -1,38 +1,103 @@
 .chat-crimes-list {
-  max-width: 600px;
   padding: 1rem 0;
+  width: 100%;
 }
 
-.chat-crimes-list h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: #1a1a1a;
+@media (max-width: 640px) {
+  .chat-crimes-list {
+    padding: 0.5rem 0;
+  }
 }
 
-.chat-crimes-list ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.chat-crimes-grid {
+  display: flex;
+  gap: 1.5rem;
 }
 
-.chat-crimes-list li {
-  margin-bottom: 1rem;
+@media (max-width: 1024px) {
+  .chat-crimes-grid {
+    gap: 1rem;
+  }
 }
 
-.chat-crimes-list a {
+@media (max-width: 640px) {
+  .chat-crimes-grid {
+    flex-direction: column;
+  }
+}
+
+.chat-crimes-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
+}
+
+@media (max-width: 1024px) {
+  .chat-crimes-column {
+    gap: 1rem;
+  }
+}
+
+.chat-crime-card {
   display: block;
-  padding: 1rem 1.5rem;
-  background-color: #f5f5f5;
-  border-radius: 0.5rem;
-  color: #dc2626;
-  text-decoration: underline;
-  transition: all 0.2s ease;
-  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fbfbfb 0%, #f9f9f9 15%, #f7f7f7 100%);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
-.chat-crimes-list a:hover {
-  background-color: #e5e5e5;
-  transform: translateX(4px);
-  color: #b91c1c;
+.chat-crime-card__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 5px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Metallic shine effect */
+.chat-crime-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.7),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: none;
+}
+
+.chat-crime-card:hover::before {
+  animation: metallic-shine 0.6s ease;
+}
+
+@keyframes metallic-shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+.chat-crime-card__chat {
+  pointer-events: none;
+}
+
+.chat-crime-card__chat .chat-example {
+  background: transparent;
+  padding: 0;
+  border: none;
 }
