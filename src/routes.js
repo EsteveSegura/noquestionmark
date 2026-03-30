@@ -4,6 +4,8 @@ import { HomeView } from './views/HomeView.js'
 export const routes = {
   // Home
   '/': {page: 'home', view: HomeView },
+  '/en': { page: 'home', view: HomeView },
+  '/es': { page: 'home', view: HomeView },
   // no-question-mark
   '/no-question-mark': { page: 'noquestionmark', view: StandardView },
   '/en/no-question-mark': { page: 'noquestionmark', view: StandardView },
