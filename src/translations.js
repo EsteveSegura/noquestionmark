@@ -26,7 +26,8 @@ export const pages = {
           { url: "/no-hello", text: "No hello - Don't send a lonely \"hi\" with no context" },
           { url: "/no-message-splitting", text: "No message splitting - Don't split one thought into ten messages" },
           { url: "/just-ask", text: "Just ask - Don't ask to ask, just ask your question" },
-          { url: "/no-unnecessary-mentions", text: "No unnecessary @mentions - Don't abuse @channel and @here" }
+          { url: "/no-unnecessary-mentions", text: "No unnecessary @mentions - Don't abuse @channel and @here" },
+          { url: "/respect-time-zones", text: "Respect time zones - Don't message at 3 AM expecting a reply" }
         ]
       },
       footer: {
@@ -64,7 +65,8 @@ export const pages = {
           { url: "/no-hello", text: "No hello - No mandes un \"hola\" solitario sin contexto" },
           { url: "/no-message-splitting", text: "No message splitting - No partas una idea en diez mensajes" },
           { url: "/just-ask", text: "Just ask - No preguntes si puedes preguntar, pregunta directamente" },
-          { url: "/no-unnecessary-mentions", text: "No unnecessary @mentions - No abuses de @channel y @here" }
+          { url: "/no-unnecessary-mentions", text: "No unnecessary @mentions - No abuses de @channel y @here" },
+          { url: "/respect-time-zones", text: "Respect time zones - No mandes mensajes a las 3 AM esperando respuesta" }
         ]
       },
       footer: {
@@ -1315,6 +1317,110 @@ export const pages = {
         },
         explanation: {
           text: "<p><strong>Preguntar sin una menci\u00f3n masiva sigue consiguiendo respuestas</strong> \u2014 y no interrumpe a todos los que tienen notificaciones activadas.</p>\n\n<p>Antes de recurrir a @channel, intenta:</p>\n<ul>\n  <li>Publica sin menci\u00f3n \u2014 la gente sigue leyendo el canal</li>\n  <li>Busca primero en el historial del canal o en la wiki</li>\n  <li>Manda un DM a alguien que probablemente sepa la respuesta</li>\n  <li>Usa @here solo para cosas urgentes que afecten a todos los conectados</li>\n</ul>\n\n<p><strong>Reserva @channel para emergencias reales.</strong> Cuando se usa con moderaci\u00f3n, la gente le presta atenci\u00f3n. Cuando se usa para contrase\u00f1as de WiFi, la gente silencia el canal.</p>\n\n<p>Cuando se hace bien, <strong>las notificaciones significan algo</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "Esto es solo medio en serio (medio \ud83d\udc40), as\u00ed que no te enojes con la persona que te envi\u00f3 aqu\u00ed.",
+          "Dicho esto, si ves la URL de este sitio en el estado/bio de alguien, prep\u00e1rate para ser ignorado si solo respondes con \"?\".",
+          "Inspirado en el maravilloso <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatares tomados de Silicon Valley. C\u00f3digo abierto en <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Hecho por <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "Este sitio est\u00e1 disponible en: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    }
+  },
+  respecttimezones: {
+    en: {
+      seo: {
+        title: "Respect time zones before messaging \u2014 ChatCrimes",
+        description: "Please don't send messages at 3 AM expecting an immediate reply. Respect your teammates' time zones and working hours.",
+        slug: "respect-time-zones"
+      },
+      header: {
+        title: "Respect time zones",
+        subtitle: "please don't message at 3 AM expecting an immediate reply",
+        animations: ["3:47 AM", "urgent!!!", "you up?", "need this NOW", "why no reply?", "hello???"]
+      },
+      intro: {
+        text: "Imagine waking up to 14 messages sent at 3 AM, each one more desperate than the last, all because someone forgot time zones exist... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c Don't do this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "hey, I need the staging credentials ASAP", time: "3:12 AM" },
+            { name: "T.J Miller", text: "hello?", time: "3:30 AM" },
+            { name: "T.J Miller", text: "are you ignoring me?", time: "3:47 AM" },
+            { name: "Thomas Middleditch", text: "it's 3 AM here. I was sleeping.", time: "7:01 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p>T.J Miller needed something urgently: <em>this can't wait, let me ping them now</em>. <strong>But sending a flurry of messages at 3 AM doesn't speed things up</strong> \u2014 it just guarantees the other person wakes up to stress and resentment.</p>\n\n<p>Most people who do this <strong>don't mean to be inconsiderate</strong>. It's a blind spot: <em>\"It's afternoon for me, so I forget it's the middle of the night for them.\"</em></p>\n\n<p>But in distributed teams, <strong>ignoring time zones erodes trust</strong>. It creates <strong>pressure to be always-on, anxiety about missing messages</strong>, and makes people dread opening their chat app in the morning.</p>\n\n<p>The same goes for:</p>\n<ul>\n  <li>Follow-up messages when someone hasn't replied in minutes (at night)</li>\n  <li>Marking everything as urgent regardless of the hour</li>\n  <li>Expecting instant replies from people in different continents</li>\n  <li>Sending \"hello???\" at 4 AM because you didn't get a response</li>\n  <li>Scheduling calls without checking the other person's timezone</li>\n</ul>\n\n<p><strong>Their 3 AM is not your 3 PM!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 Instead, try this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "hey! when you're online \u2014 I need the staging credentials. no rush, tomorrow morning your time is fine", time: "3:12 AM" },
+            { name: "Thomas Middleditch", text: "morning! just sent them to the shared vault. all set", time: "8:02 AM" },
+            { name: "T.J Miller", text: "perfect, got them. thanks!", time: "8:05 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>One clear message with no urgency pressure lets the other person respond on their own schedule</strong> \u2014 and they'll actually want to help instead of feeling ambushed.</p>\n\n<p>When messaging across time zones, try:</p>\n<ul>\n  <li>Send one message with full context, then wait</li>\n  <li>Add \"no rush\" or \"whenever you're online\" to set expectations</li>\n  <li>Use scheduled messages to deliver during their working hours</li>\n  <li>Check a world clock before following up</li>\n</ul>\n\n<p><strong>Async means trust, not silence.</strong> A well-written message at 3 AM that says \"no rush\" is respectful. Three follow-ups demanding a reply is not.</p>\n\n<p>When done right, <strong>everyone sleeps in peace</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "This is kinda only half serious (kinda \ud83d\udc40) so please don't get mad at the person who sent you here.",
+          "That said, if you see this site's URL as someone's status/bio, be prepared to be ignored if you only reply with \"?\".",
+          "Inspired by the wonderful <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatars taken from Silicon Valley. Open-source on <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Made by <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "This site is available in: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    },
+    es: {
+      seo: {
+        title: "Respeta las zonas horarias antes de escribir \u2014 ChatCrimes",
+        description: "Por favor no mandes mensajes a las 3 AM esperando respuesta inmediata. Respeta las zonas horarias y el horario laboral de tus compa\u00f1eros.",
+        slug: "respect-time-zones"
+      },
+      header: {
+        title: "Respect time zones",
+        subtitle: "por favor no mandes mensajes a las 3 AM esperando respuesta inmediata",
+        animations: ["3:47 AM", "\u00a1\u00a1urgente!!", "\u00bfest\u00e1s?", "lo necesito YA", "\u00bfpor qu\u00e9 no contestas?", "hola???"]
+      },
+      intro: {
+        text: "Imagina despertarte con 14 mensajes enviados a las 3 AM, cada uno m\u00e1s desesperado que el anterior, todo porque alguien olvid\u00f3 que las zonas horarias existen... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c No hagas esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "ey, necesito las credenciales de staging YA", time: "3:12 AM" },
+            { name: "T.J Miller", text: "\u00bfhola?", time: "3:30 AM" },
+            { name: "T.J Miller", text: "\u00bfme est\u00e1s ignorando?", time: "3:47 AM" },
+            { name: "Thomas Middleditch", text: "son las 3 AM aqu\u00ed. estaba durmiendo.", time: "7:01 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p>T.J Miller necesitaba algo urgente: <em>esto no puede esperar, le escribo ahora</em>. <strong>Pero enviar una ráfaga de mensajes a las 3 AM no acelera nada</strong> \u2014 solo garantiza que la otra persona se despierte con estr\u00e9s y resentimiento.</p>\n\n<p>La mayor\u00eda de las personas que hacen esto <strong>no pretenden ser desconsideradas</strong>. Es un punto ciego: <em>\"Para m\u00ed es por la tarde, as\u00ed que olvido que para ellos es madrugada.\"</em></p>\n\n<p>Pero en equipos distribuidos, <strong>ignorar las zonas horarias erosiona la confianza</strong>. Crea <strong>presi\u00f3n por estar siempre disponible, ansiedad por mensajes perdidos</strong>, y hace que la gente tema abrir el chat por la ma\u00f1ana.</p>\n\n<p>Lo mismo va para:</p>\n<ul>\n  <li>Mensajes de seguimiento cuando alguien no responde en minutos (de noche)</li>\n  <li>Marcar todo como urgente sin importar la hora</li>\n  <li>Esperar respuestas instant\u00e1neas de personas en otros continentes</li>\n  <li>Enviar \"hola???\" a las 4 AM porque no obtuviste respuesta</li>\n  <li>Agendar reuniones sin verificar la zona horaria del otro</li>\n</ul>\n\n<p><strong>\u00a1Sus 3 AM no son tus 3 PM!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 En su lugar, intenta esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "\u00a1ey! cuando est\u00e9s conectado \u2014 necesito las credenciales de staging. sin prisa, ma\u00f1ana a tu hora est\u00e1 bien", time: "3:12 AM" },
+            { name: "Thomas Middleditch", text: "\u00a1buenos d\u00edas! acabo de dejarlas en el vault compartido. listo", time: "8:02 AM" },
+            { name: "T.J Miller", text: "perfecto, ya las tengo. \u00a1gracias!", time: "8:05 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Un mensaje claro sin presi\u00f3n de urgencia permite que la otra persona responda a su ritmo</strong> \u2014 y tendr\u00e1 ganas de ayudar en vez de sentirse emboscada.</p>\n\n<p>Cuando escribas a trav\u00e9s de zonas horarias, intenta:</p>\n<ul>\n  <li>Env\u00eda un solo mensaje con todo el contexto y espera</li>\n  <li>A\u00f1ade \"sin prisa\" o \"cuando est\u00e9s online\" para fijar expectativas</li>\n  <li>Usa mensajes programados para que lleguen en su horario laboral</li>\n  <li>Consulta un reloj mundial antes de hacer seguimiento</li>\n</ul>\n\n<p><strong>As\u00edncrono significa confianza, no silencio.</strong> Un mensaje bien escrito a las 3 AM que diga \"sin prisa\" es respetuoso. Tres seguimientos exigiendo respuesta no lo es.</p>\n\n<p>Cuando se hace bien, <strong>todos duermen en paz</strong>. \ud83c\udf89</p>"
         }
       },
       footer: {

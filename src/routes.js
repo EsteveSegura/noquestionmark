@@ -42,4 +42,8 @@ export const routes = {
   '/no-unnecessary-mentions': { page: 'nounnecessarymentions', view: StandardView },
   '/en/no-unnecessary-mentions': { page: 'nounnecessarymentions', view: StandardView },
   '/es/no-unnecessary-mentions': { page: 'nounnecessarymentions', view: StandardView },
+  // respect-time-zones
+  '/respect-time-zones': { page: 'respecttimezones', view: StandardView },
+  '/en/respect-time-zones': { page: 'respecttimezones', view: StandardView },
+  '/es/respect-time-zones': { page: 'respecttimezones', view: StandardView },
 }
