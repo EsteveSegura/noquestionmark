@@ -46,4 +46,8 @@ export const routes = {
   '/respect-time-zones': { page: 'respecttimezones', view: StandardView },
   '/en/respect-time-zones': { page: 'respecttimezones', view: StandardView },
   '/es/respect-time-zones': { page: 'respecttimezones', view: StandardView },
+  // no-dry-ok
+  '/no-dry-ok': { page: 'nodryok', view: StandardView },
+  '/en/no-dry-ok': { page: 'nodryok', view: StandardView },
+  '/es/no-dry-ok': { page: 'nodryok', view: StandardView },
 }

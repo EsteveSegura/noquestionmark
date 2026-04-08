@@ -14,7 +14,8 @@ const urlToPageKey = {
   '/no-message-splitting': 'nomessagesplitting',
   '/just-ask': 'justask',
   '/no-unnecessary-mentions': 'nounnecessarymentions',
-  '/respect-time-zones': 'respecttimezones'
+  '/respect-time-zones': 'respecttimezones',
+  '/no-dry-ok': 'nodryok'
 }
 
 function createCard(pageTranslations, url) {

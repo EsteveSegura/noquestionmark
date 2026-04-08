@@ -27,7 +27,8 @@ export const pages = {
           { url: "/no-message-splitting", text: "No message splitting - Don't split one thought into ten messages" },
           { url: "/just-ask", text: "Just ask - Don't ask to ask, just ask your question" },
           { url: "/no-unnecessary-mentions", text: "No unnecessary @mentions - Don't abuse @channel and @here" },
-          { url: "/respect-time-zones", text: "Respect time zones - Don't message at 3 AM expecting a reply" }
+          { url: "/respect-time-zones", text: "Respect time zones - Don't message at 3 AM expecting a reply" },
+          { url: "/no-dry-ok", text: "No dry ok - Don't reply \"ok\" to something that deserves more" }
         ]
       },
       footer: {
@@ -66,7 +67,8 @@ export const pages = {
           { url: "/no-message-splitting", text: "No message splitting - No partas una idea en diez mensajes" },
           { url: "/just-ask", text: "Just ask - No preguntes si puedes preguntar, pregunta directamente" },
           { url: "/no-unnecessary-mentions", text: "No unnecessary @mentions - No abuses de @channel y @here" },
-          { url: "/respect-time-zones", text: "Respect time zones - No mandes mensajes a las 3 AM esperando respuesta" }
+          { url: "/respect-time-zones", text: "Respect time zones - No mandes mensajes a las 3 AM esperando respuesta" },
+          { url: "/no-dry-ok", text: "No dry ok - No respondas \"ok\" a algo que merece m\u00e1s" }
         ]
       },
       footer: {
@@ -1421,6 +1423,112 @@ export const pages = {
         },
         explanation: {
           text: "<p><strong>Un mensaje claro sin presi\u00f3n de urgencia permite que la otra persona responda a su ritmo</strong> \u2014 y tendr\u00e1 ganas de ayudar en vez de sentirse emboscada.</p>\n\n<p>Cuando escribas a trav\u00e9s de zonas horarias, intenta:</p>\n<ul>\n  <li>Env\u00eda un solo mensaje con todo el contexto y espera</li>\n  <li>A\u00f1ade \"sin prisa\" o \"cuando est\u00e9s online\" para fijar expectativas</li>\n  <li>Usa mensajes programados para que lleguen en su horario laboral</li>\n  <li>Consulta un reloj mundial antes de hacer seguimiento</li>\n</ul>\n\n<p><strong>As\u00edncrono significa confianza, no silencio.</strong> Un mensaje bien escrito a las 3 AM que diga \"sin prisa\" es respetuoso. Tres seguimientos exigiendo respuesta no lo es.</p>\n\n<p>Cuando se hace bien, <strong>todos duermen en paz</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "Esto es solo medio en serio (medio \ud83d\udc40), as\u00ed que no te enojes con la persona que te envi\u00f3 aqu\u00ed.",
+          "Dicho esto, si ves la URL de este sitio en el estado/bio de alguien, prep\u00e1rate para ser ignorado si solo respondes con \"?\".",
+          "Inspirado en el maravilloso <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatares tomados de Silicon Valley. C\u00f3digo abierto en <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Hecho por <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "Este sitio est\u00e1 disponible en: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    }
+  },
+  nodryok: {
+    en: {
+      seo: {
+        title: "Don't reply \"ok\" to something complex \u2014 ChatCrimes",
+        description: "Please don't reply with just 'ok' or 'k' to a detailed message. Acknowledge what was said and confirm what you'll do.",
+        slug: "no-dry-ok"
+      },
+      header: {
+        title: "No dry ok",
+        subtitle: "please don't reply with just \"ok\" to something that deserves more",
+        animations: ["ok", "k", "got it", "noted", "\ud83d\udc4d", "sure"]
+      },
+      intro: {
+        text: "Imagine spending five minutes writing a detailed plan, and the only response you get is \"ok\"... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c Don't do this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "hey, so for the release: I'll handle the migration scripts, you take care of the rollback plan, and we deploy Friday at 2 PM after QA signs off. Sound good?", time: "10:00 AM" },
+            { name: "Thomas Middleditch", text: "ok", time: "10:25 AM" },
+            { name: "T.J Miller", text: "ok as in you'll do the rollback plan? or ok you read it?", time: "10:26 AM" },
+            { name: "Thomas Middleditch", text: "yes", time: "10:50 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p>Thomas Middleditch thought he was being efficient: <em>short reply, message received</em>. <strong>But \"ok\" to a multi-part message leaves the other person guessing</strong> what exactly was acknowledged and what was agreed to.</p>\n\n<p>Most people who do this <strong>don't mean to be dismissive</strong>. It's a reflex: <em>\"I read it, so I'll confirm with the shortest possible reply.\"</em></p>\n\n<p>But when someone writes a detailed plan, <strong>a dry \"ok\" feels like it wasn't read at all</strong>. It creates <strong>ambiguity, frustration</strong>, and often forces a <em>follow-up message just to confirm what \"ok\" meant</em>.</p>\n\n<p>The same goes for:</p>\n<ul>\n  <li>k</li>\n  <li>got it</li>\n  <li>noted</li>\n  <li>sure</li>\n  <li>\ud83d\udc4d (as the entire reply)</li>\n</ul>\n\n<p><strong>Match the effort of the message!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 Instead, try this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "hey, so for the release: I'll handle the migration scripts, you take care of the rollback plan, and we deploy Friday at 2 PM after QA signs off. Sound good?", time: "10:00 AM" },
+            { name: "Thomas Middleditch", text: "sounds good! I'll have the rollback plan ready by Thursday EOD. Friday 2 PM works for me", time: "10:02 AM" },
+            { name: "T.J Miller", text: "perfect, I'll share the migration scripts for review Thursday morning", time: "10:03 AM" },
+            { name: "Thomas Middleditch", text: "great, let's sync briefly before the deploy", time: "10:04 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Echoing back the key points takes ten extra seconds</strong> \u2014 and it confirms that everyone is aligned, not just that someone saw the message.</p>\n\n<p>Instead of a dry \"ok\", try:</p>\n<ul>\n  <li>Confirm your part: \"I'll handle X by Thursday\"</li>\n  <li>Acknowledge the plan: \"Friday 2 PM works for me\"</li>\n  <li>Add something: \"Sounds good, let's sync before the deploy\"</li>\n  <li>Ask if unclear: \"Got it \u2014 one question: who's running QA?\"</li>\n</ul>\n\n<p><strong>Effort in, effort out.</strong> When someone writes a thoughtful message, a thoughtful reply shows you actually read it. That builds trust.</p>\n\n<p>When done right, <strong>everyone knows the plan</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "This is kinda only half serious (kinda \ud83d\udc40) so please don't get mad at the person who sent you here.",
+          "That said, if you see this site's URL as someone's status/bio, be prepared to be ignored if you only reply with \"?\".",
+          "Inspired by the wonderful <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatars taken from Silicon Valley. Open-source on <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Made by <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "This site is available in: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    },
+    es: {
+      seo: {
+        title: "No respondas \"ok\" a algo complejo \u2014 ChatCrimes",
+        description: "Por favor no respondas solo con 'ok' o 'k' a un mensaje detallado. Confirma qu\u00e9 entendiste y qu\u00e9 vas a hacer.",
+        slug: "no-dry-ok"
+      },
+      header: {
+        title: "No dry ok",
+        subtitle: "por favor no respondas solo \"ok\" a algo que merece m\u00e1s",
+        animations: ["ok", "k", "enterado", "anotado", "\ud83d\udc4d", "dale"]
+      },
+      intro: {
+        text: "Imagina dedicar cinco minutos a escribir un plan detallado, y que la \u00fanica respuesta que recibas sea \"ok\"... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c No hagas esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "ey, para la release: yo me encargo de los scripts de migraci\u00f3n, t\u00fa del plan de rollback, y desplegamos el viernes a las 2 PM despu\u00e9s de que QA d\u00e9 el visto bueno. \u00bfTe parece?", time: "10:00 AM" },
+            { name: "Thomas Middleditch", text: "ok", time: "10:25 AM" },
+            { name: "T.J Miller", text: "\u00bfok de que har\u00e1s el plan de rollback? \u00bfo ok de que lo le\u00edste?", time: "10:26 AM" },
+            { name: "Thomas Middleditch", text: "s\u00ed", time: "10:50 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p>Thomas Middleditch pens\u00f3 que estaba siendo eficiente: <em>respuesta corta, mensaje recibido</em>. <strong>Pero un \"ok\" a un mensaje con varias partes deja a la otra persona adivinando</strong> qu\u00e9 exactamente se entendi\u00f3 y qu\u00e9 se acord\u00f3.</p>\n\n<p>La mayor\u00eda de las personas que hacen esto <strong>no pretenden ser despectivas</strong>. Es un reflejo: <em>\"Lo le\u00ed, as\u00ed que confirmo con la respuesta m\u00e1s corta posible.\"</em></p>\n\n<p>Pero cuando alguien escribe un plan detallado, <strong>un \"ok\" seco se siente como si no se hubiera le\u00eddo</strong>. Genera <strong>ambig\u00fcedad, frustraci\u00f3n</strong>, y a menudo obliga a un <em>mensaje de seguimiento solo para confirmar qu\u00e9 significaba \"ok\"</em>.</p>\n\n<p>Lo mismo va para:</p>\n<ul>\n  <li>k</li>\n  <li>enterado</li>\n  <li>anotado</li>\n  <li>dale</li>\n  <li>\ud83d\udc4d (como \u00fanica respuesta)</li>\n</ul>\n\n<p><strong>\u00a1Iguala el esfuerzo del mensaje!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 En su lugar, intenta esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "ey, para la release: yo me encargo de los scripts de migraci\u00f3n, t\u00fa del plan de rollback, y desplegamos el viernes a las 2 PM despu\u00e9s de que QA d\u00e9 el visto bueno. \u00bfTe parece?", time: "10:00 AM" },
+            { name: "Thomas Middleditch", text: "\u00a1hecho! tendr\u00e9 el plan de rollback listo para el jueves al final del d\u00eda. El viernes a las 2 PM me va bien", time: "10:02 AM" },
+            { name: "T.J Miller", text: "perfecto, comparto los scripts de migraci\u00f3n para revisi\u00f3n el jueves por la ma\u00f1ana", time: "10:03 AM" },
+            { name: "Thomas Middleditch", text: "genial, hacemos un sync r\u00e1pido antes del deploy", time: "10:04 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Repetir los puntos clave toma diez segundos extra</strong> \u2014 y confirma que todos est\u00e1n alineados, no solo que alguien vio el mensaje.</p>\n\n<p>En lugar de un \"ok\" seco, intenta:</p>\n<ul>\n  <li>Confirma tu parte: \"Me encargo de X para el jueves\"</li>\n  <li>Reconoce el plan: \"El viernes a las 2 PM me va bien\"</li>\n  <li>A\u00f1ade algo: \"Perfecto, hagamos sync antes del deploy\"</li>\n  <li>Pregunta si no est\u00e1 claro: \"Entendido \u2014 una duda: \u00bfqui\u00e9n hace QA?\"</li>\n</ul>\n\n<p><strong>Esfuerzo que entra, esfuerzo que sale.</strong> Cuando alguien escribe un mensaje pensado, una respuesta pensada demuestra que lo le\u00edste. Eso genera confianza.</p>\n\n<p>Cuando se hace bien, <strong>todos conocen el plan</strong>. \ud83c\udf89</p>"
         }
       },
       footer: {
