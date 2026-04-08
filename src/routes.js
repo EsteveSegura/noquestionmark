@@ -34,4 +34,8 @@ export const routes = {
   '/no-message-splitting': { page: 'nomessagesplitting', view: StandardView },
   '/en/no-message-splitting': { page: 'nomessagesplitting', view: StandardView },
   '/es/no-message-splitting': { page: 'nomessagesplitting', view: StandardView },
+  // just-ask
+  '/just-ask': { page: 'justask', view: StandardView },
+  '/en/just-ask': { page: 'justask', view: StandardView },
+  '/es/just-ask': { page: 'justask', view: StandardView },
 }
