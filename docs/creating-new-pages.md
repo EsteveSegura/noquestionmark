@@ -141,7 +141,17 @@ home: {
 }
 ```
 
-### 4. Done!
+### 4. Run the tests
+
+Before opening a PR, make sure all tests pass:
+
+```bash
+npm run test
+```
+
+The tests validate the rules from this document automatically. All must be green.
+
+### 5. Done!
 
 That's it. No new components or views needed. The `StandardView` handles all the rendering automatically.
 
@@ -164,6 +174,7 @@ There are two view types:
 - [ ] Chat messages use the correct character names (T.J Miller, Thomas Middleditch)
 - [ ] Footer paragraphs are consistent with other pages
 - [ ] Tested both `/en/my-new-crime` and `/es/my-new-crime`
+- [ ] `npm test` passes with all tests green
 
 ## Rules
 
