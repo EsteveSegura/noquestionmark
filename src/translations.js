@@ -1779,9 +1779,9 @@ export const pages = {
         title: "\u274c Don't do this",
         chat: {
           messages: [
-            { name: "T.J Miller", text: "\ud83c\udf99\ufe0f Voice message (4:37)", time: "2:00 PM" },
+            { name: "T.J Miller", text: "", time: "2:00 PM", voiceNote: { duration: "4:37" } },
             { name: "Thomas Middleditch", text: "I'm in a meeting, can you type it?", time: "2:20 PM" },
-            { name: "T.J Miller", text: "\ud83c\udf99\ufe0f Voice message (2:12)", time: "2:21 PM" },
+            { name: "T.J Miller", text: "", time: "2:21 PM", voiceNote: { duration: "2:12" } },
             { name: "Thomas Middleditch", text: "I still can't listen right now", time: "2:45 PM" }
           ]
         },
@@ -1831,9 +1831,9 @@ export const pages = {
         title: "\u274c No hagas esto",
         chat: {
           messages: [
-            { name: "T.J Miller", text: "\ud83c\udf99\ufe0f Mensaje de voz (4:37)", time: "2:00 PM" },
+            { name: "T.J Miller", text: "", time: "2:00 PM", voiceNote: { duration: "4:37" } },
             { name: "Thomas Middleditch", text: "estoy en una reuni\u00f3n, \u00bfpuedes escribirlo?", time: "2:20 PM" },
-            { name: "T.J Miller", text: "\ud83c\udf99\ufe0f Mensaje de voz (2:12)", time: "2:21 PM" },
+            { name: "T.J Miller", text: "", time: "2:21 PM", voiceNote: { duration: "2:12" } },
             { name: "Thomas Middleditch", text: "sigo sin poder escuchar ahora mismo", time: "2:45 PM" }
           ]
         },
