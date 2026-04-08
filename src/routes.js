@@ -30,4 +30,8 @@ export const routes = {
   '/no-hello': { page: 'nohello', view: StandardView },
   '/en/no-hello': { page: 'nohello', view: StandardView },
   '/es/no-hello': { page: 'nohello', view: StandardView },
+  // no-message-splitting
+  '/no-message-splitting': { page: 'nomessagesplitting', view: StandardView },
+  '/en/no-message-splitting': { page: 'nomessagesplitting', view: StandardView },
+  '/es/no-message-splitting': { page: 'nomessagesplitting', view: StandardView },
 }

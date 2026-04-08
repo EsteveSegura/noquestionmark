@@ -10,7 +10,8 @@ const urlToPageKey = {
   '/no-public-shaming': 'nopublicshaming',
   '/no-reaction-as-answer': 'noreactionasanswer',
   '/use-the-thread': 'usethethread',
-  '/no-hello': 'nohello'
+  '/no-hello': 'nohello',
+  '/no-message-splitting': 'nomessagesplitting'
 }
 
 function createCard(pageTranslations, url) {
