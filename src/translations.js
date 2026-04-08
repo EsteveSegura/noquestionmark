@@ -29,7 +29,8 @@ export const pages = {
           { url: "/no-unnecessary-mentions", text: "No unnecessary @mentions - Don't abuse @channel and @here" },
           { url: "/respect-time-zones", text: "Respect time zones - Don't message at 3 AM expecting a reply" },
           { url: "/no-dry-ok", text: "No dry ok - Don't reply \"ok\" to something that deserves more" },
-          { url: "/no-passive-aggressive", text: "No passive-aggressive - Don't hide frustration behind polite phrases" }
+          { url: "/no-passive-aggressive", text: "No passive-aggressive - Don't hide frustration behind polite phrases" },
+          { url: "/no-ghost-deleting", text: "No ghost deleting - Don't silently delete messages after people read them" }
         ]
       },
       footer: {
@@ -70,7 +71,8 @@ export const pages = {
           { url: "/no-unnecessary-mentions", text: "No unnecessary @mentions - No abuses de @channel y @here" },
           { url: "/respect-time-zones", text: "Respect time zones - No mandes mensajes a las 3 AM esperando respuesta" },
           { url: "/no-dry-ok", text: "No dry ok - No respondas \"ok\" a algo que merece m\u00e1s" },
-          { url: "/no-passive-aggressive", text: "No passive-aggressive - No escondas tu frustraci\u00f3n detr\u00e1s de frases educadas" }
+          { url: "/no-passive-aggressive", text: "No passive-aggressive - No escondas tu frustraci\u00f3n detr\u00e1s de frases educadas" },
+          { url: "/no-ghost-deleting", text: "No ghost deleting - No borres mensajes en silencio despu\u00e9s de que los lean" }
         ]
       },
       footer: {
@@ -1637,6 +1639,112 @@ export const pages = {
         },
         explanation: {
           text: "<p><strong>Repetir la respuesta sin el envoltorio sarc\u00e1stico cuesta lo mismo</strong> \u2014 y mantiene la conversaci\u00f3n amistosa en vez de convertirla en una batalla.</p>\n\n<p>En lugar de referencias pasivo-agresivas, intenta:</p>\n<ul>\n  <li>Simplemente repite la respuesta brevemente y sigue adelante</li>\n  <li>A\u00f1ade info nueva: \"sigue el viernes, aviso cuando est\u00e9 en producci\u00f3n\"</li>\n  <li>Si es realmente urgente, enlaza el mensaje original directamente</li>\n  <li>Si est\u00e1s frustrado, respira antes de escribir</li>\n</ul>\n\n<p><strong>Directo le gana a diplom\u00e1tico-pero-cruel.</strong> La gente recuerda c\u00f3mo le hicieron sentir tus mensajes. Un seco \"como ya dije\" perdura mucho m\u00e1s que una reconfirmaci\u00f3n amable.</p>\n\n<p>Cuando se hace bien, <strong>todos siguen en el mismo equipo</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "Esto es solo medio en serio (medio \ud83d\udc40), as\u00ed que no te enojes con la persona que te envi\u00f3 aqu\u00ed.",
+          "Dicho esto, si ves la URL de este sitio en el estado/bio de alguien, prep\u00e1rate para ser ignorado si solo respondes con \"?\".",
+          "Inspirado en el maravilloso <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatares tomados de Silicon Valley. C\u00f3digo abierto en <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Hecho por <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "Este sitio est\u00e1 disponible en: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    }
+  },
+  noghostdeleting: {
+    en: {
+      seo: {
+        title: "Don't delete messages without warning \u2014 ChatCrimes",
+        description: "Please don't silently delete messages in chat. If you made a mistake, correct it openly instead of making it vanish.",
+        slug: "no-ghost-deleting"
+      },
+      header: {
+        title: "No ghost deleting",
+        subtitle: "please don't silently delete messages after people have read them",
+        animations: ["*deleted*", "wait what?", "where did it go?", "I swear it said...", "was I dreaming?", "gone."]
+      },
+      intro: {
+        text: "Imagine reading a message, looking away for a second, and when you look back it's gone \u2014 like it never existed... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c Don't do this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "hey, the client said they want to cancel the project entirely", time: "11:00 AM" },
+            { name: "Thomas Middleditch", text: "wait, what? are you serious?", time: "11:02 AM" },
+            { name: "T.J Miller", text: "hey, the client said they want to cancel the project entirely", time: "11:00 AM", deleted: true },
+            { name: "Thomas Middleditch", text: "why did you delete that? I already read it", time: "11:15 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p>T.J Miller realized he shared something prematurely: <em>let me just delete it before anyone notices</em>. <strong>But people already read it, and deleting the message doesn't erase their memory</strong> \u2014 it just adds confusion and suspicion.</p>\n\n<p>Most people who do this <strong>don't mean to be shady</strong>. It's a reflex: <em>\"I said something wrong, let me undo it quickly.\"</em></p>\n\n<p>But in text conversations, <strong>ghost deleting breaks the thread of conversation</strong>. Replies suddenly reference nothing, context disappears, and people are left <strong>questioning what they saw</strong> and wondering <em>why it was removed</em>.</p>\n\n<p>The same goes for:</p>\n<ul>\n  <li>Deleting a message after someone already replied to it</li>\n  <li>Removing an opinion when the discussion gets heated</li>\n  <li>Editing a message completely to say something different</li>\n  <li>Deleting evidence of a mistake instead of owning it</li>\n  <li>Silently removing a link or file you already shared</li>\n</ul>\n\n<p><strong>Own it, correct it, don't erase it!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 Instead, try this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "hey, the client said they want to cancel the project entirely", time: "11:00 AM" },
+            { name: "Thomas Middleditch", text: "wait, what? are you serious?", time: "11:02 AM" },
+            { name: "T.J Miller", text: "sorry, I misread the email \u2014 they want to cancel the *meeting*, not the project. my bad!", time: "11:03 AM" },
+            { name: "Thomas Middleditch", text: "haha, you scared me. no worries, thanks for the correction", time: "11:04 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Correcting yourself openly takes the same effort as deleting</strong> \u2014 but it keeps the conversation intact and builds trust instead of suspicion.</p>\n\n<p>Instead of ghost deleting, try:</p>\n<ul>\n  <li>Post a correction: \"sorry, I misread \u2014 here's what it actually says\"</li>\n  <li>Use strikethrough to show the edit: \"~cancel the project~ cancel the meeting\"</li>\n  <li>If it's sensitive, explain why you're removing it</li>\n  <li>Edit the message and add \"(edited)\" with the fix</li>\n</ul>\n\n<p><strong>Transparency beats vanishing.</strong> People trust teammates who own their mistakes far more than those who pretend they never happened.</p>\n\n<p>When done right, <strong>everyone stays in the loop</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "This is kinda only half serious (kinda \ud83d\udc40) so please don't get mad at the person who sent you here.",
+          "That said, if you see this site's URL as someone's status/bio, be prepared to be ignored if you only reply with \"?\".",
+          "Inspired by the wonderful <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatars taken from Silicon Valley. Open-source on <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Made by <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "This site is available in: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    },
+    es: {
+      seo: {
+        title: "No borres mensajes sin avisar \u2014 ChatCrimes",
+        description: "Por favor no borres mensajes en silencio. Si te equivocaste, corr\u00edgelo abiertamente en vez de hacerlo desaparecer.",
+        slug: "no-ghost-deleting"
+      },
+      header: {
+        title: "No ghost deleting",
+        subtitle: "por favor no borres mensajes en silencio despu\u00e9s de que la gente los haya le\u00eddo",
+        animations: ["*borrado*", "\u00bfespera qu\u00e9?", "\u00bfd\u00f3nde fue?", "juro que dec\u00eda...", "\u00bflo so\u00f1\u00e9?", "desapareci\u00f3."]
+      },
+      intro: {
+        text: "Imagina leer un mensaje, apartar la vista un segundo, y cuando vuelves a mirar ya no est\u00e1 \u2014 como si nunca hubiera existido... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c No hagas esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "ey, el cliente dice que quiere cancelar el proyecto entero", time: "11:00 AM" },
+            { name: "Thomas Middleditch", text: "\u00bfespera, qu\u00e9? \u00bfen serio?", time: "11:02 AM" },
+            { name: "T.J Miller", text: "ey, el cliente dice que quiere cancelar el proyecto entero", time: "11:00 AM", deleted: true },
+            { name: "Thomas Middleditch", text: "\u00bfpor qu\u00e9 borraste eso? ya lo hab\u00eda le\u00eddo", time: "11:15 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p>T.J Miller se dio cuenta de que comparti\u00f3 algo prematuramente: <em>d\u00e9jame borrarlo antes de que alguien se d\u00e9 cuenta</em>. <strong>Pero la gente ya lo ley\u00f3, y borrar el mensaje no borra su memoria</strong> \u2014 solo a\u00f1ade confusi\u00f3n y sospecha.</p>\n\n<p>La mayor\u00eda de las personas que hacen esto <strong>no pretenden ser turbias</strong>. Es un reflejo: <em>\"Dije algo mal, d\u00e9jame deshacerlo r\u00e1pido.\"</em></p>\n\n<p>Pero en conversaciones de texto, <strong>borrar en silencio rompe el hilo de la conversaci\u00f3n</strong>. Las respuestas de repente no referencian nada, el contexto desaparece, y la gente se queda <strong>cuestionando lo que vio</strong> y pregunt\u00e1ndose <em>por qu\u00e9 se elimin\u00f3</em>.</p>\n\n<p>Lo mismo va para:</p>\n<ul>\n  <li>Borrar un mensaje despu\u00e9s de que alguien ya respondi\u00f3</li>\n  <li>Eliminar una opini\u00f3n cuando la discusi\u00f3n se calienta</li>\n  <li>Editar un mensaje completamente para decir algo diferente</li>\n  <li>Borrar evidencia de un error en vez de asumirlo</li>\n  <li>Eliminar en silencio un enlace o archivo que ya compartiste</li>\n</ul>\n\n<p><strong>\u00a1As\u00famelo, corr\u00edgelo, no lo borres!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 En su lugar, intenta esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "ey, el cliente dice que quiere cancelar el proyecto entero", time: "11:00 AM" },
+            { name: "Thomas Middleditch", text: "\u00bfespera, qu\u00e9? \u00bfen serio?", time: "11:02 AM" },
+            { name: "T.J Miller", text: "perd\u00f3n, le\u00ed mal el email \u2014 quieren cancelar la *reuni\u00f3n*, no el proyecto. \u00a1mea culpa!", time: "11:03 AM" },
+            { name: "Thomas Middleditch", text: "jaja, me asustaste. no pasa nada, gracias por la correcci\u00f3n", time: "11:04 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Corregirte abiertamente cuesta lo mismo que borrar</strong> \u2014 pero mantiene la conversaci\u00f3n intacta y genera confianza en vez de sospecha.</p>\n\n<p>En lugar de borrar en silencio, intenta:</p>\n<ul>\n  <li>Publica una correcci\u00f3n: \"perd\u00f3n, le\u00ed mal \u2014 esto es lo que realmente dice\"</li>\n  <li>Usa tachado para mostrar el cambio: \"~cancelar el proyecto~ cancelar la reuni\u00f3n\"</li>\n  <li>Si es algo sensible, explica por qu\u00e9 lo eliminas</li>\n  <li>Edita el mensaje y a\u00f1ade \"(editado)\" con la correcci\u00f3n</li>\n</ul>\n\n<p><strong>La transparencia le gana a desaparecer.</strong> La gente conf\u00eda m\u00e1s en compa\u00f1eros que asumen sus errores que en los que fingen que nunca pasaron.</p>\n\n<p>Cuando se hace bien, <strong>todos se mantienen al tanto</strong>. \ud83c\udf89</p>"
         }
       },
       footer: {

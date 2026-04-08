@@ -54,4 +54,8 @@ export const routes = {
   '/no-passive-aggressive': { page: 'nopassiveaggressive', view: StandardView },
   '/en/no-passive-aggressive': { page: 'nopassiveaggressive', view: StandardView },
   '/es/no-passive-aggressive': { page: 'nopassiveaggressive', view: StandardView },
+  // no-ghost-deleting
+  '/no-ghost-deleting': { page: 'noghostdeleting', view: StandardView },
+  '/en/no-ghost-deleting': { page: 'noghostdeleting', view: StandardView },
+  '/es/no-ghost-deleting': { page: 'noghostdeleting', view: StandardView },
 }
