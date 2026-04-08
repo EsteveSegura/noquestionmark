@@ -38,4 +38,8 @@ export const routes = {
   '/just-ask': { page: 'justask', view: StandardView },
   '/en/just-ask': { page: 'justask', view: StandardView },
   '/es/just-ask': { page: 'justask', view: StandardView },
+  // no-unnecessary-mentions
+  '/no-unnecessary-mentions': { page: 'nounnecessarymentions', view: StandardView },
+  '/en/no-unnecessary-mentions': { page: 'nounnecessarymentions', view: StandardView },
+  '/es/no-unnecessary-mentions': { page: 'nounnecessarymentions', view: StandardView },
 }

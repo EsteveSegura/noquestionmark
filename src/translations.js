@@ -25,7 +25,8 @@ export const pages = {
           { url: "/use-the-thread", text: "Use the thread - Don't ignore existing threads with answers" },
           { url: "/no-hello", text: "No hello - Don't send a lonely \"hi\" with no context" },
           { url: "/no-message-splitting", text: "No message splitting - Don't split one thought into ten messages" },
-          { url: "/just-ask", text: "Just ask - Don't ask to ask, just ask your question" }
+          { url: "/just-ask", text: "Just ask - Don't ask to ask, just ask your question" },
+          { url: "/no-unnecessary-mentions", text: "No unnecessary @mentions - Don't abuse @channel and @here" }
         ]
       },
       footer: {
@@ -62,7 +63,8 @@ export const pages = {
           { url: "/use-the-thread", text: "Usa el thread - No ignores threads que ya tienen respuestas" },
           { url: "/no-hello", text: "No hello - No mandes un \"hola\" solitario sin contexto" },
           { url: "/no-message-splitting", text: "No message splitting - No partas una idea en diez mensajes" },
-          { url: "/just-ask", text: "Just ask - No preguntes si puedes preguntar, pregunta directamente" }
+          { url: "/just-ask", text: "Just ask - No preguntes si puedes preguntar, pregunta directamente" },
+          { url: "/no-unnecessary-mentions", text: "No unnecessary @mentions - No abuses de @channel y @here" }
         ]
       },
       footer: {
@@ -1207,6 +1209,112 @@ export const pages = {
         },
         explanation: {
           text: "<p><strong>Ir directo a tu pregunta sigue siendo educado</strong> \u2014 y permite que la otra persona responda de inmediato, aunque vea el mensaje horas despu\u00e9s.</p>\n\n<p>En lugar de preguntar si puedes preguntar, intenta:</p>\n<ul>\n  <li>\u00a1Ey! \u00bfEl entorno de staging est\u00e1 listo para pruebas?</li>\n  <li>Cosita r\u00e1pida \u2014 \u00bfcu\u00e1l es la contrase\u00f1a del vault compartido?</li>\n  <li>\u00a1Hola! \u00bfSabes si la release est\u00e1 prevista para hoy?</li>\n  <li>Ey, \u00bfd\u00f3nde puedo encontrar el doc de onboarding?</li>\n</ul>\n\n<p><strong>La educaci\u00f3n est\u00e1 en el tono, no en el pre\u00e1mbulo.</strong> Un saludo amable junto a tu pregunta real es m\u00e1s r\u00e1pido, m\u00e1s amable, y <em>compatible con comunicaci\u00f3n as\u00edncrona</em>.</p>\n\n<p>Cuando se hace bien, <strong>todos se ahorran una ida y vuelta</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "Esto es solo medio en serio (medio \ud83d\udc40), as\u00ed que no te enojes con la persona que te envi\u00f3 aqu\u00ed.",
+          "Dicho esto, si ves la URL de este sitio en el estado/bio de alguien, prep\u00e1rate para ser ignorado si solo respondes con \"?\".",
+          "Inspirado en el maravilloso <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatares tomados de Silicon Valley. C\u00f3digo abierto en <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Hecho por <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "Este sitio est\u00e1 disponible en: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    }
+  },
+  nounnecessarymentions: {
+    en: {
+      seo: {
+        title: "Stop abusing @channel and @here \u2014 ChatCrimes",
+        description: "Please don't use @channel or @here unless it truly affects everyone. Learn why unnecessary mentions are a chat crime.",
+        slug: "no-unnecessary-mentions"
+      },
+      header: {
+        title: "No unnecessary @mentions",
+        subtitle: "please don't use @channel or @here unless it truly affects everyone",
+        animations: ["@channel", "@here", "@everyone", "@all", "@team", "@here !!"]
+      },
+      intro: {
+        text: "Imagine 200 people getting a notification because someone needed to ask one person where to find a document... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c Don't do this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "@channel does anyone know the WiFi password for the 3rd floor?", time: "9:00 AM" },
+            { name: "Thomas Middleditch", text: "you just pinged 200 people for a WiFi password", time: "9:20 AM" },
+            { name: "T.J Miller", text: "@here sorry, but does anyone know?", time: "9:21 AM" },
+            { name: "Thomas Middleditch", text: "you did it again", time: "9:40 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p>T.J Miller thought he was casting a wide net: <em>someone here must know</em>. <strong>But @channel and @here notify every single person in the channel</strong>, pulling them out of focus for something that could have been a simple search or a direct message.</p>\n\n<p>Most people who do this <strong>don't realize the blast radius</strong>. It's a reflex: <em>\"I need an answer fast, so I'll ping everyone.\"</em></p>\n\n<p>But in large channels, <strong>unnecessary mentions create notification fatigue</strong>. People start <strong>muting channels, ignoring real alerts</strong>, and the signal-to-noise ratio collapses.</p>\n\n<p>The same goes for:</p>\n<ul>\n  <li>@channel for non-urgent questions</li>\n  <li>@here for things that can wait</li>\n  <li>@everyone for team-specific topics</li>\n  <li>@channel followed by @here when nobody answers</li>\n  <li>@channel in a 500-person channel for a yes/no question</li>\n</ul>\n\n<p><strong>Not everything is an emergency!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 Instead, try this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "hey! does anyone know the WiFi password for the 3rd floor? No rush", time: "9:00 AM" },
+            { name: "Thomas Middleditch", text: "it's on the IT wiki, but it's FloorThree2024", time: "9:02 AM" },
+            { name: "T.J Miller", text: "perfect, found the wiki too. thanks!", time: "9:03 AM" },
+            { name: "Thomas Middleditch", text: "no problem, that page has all the passwords", time: "9:04 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Asking without a mass mention still gets answers</strong> \u2014 and it doesn't interrupt everyone who has notifications on.</p>\n\n<p>Before reaching for @channel, try:</p>\n<ul>\n  <li>Post without a mention \u2014 people still read the channel</li>\n  <li>Search the channel history or wiki first</li>\n  <li>DM someone who likely knows the answer</li>\n  <li>Use @here only for time-sensitive items that affect everyone online</li>\n</ul>\n\n<p><strong>Reserve @channel for real emergencies.</strong> When it's used sparingly, people actually pay attention to it. When it's used for WiFi passwords, people mute the channel.</p>\n\n<p>When done right, <strong>notifications mean something</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "This is kinda only half serious (kinda \ud83d\udc40) so please don't get mad at the person who sent you here.",
+          "That said, if you see this site's URL as someone's status/bio, be prepared to be ignored if you only reply with \"?\".",
+          "Inspired by the wonderful <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatars taken from Silicon Valley. Open-source on <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Made by <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "This site is available in: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    },
+    es: {
+      seo: {
+        title: "Deja de abusar de @channel y @here \u2014 ChatCrimes",
+        description: "Por favor no uses @channel o @here a menos que realmente afecte a todos. Aprende por qu\u00e9 las menciones innecesarias son un crimen de chat.",
+        slug: "no-unnecessary-mentions"
+      },
+      header: {
+        title: "No unnecessary @mentions",
+        subtitle: "por favor no uses @channel o @here a menos que realmente afecte a todos",
+        animations: ["@channel", "@here", "@everyone", "@todos", "@equipo", "@here !!"]
+      },
+      intro: {
+        text: "Imagina que 200 personas reciben una notificaci\u00f3n porque alguien necesitaba preguntarle a una sola persona d\u00f3nde encontrar un documento... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c No hagas esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "@channel \u00bfalguien sabe la contrase\u00f1a del WiFi del 3er piso?", time: "9:00 AM" },
+            { name: "Thomas Middleditch", text: "acabas de notificar a 200 personas por una contrase\u00f1a de WiFi", time: "9:20 AM" },
+            { name: "T.J Miller", text: "@here perd\u00f3n, pero \u00bfalguien sabe?", time: "9:21 AM" },
+            { name: "Thomas Middleditch", text: "lo acabas de hacer otra vez", time: "9:40 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p>T.J Miller pens\u00f3 que estaba lanzando una red amplia: <em>alguien aqu\u00ed tiene que saber</em>. <strong>Pero @channel y @here notifican a todas las personas del canal</strong>, sac\u00e1ndolas de su concentraci\u00f3n por algo que podr\u00eda haberse resuelto con una b\u00fasqueda o un mensaje directo.</p>\n\n<p>La mayor\u00eda de las personas que hacen esto <strong>no se dan cuenta del radio de explosi\u00f3n</strong>. Es un reflejo: <em>\"Necesito una respuesta r\u00e1pida, as\u00ed que notificar\u00e9 a todos.\"</em></p>\n\n<p>Pero en canales grandes, <strong>las menciones innecesarias crean fatiga de notificaciones</strong>. La gente empieza a <strong>silenciar canales, ignorar alertas reales</strong>, y la relaci\u00f3n se\u00f1al-ruido se desploma.</p>\n\n<p>Lo mismo va para:</p>\n<ul>\n  <li>@channel para preguntas no urgentes</li>\n  <li>@here para cosas que pueden esperar</li>\n  <li>@everyone para temas de un equipo espec\u00edfico</li>\n  <li>@channel seguido de @here cuando nadie responde</li>\n  <li>@channel en un canal de 500 personas para una pregunta de s\u00ed/no</li>\n</ul>\n\n<p><strong>\u00a1No todo es una emergencia!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 En su lugar, intenta esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "\u00a1ey! \u00bfalguien sabe la contrase\u00f1a del WiFi del 3er piso? Sin prisa", time: "9:00 AM" },
+            { name: "Thomas Middleditch", text: "est\u00e1 en la wiki de IT, pero es FloorThree2024", time: "9:02 AM" },
+            { name: "T.J Miller", text: "perfecto, encontr\u00e9 la wiki tambi\u00e9n. \u00a1gracias!", time: "9:03 AM" },
+            { name: "Thomas Middleditch", text: "de nada, esa p\u00e1gina tiene todas las contrase\u00f1as", time: "9:04 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Preguntar sin una menci\u00f3n masiva sigue consiguiendo respuestas</strong> \u2014 y no interrumpe a todos los que tienen notificaciones activadas.</p>\n\n<p>Antes de recurrir a @channel, intenta:</p>\n<ul>\n  <li>Publica sin menci\u00f3n \u2014 la gente sigue leyendo el canal</li>\n  <li>Busca primero en el historial del canal o en la wiki</li>\n  <li>Manda un DM a alguien que probablemente sepa la respuesta</li>\n  <li>Usa @here solo para cosas urgentes que afecten a todos los conectados</li>\n</ul>\n\n<p><strong>Reserva @channel para emergencias reales.</strong> Cuando se usa con moderaci\u00f3n, la gente le presta atenci\u00f3n. Cuando se usa para contrase\u00f1as de WiFi, la gente silencia el canal.</p>\n\n<p>Cuando se hace bien, <strong>las notificaciones significan algo</strong>. \ud83c\udf89</p>"
         }
       },
       footer: {
