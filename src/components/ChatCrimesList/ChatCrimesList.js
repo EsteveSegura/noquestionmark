@@ -12,7 +12,8 @@ const urlToPageKey = {
   '/use-the-thread': 'usethethread',
   '/no-hello': 'nohello',
   '/no-message-splitting': 'nomessagesplitting',
-  '/just-ask': 'justask'
+  '/just-ask': 'justask',
+  '/no-unnecessary-mentions': 'nounnecessarymentions'
 }
 
 function createCard(pageTranslations, url) {
