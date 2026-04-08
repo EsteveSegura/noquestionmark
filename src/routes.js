@@ -50,4 +50,8 @@ export const routes = {
   '/no-dry-ok': { page: 'nodryok', view: StandardView },
   '/en/no-dry-ok': { page: 'nodryok', view: StandardView },
   '/es/no-dry-ok': { page: 'nodryok', view: StandardView },
+  // no-passive-aggressive
+  '/no-passive-aggressive': { page: 'nopassiveaggressive', view: StandardView },
+  '/en/no-passive-aggressive': { page: 'nopassiveaggressive', view: StandardView },
+  '/es/no-passive-aggressive': { page: 'nopassiveaggressive', view: StandardView },
 }
