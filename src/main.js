@@ -18,9 +18,9 @@ function render() {
   const lang = getCurrentLanguage()
   const t = pages[route.page][lang] || pages[route.page][defaultLanguage]
 
-  // Update page title
-  const pageTitle = t.header?.title || 'ChatCrimes'
-  document.title = toTitleCase(pageTitle)
+  // Update page title (prefer SEO title, fallback to header title)
+  const pageTitle = t.seo?.title || toTitleCase(t.header?.title || 'ChatCrimes')
+  document.title = pageTitle
 
   const app = document.querySelector('#app')
   app.innerHTML = ''
