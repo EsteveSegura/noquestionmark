@@ -50,6 +50,15 @@
   color: #333;
 }
 
+.chat-message__mention {
+  background-color: #E8F0FE;
+  color: #1D4ED8;
+  padding: 1px 4px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
 .chat-message__reaction {
   display: inline-flex;
   align-items: center;

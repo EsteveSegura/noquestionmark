@@ -1,5 +1,9 @@
 import './ChatMessage.css'
 
+function formatMentions(text) {
+  return text.replace(/@(\w+)/g, '<span class="chat-message__mention">@$1</span>')
+}
+
 export function ChatMessage({ name, text, avatar, time, reaction = null, thread = null }) {
   const message = document.createElement('div')
   message.className = 'chat-message'
@@ -34,7 +38,7 @@ export function ChatMessage({ name, text, avatar, time, reaction = null, thread 
         <span class="chat-message__name">${name}</span>
         <span class="chat-message__time">${time}</span>
       </div>
-      <div class="chat-message__text">${text}</div>
+      <div class="chat-message__text">${formatMentions(text)}</div>
       ${threadHTML}
       ${reactionHTML}
     </div>
