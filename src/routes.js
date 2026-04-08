@@ -26,4 +26,8 @@ export const routes = {
   '/use-the-thread': { page: 'usethethread', view: StandardView },
   '/en/use-the-thread': { page: 'usethethread', view: StandardView },
   '/es/use-the-thread': { page: 'usethethread', view: StandardView },
+  // no-hello
+  '/no-hello': { page: 'nohello', view: StandardView },
+  '/en/no-hello': { page: 'nohello', view: StandardView },
+  '/es/no-hello': { page: 'nohello', view: StandardView },
 }

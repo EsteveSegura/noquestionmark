@@ -22,7 +22,8 @@ export const pages = {
           { url: "/no-channel-only", text: "No #channel-only - Don't reply with just a channel name" },
           { url: "/no-public-shaming", text: "No public shaming - Don't call people out in public channels" },
           { url: "/no-reaction-as-answer", text: "No reaction as answer - Don't use reactions instead of actual replies" },
-          { url: "/use-the-thread", text: "Use the thread - Don't ignore existing threads with answers" }
+          { url: "/use-the-thread", text: "Use the thread - Don't ignore existing threads with answers" },
+          { url: "/no-hello", text: "No hello - Don't send a lonely \"hi\" with no context" }
         ]
       },
       footer: {
@@ -56,7 +57,8 @@ export const pages = {
           { url: "/no-channel-only", text: "No solo #canal - No respondas solo con un nombre de canal" },
           { url: "/no-public-shaming", text: "No public shaming - No señales a la gente en canales públicos" },
           { url: "/no-reaction-as-answer", text: "No reacción como respuesta - No uses reacciones en lugar de respuestas reales" },
-          { url: "/use-the-thread", text: "Usa el thread - No ignores threads que ya tienen respuestas" }
+          { url: "/use-the-thread", text: "Usa el thread - No ignores threads que ya tienen respuestas" },
+          { url: "/no-hello", text: "No hello - No mandes un \"hola\" solitario sin contexto" }
         ]
       },
       footer: {
@@ -894,6 +896,110 @@ export const pages = {
           'Inspirado en el maravilloso <a href="https://nohello.net" target="_blank" rel="noopener noreferrer">nohello.net</a>. Avatares tomados de Silicon Valley. Código abierto en <a href="https://github.com/EsteveSegura/noquestionmark" target="_blank" rel="noopener noreferrer">GitHub</a>.',
           'Hecho por <a href="https://girlazo.com" target="_blank" rel="noopener noreferrer">Esteve Segura</a>.',
           'Este sitio está disponible en: <a href="/en">English</a>, <a href="/es">Español</a>'
+        ]
+      }
+    }
+  },
+  nohello: {
+    en: {
+      seo: {
+        title: "Don't just say \"hi\" with no context — ChatCrimes",
+        description: "Please don't send a lonely 'hi' or 'hello' in chat and wait. Include your question or context in the first message.",
+        slug: "no-hello"
+      },
+      header: {
+        title: "No hello",
+        subtitle: "please don't send a lonely \"hi\" and wait",
+        animations: ["hi", "hello", "hey", "heyy", "you there?", "hi!"]
+      },
+      intro: {
+        text: "Imagine someone taps you on the shoulder, says \"hi\", and then just… stands there staring at you in silence... 🤦‍♀️"
+      },
+      dontDoThis: {
+        title: "❌ Don't do this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "hi", time: "10:00 AM" },
+            { name: "Thomas Middleditch", text: "hey, what's up?", time: "10:03 AM" },
+            { name: "T.J Miller", text: "can I ask you something?", time: "10:05 AM" },
+            { name: "Thomas Middleditch", text: "...sure, go ahead", time: "10:25 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p>T.J Miller thought he was being polite: <em>say hi first, then ask</em>. <strong>But that lonely \"hi\" forces the other person to stop what they're doing and wait</strong> for the actual question that never comes.</p>\n\n<p>Most people who do this <strong>don't mean to waste anyone's time</strong>. It's a reflex: <em>\"I should greet them before asking something.\"</em></p>\n\n<p>But in text conversations, <strong>\"hi\" with no follow-up creates dead air</strong>. It adds <strong>unnecessary waiting, context switching</strong>, and sometimes even <em>anxiety about what's coming next</em>.</p>\n\n<p>The same goes for:</p>\n<ul>\n  <li>hello</li>\n  <li>hey, you there?</li>\n  <li>hi, got a minute?</li>\n  <li>can I ask you something?</li>\n  <li>hey! *then nothing for 10 minutes*</li>\n</ul>\n\n<p><strong>Say hi and ask your question in the same message!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "✅ Instead, try this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "hey! quick question — is the staging environment ready for QA testing today?", time: "10:00 AM" },
+            { name: "Thomas Middleditch", text: "hi! yes, deployed this morning, you can start testing now", time: "10:02 AM" },
+            { name: "T.J Miller", text: "perfect, jumping in now, thanks!", time: "10:03 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Including your question upfront takes zero extra effort</strong>, but it lets the other person answer immediately, even if they see it hours later.</p>\n\n<p>Instead of just \"hi\", try:</p>\n<ul>\n  <li>Hey! Can you check the deploy logs from this morning?</li>\n  <li>Hi, quick one — do you have the API docs link?</li>\n  <li>Hello! Is the design review still happening at 3?</li>\n  <li>Hey, I need access to the staging DB, can you help?</li>\n</ul>\n\n<p><strong>Greet and ask in one shot.</strong> It's still friendly, and it's <em>async-friendly</em> too. The other person can respond on their own time with all the context they need.</p>\n\n<p>When done right, <strong>everyone saves time</strong>. 🎉</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "This is kinda only half serious (kinda 👀) so please don't get mad at the person who sent you here.",
+          "That said, if you see this site's URL as someone's status/bio, be prepared to be ignored if you only reply with \"?\".",
+          "Inspired by the wonderful <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatars taken from Silicon Valley. Open-source on <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Made by <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "This site is available in: <a href=\"/en\">English</a>, <a href=\"/es\">Español</a>"
+        ]
+      }
+    },
+    es: {
+      seo: {
+        title: "No mandes solo un \"hola\" sin contexto — ChatCrimes",
+        description: "Por favor no mandes un 'hola' solitario en el chat y te quedes esperando. Incluye tu pregunta o contexto en el primer mensaje.",
+        slug: "no-hello"
+      },
+      header: {
+        title: "No hello",
+        subtitle: "por favor no mandes un \"hola\" solitario y te quedes esperando",
+        animations: ["hola", "buenas", "ey", "holi", "estás ahí?", "hola!"]
+      },
+      intro: {
+        text: "Imagina que alguien te toca el hombro, dice \"hola\", y luego se queda ahí… mirándote en silencio... 🤦‍♀️"
+      },
+      dontDoThis: {
+        title: "❌ No hagas esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "hola", time: "10:00 AM" },
+            { name: "Thomas Middleditch", text: "ey, ¿qué pasa?", time: "10:03 AM" },
+            { name: "T.J Miller", text: "¿te puedo preguntar algo?", time: "10:05 AM" },
+            { name: "Thomas Middleditch", text: "...claro, dime", time: "10:25 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p>T.J Miller pensó que estaba siendo educado: <em>saluda primero, pregunta después</em>. <strong>Pero ese \"hola\" solitario obliga a la otra persona a dejar lo que está haciendo y esperar</strong> una pregunta que nunca llega.</p>\n\n<p>La mayoría de las personas que hacen esto <strong>no pretenden hacer perder el tiempo a nadie</strong>. Es un reflejo: <em>\"Debería saludar antes de preguntar algo.\"</em></p>\n\n<p>Pero en conversaciones de texto, <strong>un \"hola\" sin continuación crea un silencio incómodo</strong>. Añade <strong>esperas innecesarias, cambios de contexto</strong>, y a veces incluso <em>ansiedad sobre qué vendrá después</em>.</p>\n\n<p>Lo mismo va para:</p>\n<ul>\n  <li>buenas</li>\n  <li>ey, ¿estás ahí?</li>\n  <li>hola, ¿tienes un minuto?</li>\n  <li>¿te puedo preguntar algo?</li>\n  <li>hola! *y luego nada durante 10 minutos*</li>\n</ul>\n\n<p><strong>¡Saluda y pregunta en el mismo mensaje!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "✅ En su lugar, intenta esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "¡ey! pregunta rápida — ¿el entorno de staging está listo para pruebas de QA hoy?", time: "10:00 AM" },
+            { name: "Thomas Middleditch", text: "¡hola! sí, lo desplegué esta mañana, ya puedes empezar a probar", time: "10:02 AM" },
+            { name: "T.J Miller", text: "perfecto, me pongo con ello, ¡gracias!", time: "10:03 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Incluir tu pregunta de entrada no cuesta nada extra</strong>, pero permite que la otra persona responda de inmediato, aunque lo vea horas después.</p>\n\n<p>En lugar de solo \"hola\", intenta:</p>\n<ul>\n  <li>¡Ey! ¿Puedes revisar los logs del deploy de esta mañana?</li>\n  <li>Hola, cosita rápida — ¿tienes el enlace de la documentación del API?</li>\n  <li>¡Buenas! ¿La revisión de diseño sigue siendo a las 3?</li>\n  <li>Ey, necesito acceso a la DB de staging, ¿me echas una mano?</li>\n</ul>\n\n<p><strong>Saluda y pregunta de un tirón.</strong> Sigue siendo amable, y es <em>compatible con comunicación asíncrona</em>. La otra persona puede responder a su ritmo con todo el contexto que necesita.</p>\n\n<p>Cuando se hace bien, <strong>todos ahorran tiempo</strong>. 🎉</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "Esto es solo medio en serio (medio 👀), así que no te enojes con la persona que te envió aquí.",
+          "Dicho esto, si ves la URL de este sitio en el estado/bio de alguien, prepárate para ser ignorado si solo respondes con \"?\".",
+          "Inspirado en el maravilloso <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatares tomados de Silicon Valley. Código abierto en <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Hecho por <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "Este sitio está disponible en: <a href=\"/en\">English</a>, <a href=\"/es\">Español</a>"
         ]
       }
     }
