@@ -16,7 +16,8 @@ const urlToPageKey = {
   '/no-unnecessary-mentions': 'nounnecessarymentions',
   '/respect-time-zones': 'respecttimezones',
   '/no-dry-ok': 'nodryok',
-  '/no-passive-aggressive': 'nopassiveaggressive'
+  '/no-passive-aggressive': 'nopassiveaggressive',
+  '/no-ghost-deleting': 'noghostdeleting'
 }
 
 function createCard(pageTranslations, url) {

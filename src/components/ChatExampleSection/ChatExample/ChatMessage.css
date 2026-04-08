@@ -50,6 +50,21 @@
   color: #333;
 }
 
+.chat-message--deleted {
+  opacity: 0.6;
+}
+
+.chat-message--deleted .chat-message__text {
+  font-style: italic;
+  color: #999;
+}
+
+.chat-message__deleted-label {
+  color: #999;
+  font-style: italic;
+  font-size: 13px;
+}
+
 .chat-message__mention {
   background-color: #E8F0FE;
   color: #1D4ED8;
