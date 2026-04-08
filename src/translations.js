@@ -30,7 +30,8 @@ export const pages = {
           { url: "/respect-time-zones", text: "Respect time zones - Don't message at 3 AM expecting a reply" },
           { url: "/no-dry-ok", text: "No dry ok - Don't reply \"ok\" to something that deserves more" },
           { url: "/no-passive-aggressive", text: "No passive-aggressive - Don't hide frustration behind polite phrases" },
-          { url: "/no-ghost-deleting", text: "No ghost deleting - Don't silently delete messages after people read them" }
+          { url: "/no-ghost-deleting", text: "No ghost deleting - Don't silently delete messages after people read them" },
+          { url: "/no-long-voice-notes", text: "No long voice notes - Don't send 5-minute voice notes when a sentence would do" }
         ]
       },
       footer: {
@@ -72,7 +73,8 @@ export const pages = {
           { url: "/respect-time-zones", text: "Respect time zones - No mandes mensajes a las 3 AM esperando respuesta" },
           { url: "/no-dry-ok", text: "No dry ok - No respondas \"ok\" a algo que merece m\u00e1s" },
           { url: "/no-passive-aggressive", text: "No passive-aggressive - No escondas tu frustraci\u00f3n detr\u00e1s de frases educadas" },
-          { url: "/no-ghost-deleting", text: "No ghost deleting - No borres mensajes en silencio despu\u00e9s de que los lean" }
+          { url: "/no-ghost-deleting", text: "No ghost deleting - No borres mensajes en silencio despu\u00e9s de que los lean" },
+          { url: "/no-long-voice-notes", text: "No long voice notes - No mandes notas de voz de 5 minutos cuando basta una frase" }
         ]
       },
       footer: {
@@ -1745,6 +1747,112 @@ export const pages = {
         },
         explanation: {
           text: "<p><strong>Corregirte abiertamente cuesta lo mismo que borrar</strong> \u2014 pero mantiene la conversaci\u00f3n intacta y genera confianza en vez de sospecha.</p>\n\n<p>En lugar de borrar en silencio, intenta:</p>\n<ul>\n  <li>Publica una correcci\u00f3n: \"perd\u00f3n, le\u00ed mal \u2014 esto es lo que realmente dice\"</li>\n  <li>Usa tachado para mostrar el cambio: \"~cancelar el proyecto~ cancelar la reuni\u00f3n\"</li>\n  <li>Si es algo sensible, explica por qu\u00e9 lo eliminas</li>\n  <li>Edita el mensaje y a\u00f1ade \"(editado)\" con la correcci\u00f3n</li>\n</ul>\n\n<p><strong>La transparencia le gana a desaparecer.</strong> La gente conf\u00eda m\u00e1s en compa\u00f1eros que asumen sus errores que en los que fingen que nunca pasaron.</p>\n\n<p>Cuando se hace bien, <strong>todos se mantienen al tanto</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "Esto es solo medio en serio (medio \ud83d\udc40), as\u00ed que no te enojes con la persona que te envi\u00f3 aqu\u00ed.",
+          "Dicho esto, si ves la URL de este sitio en el estado/bio de alguien, prep\u00e1rate para ser ignorado si solo respondes con \"?\".",
+          "Inspirado en el maravilloso <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatares tomados de Silicon Valley. C\u00f3digo abierto en <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Hecho por <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "Este sitio est\u00e1 disponible en: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    }
+  },
+  nolongvoicenotes: {
+    en: {
+      seo: {
+        title: "Don't send 5-minute voice notes in chat \u2014 ChatCrimes",
+        description: "Please don't send extremely long voice notes in work chat. Write it down or keep it under 30 seconds.",
+        slug: "no-long-voice-notes"
+      },
+      header: {
+        title: "No long voice notes",
+        subtitle: "please don't send a 5-minute voice note when a sentence would do",
+        animations: ["4:37 \u25b6", "voice note", "just listen", "2:58 \u25b6", "it's easier to explain", "7:12 \u25b6"]
+      },
+      intro: {
+        text: "Imagine opening a chat and finding a 5-minute voice note with zero context about what's inside... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c Don't do this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "\ud83c\udf99\ufe0f Voice message (4:37)", time: "2:00 PM" },
+            { name: "Thomas Middleditch", text: "I'm in a meeting, can you type it?", time: "2:20 PM" },
+            { name: "T.J Miller", text: "\ud83c\udf99\ufe0f Voice message (2:12)", time: "2:21 PM" },
+            { name: "Thomas Middleditch", text: "I still can't listen right now", time: "2:45 PM" }
+          ]
+        },
+        explanation: {
+          text: "<p>T.J Miller thought it was faster to just talk: <em>it's easier to explain out loud</em>. <strong>But a long voice note forces the other person to stop everything, find headphones, and listen in real time</strong> \u2014 with no way to skim, search, or reference it later.</p>\n\n<p>Most people who do this <strong>don't mean to be inconsiderate</strong>. It's a habit: <em>\"Speaking is faster than typing for me.\"</em></p>\n\n<p>But in work chat, <strong>voice notes are the opposite of async-friendly</strong>. They can't be <strong>skimmed, searched, quoted, or translated</strong>. And a 5-minute monologue often contains 30 seconds of actual information buried in filler.</p>\n\n<p>The same goes for:</p>\n<ul>\n  <li>Multi-minute voice notes for simple questions</li>\n  <li>Sending a second voice note because the first one wasn't clear</li>\n  <li>Voice notes with no text summary of what's inside</li>\n  <li>Rambling voice notes that could be one typed sentence</li>\n  <li>Voice notes in group channels where 20 people have to listen</li>\n</ul>\n\n<p><strong>If it takes more than 30 seconds, type it!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 Instead, try this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "hey! quick update on the client call: they want to move the deadline to next Friday and add two more pages to the scope. I pushed back on the timeline but agreed to the extra pages. Full notes in the doc.", time: "2:00 PM" },
+            { name: "Thomas Middleditch", text: "got it, makes sense. I'll update the backlog", time: "2:02 PM" },
+            { name: "T.J Miller", text: "perfect, linked the doc in #project-updates too", time: "2:03 PM" },
+            { name: "Thomas Middleditch", text: "great, I'll review after my meeting", time: "2:04 PM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>A typed message can be read in 10 seconds, skimmed, and referenced later</strong> \u2014 a 5-minute voice note can't do any of that.</p>\n\n<p>Instead of a long voice note, try:</p>\n<ul>\n  <li>Type a summary with the key points</li>\n  <li>If it's complex, write it in a doc and share the link</li>\n  <li>Use bullet points for multiple topics</li>\n  <li>If you must send audio, keep it under 30 seconds and add a text summary</li>\n</ul>\n\n<p><strong>Text is searchable, skimmable, and async.</strong> Your teammates will get the info faster, reference it later, and never have to whisper \"what did that voice note say?\" in a meeting.</p>\n\n<p>When done right, <strong>everyone stays informed without headphones</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "This is kinda only half serious (kinda \ud83d\udc40) so please don't get mad at the person who sent you here.",
+          "That said, if you see this site's URL as someone's status/bio, be prepared to be ignored if you only reply with \"?\".",
+          "Inspired by the wonderful <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatars taken from Silicon Valley. Open-source on <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Made by <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "This site is available in: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    },
+    es: {
+      seo: {
+        title: "No mandes notas de voz de 5 minutos en el chat \u2014 ChatCrimes",
+        description: "Por favor no mandes notas de voz extremadamente largas en el chat de trabajo. Escr\u00edbelo o mant\u00e9n el audio por debajo de 30 segundos.",
+        slug: "no-long-voice-notes"
+      },
+      header: {
+        title: "No long voice notes",
+        subtitle: "por favor no mandes una nota de voz de 5 minutos cuando bastar\u00eda una frase",
+        animations: ["4:37 \u25b6", "nota de voz", "solo escucha", "2:58 \u25b6", "es m\u00e1s f\u00e1cil hablando", "7:12 \u25b6"]
+      },
+      intro: {
+        text: "Imagina abrir un chat y encontrarte una nota de voz de 5 minutos sin ning\u00fan contexto sobre qu\u00e9 contiene... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c No hagas esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "\ud83c\udf99\ufe0f Mensaje de voz (4:37)", time: "2:00 PM" },
+            { name: "Thomas Middleditch", text: "estoy en una reuni\u00f3n, \u00bfpuedes escribirlo?", time: "2:20 PM" },
+            { name: "T.J Miller", text: "\ud83c\udf99\ufe0f Mensaje de voz (2:12)", time: "2:21 PM" },
+            { name: "Thomas Middleditch", text: "sigo sin poder escuchar ahora mismo", time: "2:45 PM" }
+          ]
+        },
+        explanation: {
+          text: "<p>T.J Miller pens\u00f3 que era m\u00e1s r\u00e1pido hablar: <em>es m\u00e1s f\u00e1cil explicarlo de viva voz</em>. <strong>Pero una nota de voz larga obliga a la otra persona a parar todo, buscar auriculares y escuchar en tiempo real</strong> \u2014 sin poder ojear, buscar o referenciar despu\u00e9s.</p>\n\n<p>La mayor\u00eda de las personas que hacen esto <strong>no pretenden ser desconsideradas</strong>. Es un h\u00e1bito: <em>\"Hablar es m\u00e1s r\u00e1pido que escribir para m\u00ed.\"</em></p>\n\n<p>Pero en el chat de trabajo, <strong>las notas de voz son lo opuesto a comunicaci\u00f3n as\u00edncrona</strong>. No se pueden <strong>ojear, buscar, citar ni traducir</strong>. Y un mon\u00f3logo de 5 minutos suele contener 30 segundos de informaci\u00f3n real enterrados entre relleno.</p>\n\n<p>Lo mismo va para:</p>\n<ul>\n  <li>Notas de voz de varios minutos para preguntas simples</li>\n  <li>Enviar una segunda nota de voz porque la primera no qued\u00f3 clara</li>\n  <li>Notas de voz sin resumen de texto sobre qu\u00e9 contienen</li>\n  <li>Audios divagantes que podr\u00edan ser una frase escrita</li>\n  <li>Notas de voz en canales grupales donde 20 personas tienen que escuchar</li>\n</ul>\n\n<p><strong>\u00a1Si tarda m\u00e1s de 30 segundos, escr\u00edbelo!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 En su lugar, intenta esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "\u00a1ey! resumen r\u00e1pido de la llamada con el cliente: quieren mover la fecha l\u00edmite al viernes que viene y a\u00f1adir dos p\u00e1ginas m\u00e1s al alcance. Les puse pegas con el plazo pero acept\u00e9 las p\u00e1ginas extra. Notas completas en el doc.", time: "2:00 PM" },
+            { name: "Thomas Middleditch", text: "enterado, tiene sentido. actualizo el backlog", time: "2:02 PM" },
+            { name: "T.J Miller", text: "perfecto, he enlazado el doc en #project-updates tambi\u00e9n", time: "2:03 PM" },
+            { name: "Thomas Middleditch", text: "genial, lo reviso despu\u00e9s de mi reuni\u00f3n", time: "2:04 PM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Un mensaje escrito se lee en 10 segundos, se puede ojear y referenciar despu\u00e9s</strong> \u2014 una nota de voz de 5 minutos no puede hacer nada de eso.</p>\n\n<p>En lugar de una nota de voz larga, intenta:</p>\n<ul>\n  <li>Escribe un resumen con los puntos clave</li>\n  <li>Si es complejo, escr\u00edbelo en un doc y comparte el enlace</li>\n  <li>Usa vi\u00f1etas para m\u00faltiples temas</li>\n  <li>Si necesitas mandar audio, que sea de menos de 30 segundos y a\u00f1ade un resumen en texto</li>\n</ul>\n\n<p><strong>El texto es buscable, ojeable y as\u00edncrono.</strong> Tus compa\u00f1eros recibir\u00e1n la info m\u00e1s r\u00e1pido, podr\u00e1n consultarla despu\u00e9s, y no tendr\u00e1n que susurrar \"\u00bfqu\u00e9 dec\u00eda esa nota de voz?\" en una reuni\u00f3n.</p>\n\n<p>Cuando se hace bien, <strong>todos se enteran sin necesitar auriculares</strong>. \ud83c\udf89</p>"
         }
       },
       footer: {

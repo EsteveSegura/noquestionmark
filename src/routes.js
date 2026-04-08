@@ -58,4 +58,8 @@ export const routes = {
   '/no-ghost-deleting': { page: 'noghostdeleting', view: StandardView },
   '/en/no-ghost-deleting': { page: 'noghostdeleting', view: StandardView },
   '/es/no-ghost-deleting': { page: 'noghostdeleting', view: StandardView },
+  // no-long-voice-notes
+  '/no-long-voice-notes': { page: 'nolongvoicenotes', view: StandardView },
+  '/en/no-long-voice-notes': { page: 'nolongvoicenotes', view: StandardView },
+  '/es/no-long-voice-notes': { page: 'nolongvoicenotes', view: StandardView },
 }
