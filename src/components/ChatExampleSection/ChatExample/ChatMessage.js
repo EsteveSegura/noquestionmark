@@ -4,7 +4,31 @@ function formatMentions(text) {
   return text.replace(/@(\w+)/g, '<span class="chat-message__mention">@$1</span>')
 }
 
-export function ChatMessage({ name, text, avatar, time, reaction = null, thread = null, deleted = false }) {
+function generateWaveformBars() {
+  const barCount = 28
+  const bars = []
+  for (let i = 0; i < barCount; i++) {
+    const height = Math.max(4, Math.floor(Math.sin(i * 0.6 + 1) * 12 + Math.cos(i * 1.2) * 8 + 14))
+    bars.push(`<span class="chat-message__voice-bar" style="height: ${height}px"></span>`)
+  }
+  return bars.join('')
+}
+
+function renderVoiceNote(voiceNote) {
+  return `
+    <div class="chat-message__voice-note">
+      <button class="chat-message__voice-play" aria-label="Play voice message">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><polygon points="3,1 12,7 3,13"/></svg>
+      </button>
+      <div class="chat-message__voice-waveform">
+        ${generateWaveformBars()}
+      </div>
+      <span class="chat-message__voice-duration">${voiceNote.duration}</span>
+    </div>
+  `
+}
+
+export function ChatMessage({ name, text, avatar, time, reaction = null, thread = null, deleted = false, voiceNote = null }) {
   const message = document.createElement('div')
   message.className = 'chat-message' + (deleted ? ' chat-message--deleted' : '')
 
@@ -38,7 +62,7 @@ export function ChatMessage({ name, text, avatar, time, reaction = null, thread 
         <span class="chat-message__name">${name}</span>
         <span class="chat-message__time">${time}</span>
       </div>
-      <div class="chat-message__text">${deleted ? '<span class="chat-message__deleted-label">\u2716 This message was deleted.</span>' : formatMentions(text)}</div>
+      <div class="chat-message__text">${deleted ? '<span class="chat-message__deleted-label">\u2716 This message was deleted.</span>' : voiceNote ? renderVoiceNote(voiceNote) : formatMentions(text)}</div>
       ${threadHTML}
       ${reactionHTML}
     </div>
