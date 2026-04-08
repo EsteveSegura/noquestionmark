@@ -13,7 +13,8 @@ const urlToPageKey = {
   '/no-hello': 'nohello',
   '/no-message-splitting': 'nomessagesplitting',
   '/just-ask': 'justask',
-  '/no-unnecessary-mentions': 'nounnecessarymentions'
+  '/no-unnecessary-mentions': 'nounnecessarymentions',
+  '/respect-time-zones': 'respecttimezones'
 }
 
 function createCard(pageTranslations, url) {
