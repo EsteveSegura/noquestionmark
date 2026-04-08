@@ -4,9 +4,9 @@ function formatMentions(text) {
   return text.replace(/@(\w+)/g, '<span class="chat-message__mention">@$1</span>')
 }
 
-export function ChatMessage({ name, text, avatar, time, reaction = null, thread = null }) {
+export function ChatMessage({ name, text, avatar, time, reaction = null, thread = null, deleted = false }) {
   const message = document.createElement('div')
-  message.className = 'chat-message'
+  message.className = 'chat-message' + (deleted ? ' chat-message--deleted' : '')
 
   const reactionHTML = reaction ? `
       <div class="chat-message__reaction">
@@ -38,7 +38,7 @@ export function ChatMessage({ name, text, avatar, time, reaction = null, thread 
         <span class="chat-message__name">${name}</span>
         <span class="chat-message__time">${time}</span>
       </div>
-      <div class="chat-message__text">${formatMentions(text)}</div>
+      <div class="chat-message__text">${deleted ? '<span class="chat-message__deleted-label">\u2716 This message was deleted.</span>' : formatMentions(text)}</div>
       ${threadHTML}
       ${reactionHTML}
     </div>

@@ -25,7 +25,8 @@ export function ChatExample(section, isPositive = false) {
       avatar: avatarImage,
       time: msg.time,
       reaction: msg.reaction || null,
-      thread: msg.thread || null
+      thread: msg.thread || null,
+      deleted: msg.deleted || false
     }))
   })
 
