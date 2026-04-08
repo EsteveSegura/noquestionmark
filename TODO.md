@@ -6,7 +6,7 @@
 - [x] **"Can I ask you a question?"** → `/just-ask`
 - [x] **Mensajes partidos en 10 líneas** → `/no-message-splitting`
 - [x] **@channel / @here innecesario** → `/no-unnecessary-mentions`
-- [ ] **Mensajes a las 3AM esperando respuesta** → `/respect-time-zones`
+- [x] **Mensajes a las 3AM esperando respuesta** → `/respect-time-zones`
 - [ ] **"As per my last message" pasivo-agresivo** → `/no-passive-aggressive`
 - [ ] **Responder "ok" a algo complejo** → `/no-dry-ok`
 - [ ] **Borrar mensajes sin avisar** → `/no-ghost-deleting`
