@@ -24,7 +24,8 @@ export const pages = {
           { url: "/no-reaction-as-answer", text: "No reaction as answer - Don't use reactions instead of actual replies" },
           { url: "/use-the-thread", text: "Use the thread - Don't ignore existing threads with answers" },
           { url: "/no-hello", text: "No hello - Don't send a lonely \"hi\" with no context" },
-          { url: "/no-message-splitting", text: "No message splitting - Don't split one thought into ten messages" }
+          { url: "/no-message-splitting", text: "No message splitting - Don't split one thought into ten messages" },
+          { url: "/just-ask", text: "Just ask - Don't ask to ask, just ask your question" }
         ]
       },
       footer: {
@@ -60,7 +61,8 @@ export const pages = {
           { url: "/no-reaction-as-answer", text: "No reacción como respuesta - No uses reacciones en lugar de respuestas reales" },
           { url: "/use-the-thread", text: "Usa el thread - No ignores threads que ya tienen respuestas" },
           { url: "/no-hello", text: "No hello - No mandes un \"hola\" solitario sin contexto" },
-          { url: "/no-message-splitting", text: "No message splitting - No partas una idea en diez mensajes" }
+          { url: "/no-message-splitting", text: "No message splitting - No partas una idea en diez mensajes" },
+          { url: "/just-ask", text: "Just ask - No preguntes si puedes preguntar, pregunta directamente" }
         ]
       },
       footer: {
@@ -1101,6 +1103,110 @@ export const pages = {
         },
         explanation: {
           text: "<p><strong>Componer tu idea completa antes de darle a enviar toma unos segundos extra</strong>, pero le da al lector todo lo que necesita en una sola notificaci\u00f3n limpia.</p>\n\n<p>En lugar de un mensaje por palabra, intenta:</p>\n<ul>\n  <li>Escribe la idea completa y pulsa enviar una sola vez</li>\n  <li>Usa Shift+Enter para saltos de l\u00ednea dentro de un mensaje</li>\n  <li>Si es largo, escr\u00edbelo en un doc y comparte el enlace</li>\n  <li>Relee antes de enviar \u2014 \u00bfpueden dos mensajes ser uno?</li>\n</ul>\n\n<p><strong>Menos pings, ideas m\u00e1s claras.</strong> Tus compa\u00f1eros leer\u00e1n un pensamiento completo en vez de ver llegar una frase palabra a palabra.</p>\n\n<p>Cuando se hace bien, <strong>todos mantienen el foco</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "Esto es solo medio en serio (medio \ud83d\udc40), as\u00ed que no te enojes con la persona que te envi\u00f3 aqu\u00ed.",
+          "Dicho esto, si ves la URL de este sitio en el estado/bio de alguien, prep\u00e1rate para ser ignorado si solo respondes con \"?\".",
+          "Inspirado en el maravilloso <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatares tomados de Silicon Valley. C\u00f3digo abierto en <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Hecho por <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "Este sitio est\u00e1 disponible en: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    }
+  },
+  justask: {
+    en: {
+      seo: {
+        title: "Just ask your question \u2014 ChatCrimes",
+        description: "Please don't ask to ask. Skip the \"can I ask you a question?\" and just ask your question directly.",
+        slug: "just-ask"
+      },
+      header: {
+        title: "Just ask",
+        subtitle: "please don't ask to ask, just ask your question directly",
+        animations: ["can I ask?", "got a sec?", "quick question", "you busy?", "can I bother you?", "one thing..."]
+      },
+      intro: {
+        text: "Imagine someone walks up to you, asks \"can I ask you a question?\", and then waits for permission before saying anything useful... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c Don't do this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "hey, can I ask you a question?", time: "1:00 PM" },
+            { name: "Thomas Middleditch", text: "sure", time: "1:15 PM" },
+            { name: "T.J Miller", text: "is the API docs repo public or private?", time: "1:16 PM" },
+            { name: "Thomas Middleditch", text: "public. you could have just asked that directly", time: "1:35 PM" }
+          ]
+        },
+        explanation: {
+          text: "<p>T.J Miller thought he was being polite: <em>let me check if they have time first</em>. <strong>But asking to ask adds an entire unnecessary round trip</strong> that delays the actual conversation by minutes or hours.</p>\n\n<p>Most people who do this <strong>don't mean to waste anyone's time</strong>. It's a social habit: <em>\"I don't want to be rude, so I'll ask for permission first.\"</em></p>\n\n<p>But in async text conversations, <strong>each round trip can take ages</strong>. That \"sure\" might arrive <strong>15 minutes later</strong>, and by then you've lost momentum and the other person has context-switched twice for nothing.</p>\n\n<p>The same goes for:</p>\n<ul>\n  <li>can I ask you something?</li>\n  <li>got a second?</li>\n  <li>are you busy?</li>\n  <li>can I bother you for a sec?</li>\n  <li>I have a question...</li>\n</ul>\n\n<p><strong>Skip the preamble, just ask!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 Instead, try this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "hey! quick one \u2014 is the API docs repo public or private?", time: "1:00 PM" },
+            { name: "Thomas Middleditch", text: "public! here's the link: docs.example.com/api", time: "1:02 PM" },
+            { name: "T.J Miller", text: "perfect, thanks!", time: "1:03 PM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Jumping straight to your question is still polite</strong> \u2014 and it lets the other person answer right away, even if they see the message hours later.</p>\n\n<p>Instead of asking to ask, try:</p>\n<ul>\n  <li>Hey! Is the staging env ready for testing?</li>\n  <li>Quick one \u2014 what's the password for the shared vault?</li>\n  <li>Hi! Do you know if the release is scheduled for today?</li>\n  <li>Hey, where can I find the onboarding doc?</li>\n</ul>\n\n<p><strong>Politeness is in the tone, not in the preamble.</strong> A friendly greeting plus your actual question is faster, kinder, and <em>async-friendly</em>.</p>\n\n<p>When done right, <strong>everyone saves a round trip</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "This is kinda only half serious (kinda \ud83d\udc40) so please don't get mad at the person who sent you here.",
+          "That said, if you see this site's URL as someone's status/bio, be prepared to be ignored if you only reply with \"?\".",
+          "Inspired by the wonderful <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatars taken from Silicon Valley. Open-source on <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Made by <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "This site is available in: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    },
+    es: {
+      seo: {
+        title: "Pregunta directamente \u2014 ChatCrimes",
+        description: "Por favor no preguntes si puedes preguntar. Salta el \"\u00bfte puedo hacer una pregunta?\" y ve directo al grano.",
+        slug: "just-ask"
+      },
+      header: {
+        title: "Just ask",
+        subtitle: "por favor no preguntes si puedes preguntar, ve directo al grano",
+        animations: ["\u00bfpuedo preguntar?", "\u00bftienes un seg?", "duda r\u00e1pida", "\u00bfest\u00e1s ocupado?", "\u00bfte molesto?", "una cosita..."]
+      },
+      intro: {
+        text: "Imagina que alguien se acerca, te dice \"\u00bfte puedo hacer una pregunta?\", y se queda esperando permiso antes de decir algo \u00fatil... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c No hagas esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "ey, \u00bfte puedo hacer una pregunta?", time: "1:00 PM" },
+            { name: "Thomas Middleditch", text: "claro", time: "1:15 PM" },
+            { name: "T.J Miller", text: "\u00bfel repo de la documentaci\u00f3n del API es p\u00fablico o privado?", time: "1:16 PM" },
+            { name: "Thomas Middleditch", text: "p\u00fablico. podr\u00edas haber preguntado eso directamente", time: "1:35 PM" }
+          ]
+        },
+        explanation: {
+          text: "<p>T.J Miller pens\u00f3 que estaba siendo educado: <em>deja que compruebe si tiene tiempo primero</em>. <strong>Pero preguntar si puedes preguntar a\u00f1ade un viaje de ida y vuelta completamente innecesario</strong> que retrasa la conversaci\u00f3n real minutos u horas.</p>\n\n<p>La mayor\u00eda de las personas que hacen esto <strong>no pretenden hacer perder el tiempo a nadie</strong>. Es un h\u00e1bito social: <em>\"No quiero ser maleducado, as\u00ed que pedir\u00e9 permiso primero.\"</em></p>\n\n<p>Pero en conversaciones as\u00edncronas de texto, <strong>cada ida y vuelta puede tardar una eternidad</strong>. Ese \"claro\" puede llegar <strong>15 minutos despu\u00e9s</strong>, y para entonces ya perdiste el hilo y la otra persona ha cambiado de contexto dos veces para nada.</p>\n\n<p>Lo mismo va para:</p>\n<ul>\n  <li>\u00bfte puedo preguntar algo?</li>\n  <li>\u00bftienes un segundo?</li>\n  <li>\u00bfest\u00e1s ocupado?</li>\n  <li>\u00bfte puedo molestar un momento?</li>\n  <li>tengo una pregunta...</li>\n</ul>\n\n<p><strong>\u00a1Salta el pre\u00e1mbulo y pregunta!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 En su lugar, intenta esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "\u00a1ey! cosita r\u00e1pida \u2014 \u00bfel repo de la documentaci\u00f3n del API es p\u00fablico o privado?", time: "1:00 PM" },
+            { name: "Thomas Middleditch", text: "\u00a1p\u00fablico! aqu\u00ed tienes el enlace: docs.example.com/api", time: "1:02 PM" },
+            { name: "T.J Miller", text: "\u00a1perfecto, gracias!", time: "1:03 PM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Ir directo a tu pregunta sigue siendo educado</strong> \u2014 y permite que la otra persona responda de inmediato, aunque vea el mensaje horas despu\u00e9s.</p>\n\n<p>En lugar de preguntar si puedes preguntar, intenta:</p>\n<ul>\n  <li>\u00a1Ey! \u00bfEl entorno de staging est\u00e1 listo para pruebas?</li>\n  <li>Cosita r\u00e1pida \u2014 \u00bfcu\u00e1l es la contrase\u00f1a del vault compartido?</li>\n  <li>\u00a1Hola! \u00bfSabes si la release est\u00e1 prevista para hoy?</li>\n  <li>Ey, \u00bfd\u00f3nde puedo encontrar el doc de onboarding?</li>\n</ul>\n\n<p><strong>La educaci\u00f3n est\u00e1 en el tono, no en el pre\u00e1mbulo.</strong> Un saludo amable junto a tu pregunta real es m\u00e1s r\u00e1pido, m\u00e1s amable, y <em>compatible con comunicaci\u00f3n as\u00edncrona</em>.</p>\n\n<p>Cuando se hace bien, <strong>todos se ahorran una ida y vuelta</strong>. \ud83c\udf89</p>"
         }
       },
       footer: {

@@ -7,7 +7,7 @@
 - [ ] **Wall of text sin formato** → `/no-wall-of-text`
 - [ ] **@channel / @here innecesario** → `/no-unnecessary-mentions`
 - [x] **Mensajes partidos en 10 líneas** → `/no-message-splitting`
-- [ ] **"Can I ask you a question?"** → `/just-ask`
+- [x] **"Can I ask you a question?"** → `/just-ask`
 - [ ] **Responder "ok" a algo complejo** → `/no-dry-ok`
 - [ ] **Screenshot de texto** → `/no-screenshot-of-text`
 - [ ] **Mensajes a las 3AM esperando respuesta** → `/respect-time-zones`
