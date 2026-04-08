@@ -23,7 +23,8 @@ export const pages = {
           { url: "/no-public-shaming", text: "No public shaming - Don't call people out in public channels" },
           { url: "/no-reaction-as-answer", text: "No reaction as answer - Don't use reactions instead of actual replies" },
           { url: "/use-the-thread", text: "Use the thread - Don't ignore existing threads with answers" },
-          { url: "/no-hello", text: "No hello - Don't send a lonely \"hi\" with no context" }
+          { url: "/no-hello", text: "No hello - Don't send a lonely \"hi\" with no context" },
+          { url: "/no-message-splitting", text: "No message splitting - Don't split one thought into ten messages" }
         ]
       },
       footer: {
@@ -58,7 +59,8 @@ export const pages = {
           { url: "/no-public-shaming", text: "No public shaming - No señales a la gente en canales públicos" },
           { url: "/no-reaction-as-answer", text: "No reacción como respuesta - No uses reacciones en lugar de respuestas reales" },
           { url: "/use-the-thread", text: "Usa el thread - No ignores threads que ya tienen respuestas" },
-          { url: "/no-hello", text: "No hello - No mandes un \"hola\" solitario sin contexto" }
+          { url: "/no-hello", text: "No hello - No mandes un \"hola\" solitario sin contexto" },
+          { url: "/no-message-splitting", text: "No message splitting - No partas una idea en diez mensajes" }
         ]
       },
       footer: {
@@ -1000,6 +1002,114 @@ export const pages = {
           "Inspirado en el maravilloso <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatares tomados de Silicon Valley. Código abierto en <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
           "Hecho por <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
           "Este sitio está disponible en: <a href=\"/en\">English</a>, <a href=\"/es\">Español</a>"
+        ]
+      }
+    }
+  },
+  nomessagesplitting: {
+    en: {
+      seo: {
+        title: "Don't split one message into ten lines \u2014 ChatCrimes",
+        description: "Please don't send each word as a separate message. Write your full thought in one message instead of spamming the chat.",
+        slug: "no-message-splitting"
+      },
+      header: {
+        title: "No message splitting",
+        subtitle: "please don't split one thought into ten separate messages",
+        animations: ["hey", "you there?", "so", "I was thinking", "about the thing", "nvm"]
+      },
+      intro: {
+        text: "Imagine getting twelve notifications in a row, only to discover it was a single sentence chopped into tiny pieces... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c Don't do this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "hey", time: "3:00 PM" },
+            { name: "T.J Miller", text: "so", time: "3:00 PM" },
+            { name: "T.J Miller", text: "I was thinking", time: "3:01 PM" },
+            { name: "T.J Miller", text: "about the deploy", time: "3:01 PM" },
+            { name: "T.J Miller", text: "can we push it to tomorrow?", time: "3:02 PM" },
+            { name: "Thomas Middleditch", text: "you could have said all that in one message", time: "3:22 PM" }
+          ]
+        },
+        explanation: {
+          text: "<p>T.J Miller thought he was being conversational: <em>short messages, casual vibe</em>. <strong>But splitting one thought into six messages creates a wall of notifications</strong> that interrupts everyone in the channel.</p>\n\n<p>Most people who do this <strong>don't mean to spam</strong>. It's a reflex: <em>\"I'll just type as I think.\"</em></p>\n\n<p>But in text conversations, <strong>each message triggers a notification</strong>. Six messages means <strong>six interruptions, six pings</strong>, and the reader has to <em>piece together the whole thought like a puzzle</em>.</p>\n\n<p>The same goes for:</p>\n<ul>\n  <li>hey / you there? / so / about that thing</li>\n  <li>one word per line</li>\n  <li>stream-of-consciousness typing</li>\n  <li>hitting Enter after every three words</li>\n  <li>sending half a thought, then finishing it five messages later</li>\n</ul>\n\n<p><strong>One thought, one message!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 Instead, try this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "hey! I was thinking about the deploy \u2014 can we push it to tomorrow? I want to run a few more tests first.", time: "3:00 PM" },
+            { name: "Thomas Middleditch", text: "sure, tomorrow works. let me update the schedule.", time: "3:01 PM" },
+            { name: "T.J Miller", text: "perfect, thanks!", time: "3:02 PM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Composing your full thought before hitting send takes a few extra seconds</strong>, but it gives the reader everything they need in one clean notification.</p>\n\n<p>Instead of message-per-word, try:</p>\n<ul>\n  <li>Write the full idea, then hit send once</li>\n  <li>Use Shift+Enter for line breaks inside one message</li>\n  <li>If it's long, write it in a doc and share the link</li>\n  <li>Re-read before sending \u2014 can two messages become one?</li>\n</ul>\n\n<p><strong>Fewer pings, clearer thinking.</strong> Your teammates will read a complete thought instead of watching a sentence arrive one word at a time.</p>\n\n<p>When done right, <strong>everyone stays focused</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "This is kinda only half serious (kinda \ud83d\udc40) so please don't get mad at the person who sent you here.",
+          "That said, if you see this site's URL as someone's status/bio, be prepared to be ignored if you only reply with \"?\".",
+          "Inspired by the wonderful <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatars taken from Silicon Valley. Open-source on <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Made by <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "This site is available in: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    },
+    es: {
+      seo: {
+        title: "No partas un mensaje en diez l\u00edneas \u2014 ChatCrimes",
+        description: "Por favor no mandes cada palabra como un mensaje separado. Escribe tu idea completa en un solo mensaje en lugar de inundar el chat.",
+        slug: "no-message-splitting"
+      },
+      header: {
+        title: "No message splitting",
+        subtitle: "por favor no partas una idea en diez mensajes separados",
+        animations: ["ey", "est\u00e1s?", "pues", "estaba pensando", "sobre lo del otro d\u00eda", "nada deja"]
+      },
+      intro: {
+        text: "Imagina recibir doce notificaciones seguidas, solo para descubrir que era una sola frase cortada en pedacitos... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c No hagas esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "ey", time: "3:00 PM" },
+            { name: "T.J Miller", text: "pues", time: "3:00 PM" },
+            { name: "T.J Miller", text: "estaba pensando", time: "3:01 PM" },
+            { name: "T.J Miller", text: "sobre el deploy", time: "3:01 PM" },
+            { name: "T.J Miller", text: "\u00bflo pasamos a ma\u00f1ana?", time: "3:02 PM" },
+            { name: "Thomas Middleditch", text: "podr\u00edas haber dicho todo eso en un solo mensaje", time: "3:22 PM" }
+          ]
+        },
+        explanation: {
+          text: "<p>T.J Miller pens\u00f3 que estaba siendo informal: <em>mensajes cortos, buen rollo</em>. <strong>Pero partir una idea en seis mensajes crea una avalancha de notificaciones</strong> que interrumpe a todos en el canal.</p>\n\n<p>La mayor\u00eda de las personas que hacen esto <strong>no pretenden hacer spam</strong>. Es un reflejo: <em>\"Voy escribiendo seg\u00fan pienso.\"</em></p>\n\n<p>Pero en conversaciones de texto, <strong>cada mensaje dispara una notificaci\u00f3n</strong>. Seis mensajes significan <strong>seis interrupciones, seis pings</strong>, y el lector tiene que <em>juntar las piezas como un puzle</em>.</p>\n\n<p>Lo mismo va para:</p>\n<ul>\n  <li>ey / est\u00e1s? / pues / sobre eso</li>\n  <li>una palabra por l\u00ednea</li>\n  <li>escribir en modo flujo de conciencia</li>\n  <li>pulsar Enter cada tres palabras</li>\n  <li>mandar media idea y terminarla cinco mensajes despu\u00e9s</li>\n</ul>\n\n<p><strong>\u00a1Una idea, un mensaje!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 En su lugar, intenta esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "\u00a1ey! estaba pensando en el deploy \u2014 \u00bflo pasamos a ma\u00f1ana? Quiero correr unas pruebas m\u00e1s primero.", time: "3:00 PM" },
+            { name: "Thomas Middleditch", text: "claro, ma\u00f1ana va bien. actualizo el calendario.", time: "3:01 PM" },
+            { name: "T.J Miller", text: "\u00a1perfecto, gracias!", time: "3:02 PM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Componer tu idea completa antes de darle a enviar toma unos segundos extra</strong>, pero le da al lector todo lo que necesita en una sola notificaci\u00f3n limpia.</p>\n\n<p>En lugar de un mensaje por palabra, intenta:</p>\n<ul>\n  <li>Escribe la idea completa y pulsa enviar una sola vez</li>\n  <li>Usa Shift+Enter para saltos de l\u00ednea dentro de un mensaje</li>\n  <li>Si es largo, escr\u00edbelo en un doc y comparte el enlace</li>\n  <li>Relee antes de enviar \u2014 \u00bfpueden dos mensajes ser uno?</li>\n</ul>\n\n<p><strong>Menos pings, ideas m\u00e1s claras.</strong> Tus compa\u00f1eros leer\u00e1n un pensamiento completo en vez de ver llegar una frase palabra a palabra.</p>\n\n<p>Cuando se hace bien, <strong>todos mantienen el foco</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "Esto es solo medio en serio (medio \ud83d\udc40), as\u00ed que no te enojes con la persona que te envi\u00f3 aqu\u00ed.",
+          "Dicho esto, si ves la URL de este sitio en el estado/bio de alguien, prep\u00e1rate para ser ignorado si solo respondes con \"?\".",
+          "Inspirado en el maravilloso <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatares tomados de Silicon Valley. C\u00f3digo abierto en <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Hecho por <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "Este sitio est\u00e1 disponible en: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
         ]
       }
     }
