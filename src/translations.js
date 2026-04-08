@@ -2,6 +2,11 @@ export const pages = {
   // TODO: Split pages in separated files
   home: {
     en: {
+      seo: {
+        title: "ChatCrimes — The tiny crimes ruining every chat",
+        description: "A collection of the tiny crimes ruining every chat. From the lonely 'hi' to the haunting '?'. Learn chat etiquette the fun way.",
+        slug: ""
+      },
       header: {
         title: "ChatCrimes",
         subtitle: "From the lonely \"hi\" to the haunting \"?\", explore the tiny crimes ruining every chat.",
@@ -30,7 +35,12 @@ export const pages = {
         ]
       }
     },
-    es : {
+    es: {
+      seo: {
+        title: "ChatCrimes — Los pequeños crímenes que arruinan cada chat",
+        description: "Una colección de los pequeños crímenes que arruinan cada chat. Desde el solitario 'hola' hasta el inquietante '?'. Aprende etiqueta de chat de forma divertida.",
+        slug: ""
+      },
       header: {
         title: "ChatCrimes",
         subtitle: "Desde el solitario \"hola\" hasta el inquietante \"?\", explora los pequeños crímenes que arruinan cada chat.",
@@ -62,6 +72,11 @@ export const pages = {
   },
   nopublicshaming: {
     en: {
+      seo: {
+        title: "Don't shame coworkers in public channels — ChatCrimes",
+        description: "Don't call people out in public channels. Learn why public shaming in chat is a crime and how to give feedback privately.",
+        slug: "no-public-shaming"
+      },
       header: {
         title: "No public shaming",
         subtitle: "please don't call people out in public channels",
@@ -148,6 +163,11 @@ export const pages = {
       }
     },
     es: {
+      seo: {
+        title: "No avergüences a compañeros en canales públicos — ChatCrimes",
+        description: "No señales a la gente en canales públicos. Aprende por qué el public shaming en el chat es un crimen y cómo dar feedback en privado.",
+        slug: "no-public-shaming"
+      },
       header: {
         title: "No public shaming",
         subtitle: "por favor no señales a la gente en canales públicos",
@@ -236,6 +256,11 @@ export const pages = {
   },
   nochannelonly: {
     en: {
+      seo: {
+        title: "Don't just reply with a channel name — ChatCrimes",
+        description: "Don't reply with just a channel name in chat. Learn why redirecting without answering is a chat crime and what to do instead.",
+        slug: "no-channel-only"
+      },
       header: {
         title: "No #channel-only",
         subtitle: "please don't reply with just a channel name in chat",
@@ -317,6 +342,11 @@ export const pages = {
       }
     },
     es: {
+      seo: {
+        title: "No respondas solo con un nombre de canal — ChatCrimes",
+        description: "No respondas solo con un nombre de canal en el chat. Aprende por qué redirigir sin responder es un crimen de chat y qué hacer en su lugar.",
+        slug: "no-channel-only"
+      },
       header: {
         title: "No solo #canal",
         subtitle: "por favor no respondas solo con un nombre de canal en el chat",
@@ -400,6 +430,11 @@ export const pages = {
   },
   noquestionmark: {
     en: {
+      seo: {
+        title: "Don't reply with just \"?\" — ChatCrimes",
+        description: "Please don't reply with just a question mark in chat. Learn why it's a chat crime and what to do instead.",
+        slug: "no-question-mark"
+      },
       header: {
         title: 'No ?',
         subtitle: 'please don\'t reply with just a question mark in chat',
@@ -474,6 +509,11 @@ export const pages = {
       }
     },
     es: {
+      seo: {
+        title: "No respondas solo con \"?\" — ChatCrimes",
+        description: "Por favor no respondas solo con un signo de interrogación en el chat. Aprende por qué es un crimen de chat y qué hacer en su lugar.",
+        slug: "no-question-mark"
+      },
       header: {
         title: 'No ? ',
         subtitle: 'por favor no respondas solo con un signo de interrogación en el chat',
@@ -550,6 +590,11 @@ export const pages = {
   },
   noreactionasanswer: {
     en: {
+      seo: {
+        title: "Stop using reactions as answers — ChatCrimes",
+        description: "Don't use emoji reactions instead of actual replies in chat. Learn why it's a chat crime and how to respond properly.",
+        slug: "no-reaction-as-answer"
+      },
       header: {
         title: 'No reaction as answer',
         subtitle: 'please don\'t use reactions instead of actual replies',
@@ -627,6 +672,11 @@ export const pages = {
       }
     },
     es: {
+      seo: {
+        title: "No uses reacciones como respuesta — ChatCrimes",
+        description: "No uses reacciones de emoji en lugar de respuestas reales en el chat. Aprende por qué es un crimen de chat y cómo responder correctamente.",
+        slug: "no-reaction-as-answer"
+      },
       header: {
         title: 'No reacción como respuesta',
         subtitle: 'por favor no uses reacciones en lugar de respuestas reales',
@@ -706,6 +756,11 @@ export const pages = {
   },
   usethethread: {
     en: {
+      seo: {
+        title: "Use threads, don't flood the channel — ChatCrimes",
+        description: "Check existing threads before asking again in the main channel. Learn why ignoring threads is a chat crime.",
+        slug: "use-the-thread"
+      },
       header: {
         title: 'Use the thread',
         subtitle: 'please check existing threads before asking again',
@@ -772,6 +827,11 @@ export const pages = {
       }
     },
     es: {
+      seo: {
+        title: "Usa los threads, no inundes el canal — ChatCrimes",
+        description: "Revisa los threads existentes antes de preguntar de nuevo en el canal principal. Aprende por qué ignorar los threads es un crimen de chat.",
+        slug: "use-the-thread"
+      },
       header: {
         title: 'Usa el thread',
         subtitle: 'por favor revisa los threads existentes antes de preguntar de nuevo',

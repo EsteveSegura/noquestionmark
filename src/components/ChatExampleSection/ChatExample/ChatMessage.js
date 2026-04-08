@@ -6,7 +6,7 @@ export function ChatMessage({ name, text, avatar, time, reaction = null, thread 
 
   const reactionHTML = reaction ? `
       <div class="chat-message__reaction">
-        <img src="${reaction.image}" alt="reaction" class="chat-message__reaction-image" />
+        <img src="${reaction.image}" alt="Thumbs up reaction used as only response" class="chat-message__reaction-image" />
         <span class="chat-message__reaction-count">${reaction.count || 1}</span>
       </div>
   ` : ''
@@ -18,7 +18,7 @@ export function ChatMessage({ name, text, avatar, time, reaction = null, thread 
   const threadHTML = thread ? `
       <div class="chat-message__thread">
         <div class="chat-message__thread-avatars">
-          ${threadAvatars.map((av, i) => `<img src="${av}" alt="avatar" class="chat-message__thread-avatar" style="z-index: ${threadAvatars.length - i}" />`).join('')}
+          ${threadAvatars.map((av, i) => `<img src="${av}" alt="Thread participant avatar" class="chat-message__thread-avatar" style="z-index: ${threadAvatars.length - i}" />`).join('')}
         </div>
         <span class="chat-message__thread-replies">${threadReplies} replies</span>
         <span class="chat-message__thread-last">${threadLastReply}</span>
@@ -27,7 +27,7 @@ export function ChatMessage({ name, text, avatar, time, reaction = null, thread 
 
   message.innerHTML = `
     <div class="chat-message__avatar">
-      <img src="${avatar}" alt="${name}" />
+      <img src="${avatar}" alt="${name} chat avatar" />
     </div>
     <div class="chat-message__content">
       <div class="chat-message__header">

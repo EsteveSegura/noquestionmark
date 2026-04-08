@@ -17,7 +17,7 @@ function createCard(pageTranslations, url) {
   card.href = url
   card.className = 'chat-crime-card'
 
-  const cardTitle = document.createElement('h4')
+  const cardTitle = document.createElement('h3')
   cardTitle.className = 'chat-crime-card__title'
   cardTitle.textContent = pageTranslations.header.title
   card.appendChild(cardTitle)
