@@ -28,7 +28,8 @@ export const pages = {
           { url: "/just-ask", text: "Just ask - Don't ask to ask, just ask your question" },
           { url: "/no-unnecessary-mentions", text: "No unnecessary @mentions - Don't abuse @channel and @here" },
           { url: "/respect-time-zones", text: "Respect time zones - Don't message at 3 AM expecting a reply" },
-          { url: "/no-dry-ok", text: "No dry ok - Don't reply \"ok\" to something that deserves more" }
+          { url: "/no-dry-ok", text: "No dry ok - Don't reply \"ok\" to something that deserves more" },
+          { url: "/no-passive-aggressive", text: "No passive-aggressive - Don't hide frustration behind polite phrases" }
         ]
       },
       footer: {
@@ -68,7 +69,8 @@ export const pages = {
           { url: "/just-ask", text: "Just ask - No preguntes si puedes preguntar, pregunta directamente" },
           { url: "/no-unnecessary-mentions", text: "No unnecessary @mentions - No abuses de @channel y @here" },
           { url: "/respect-time-zones", text: "Respect time zones - No mandes mensajes a las 3 AM esperando respuesta" },
-          { url: "/no-dry-ok", text: "No dry ok - No respondas \"ok\" a algo que merece m\u00e1s" }
+          { url: "/no-dry-ok", text: "No dry ok - No respondas \"ok\" a algo que merece m\u00e1s" },
+          { url: "/no-passive-aggressive", text: "No passive-aggressive - No escondas tu frustraci\u00f3n detr\u00e1s de frases educadas" }
         ]
       },
       footer: {
@@ -1529,6 +1531,112 @@ export const pages = {
         },
         explanation: {
           text: "<p><strong>Repetir los puntos clave toma diez segundos extra</strong> \u2014 y confirma que todos est\u00e1n alineados, no solo que alguien vio el mensaje.</p>\n\n<p>En lugar de un \"ok\" seco, intenta:</p>\n<ul>\n  <li>Confirma tu parte: \"Me encargo de X para el jueves\"</li>\n  <li>Reconoce el plan: \"El viernes a las 2 PM me va bien\"</li>\n  <li>A\u00f1ade algo: \"Perfecto, hagamos sync antes del deploy\"</li>\n  <li>Pregunta si no est\u00e1 claro: \"Entendido \u2014 una duda: \u00bfqui\u00e9n hace QA?\"</li>\n</ul>\n\n<p><strong>Esfuerzo que entra, esfuerzo que sale.</strong> Cuando alguien escribe un mensaje pensado, una respuesta pensada demuestra que lo le\u00edste. Eso genera confianza.</p>\n\n<p>Cuando se hace bien, <strong>todos conocen el plan</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "Esto es solo medio en serio (medio \ud83d\udc40), as\u00ed que no te enojes con la persona que te envi\u00f3 aqu\u00ed.",
+          "Dicho esto, si ves la URL de este sitio en el estado/bio de alguien, prep\u00e1rate para ser ignorado si solo respondes con \"?\".",
+          "Inspirado en el maravilloso <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatares tomados de Silicon Valley. C\u00f3digo abierto en <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Hecho por <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "Este sitio est\u00e1 disponible en: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    }
+  },
+  nopassiveaggressive: {
+    en: {
+      seo: {
+        title: "Stop being passive-aggressive in chat \u2014 ChatCrimes",
+        description: "Please don't use phrases like 'as per my last message' or 'as I already said' in chat. Be direct, not passive-aggressive.",
+        slug: "no-passive-aggressive"
+      },
+      header: {
+        title: "No passive-aggressive",
+        subtitle: "please don't hide frustration behind polite-sounding phrases",
+        animations: ["per my last msg", "as I said", "gentle reminder", "just circling back", "as mentioned", "not sure if you saw"]
+      },
+      intro: {
+        text: "Imagine reading a message that sounds polite on the surface but is clearly dripping with barely contained irritation... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c Don't do this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "hey, any update on the deploy?", time: "2:00 PM" },
+            { name: "Thomas Middleditch", text: "as per my last message, the deploy is scheduled for Friday", time: "2:20 PM" },
+            { name: "T.J Miller", text: "right, but is it confirmed?", time: "2:21 PM" },
+            { name: "Thomas Middleditch", text: "as I already mentioned, yes. it's confirmed.", time: "2:45 PM" }
+          ]
+        },
+        explanation: {
+          text: "<p>Thomas Middleditch thought he was being professional: <em>I already answered this, let me reference my previous message</em>. <strong>But phrases like \"as per my last message\" are universally read as passive-aggressive</strong>, even if that wasn't the intention.</p>\n\n<p>Most people who do this <strong>don't think they're being rude</strong>. It feels like a polite redirect: <em>\"I'm just pointing them to what I already said.\"</em></p>\n\n<p>But in text, <strong>tone is easily lost and these phrases carry a sharp subtext</strong>: <em>you should have read what I wrote</em>. They create <strong>tension, defensiveness</strong>, and make people <em>dread asking follow-up questions</em>.</p>\n\n<p>The same goes for:</p>\n<ul>\n  <li>As I already mentioned...</li>\n  <li>Per my previous email...</li>\n  <li>Just a gentle reminder (that's not gentle at all)</li>\n  <li>Not sure if you saw my last message...</li>\n  <li>Circling back on this (for the third time)</li>\n</ul>\n\n<p><strong>Say what you mean, kindly!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 Instead, try this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "hey, any update on the deploy?", time: "2:00 PM" },
+            { name: "Thomas Middleditch", text: "yep! still on track for Friday. I'll ping the channel once it's live", time: "2:02 PM" },
+            { name: "T.J Miller", text: "great, thanks for confirming!", time: "2:03 PM" },
+            { name: "Thomas Middleditch", text: "no problem, I'll keep you posted", time: "2:04 PM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Repeating the answer without the sarcastic wrapper takes the same effort</strong> \u2014 and it keeps the conversation friendly instead of adversarial.</p>\n\n<p>Instead of passive-aggressive callbacks, try:</p>\n<ul>\n  <li>Just re-state the answer briefly and move on</li>\n  <li>Add new info: \"still Friday, I'll ping when it's live\"</li>\n  <li>If it's truly urgent, link the original message directly</li>\n  <li>If you're frustrated, take a breath before typing</li>\n</ul>\n\n<p><strong>Direct beats diplomatic-but-mean.</strong> People remember how your messages made them feel. A curt \"as I said\" lingers far longer than a friendly re-confirmation.</p>\n\n<p>When done right, <strong>everyone stays on the same team</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "This is kinda only half serious (kinda \ud83d\udc40) so please don't get mad at the person who sent you here.",
+          "That said, if you see this site's URL as someone's status/bio, be prepared to be ignored if you only reply with \"?\".",
+          "Inspired by the wonderful <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatars taken from Silicon Valley. Open-source on <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Made by <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "This site is available in: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    },
+    es: {
+      seo: {
+        title: "Deja de ser pasivo-agresivo en el chat \u2014 ChatCrimes",
+        description: "Por favor no uses frases como 'como ya dije' o 'seg\u00fan mi \u00faltimo mensaje' en el chat. S\u00e9 directo, no pasivo-agresivo.",
+        slug: "no-passive-aggressive"
+      },
+      header: {
+        title: "No passive-aggressive",
+        subtitle: "por favor no escondas tu frustraci\u00f3n detr\u00e1s de frases que suenan educadas",
+        animations: ["como ya dije", "seg\u00fan mi msg", "recordatorio amable", "vuelvo a insistir", "como mencion\u00e9", "no s\u00e9 si lo viste"]
+      },
+      intro: {
+        text: "Imagina leer un mensaje que suena educado en la superficie pero que claramente destila una irritaci\u00f3n apenas contenida... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c No hagas esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "ey, \u00bfalguna novedad sobre el deploy?", time: "2:00 PM" },
+            { name: "Thomas Middleditch", text: "como ya dije en mi \u00faltimo mensaje, el deploy est\u00e1 programado para el viernes", time: "2:20 PM" },
+            { name: "T.J Miller", text: "ya, pero \u00bfest\u00e1 confirmado?", time: "2:21 PM" },
+            { name: "Thomas Middleditch", text: "como ya mencion\u00e9, s\u00ed. est\u00e1 confirmado.", time: "2:45 PM" }
+          ]
+        },
+        explanation: {
+          text: "<p>Thomas Middleditch pens\u00f3 que estaba siendo profesional: <em>ya respond\u00ed esto, d\u00e9jame referenciar mi mensaje anterior</em>. <strong>Pero frases como \"como ya dije\" se leen universalmente como pasivo-agresivas</strong>, aunque esa no fuera la intenci\u00f3n.</p>\n\n<p>La mayor\u00eda de las personas que hacen esto <strong>no creen estar siendo maleducadas</strong>. Se siente como una redirecci\u00f3n educada: <em>\"Solo les se\u00f1alo lo que ya escrib\u00ed.\"</em></p>\n\n<p>Pero en texto, <strong>el tono se pierde f\u00e1cilmente y estas frases llevan un subtexto afilado</strong>: <em>deber\u00edas haber le\u00eddo lo que escrib\u00ed</em>. Generan <strong>tensi\u00f3n, actitud defensiva</strong>, y hacen que la gente <em>tema hacer preguntas de seguimiento</em>.</p>\n\n<p>Lo mismo va para:</p>\n<ul>\n  <li>Como ya mencion\u00e9...</li>\n  <li>Seg\u00fan mi mensaje anterior...</li>\n  <li>Solo un recordatorio amable (que no tiene nada de amable)</li>\n  <li>No s\u00e9 si viste mi \u00faltimo mensaje...</li>\n  <li>Vuelvo a insistir sobre esto (por tercera vez)</li>\n</ul>\n\n<p><strong>\u00a1Di lo que quieres decir, con amabilidad!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 En su lugar, intenta esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "ey, \u00bfalguna novedad sobre el deploy?", time: "2:00 PM" },
+            { name: "Thomas Middleditch", text: "\u00a1s\u00ed! sigue en pie para el viernes. Aviso por el canal cuando est\u00e9 en producci\u00f3n", time: "2:02 PM" },
+            { name: "T.J Miller", text: "\u00a1genial, gracias por confirmar!", time: "2:03 PM" },
+            { name: "Thomas Middleditch", text: "de nada, te mantengo al tanto", time: "2:04 PM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Repetir la respuesta sin el envoltorio sarc\u00e1stico cuesta lo mismo</strong> \u2014 y mantiene la conversaci\u00f3n amistosa en vez de convertirla en una batalla.</p>\n\n<p>En lugar de referencias pasivo-agresivas, intenta:</p>\n<ul>\n  <li>Simplemente repite la respuesta brevemente y sigue adelante</li>\n  <li>A\u00f1ade info nueva: \"sigue el viernes, aviso cuando est\u00e9 en producci\u00f3n\"</li>\n  <li>Si es realmente urgente, enlaza el mensaje original directamente</li>\n  <li>Si est\u00e1s frustrado, respira antes de escribir</li>\n</ul>\n\n<p><strong>Directo le gana a diplom\u00e1tico-pero-cruel.</strong> La gente recuerda c\u00f3mo le hicieron sentir tus mensajes. Un seco \"como ya dije\" perdura mucho m\u00e1s que una reconfirmaci\u00f3n amable.</p>\n\n<p>Cuando se hace bien, <strong>todos siguen en el mismo equipo</strong>. \ud83c\udf89</p>"
         }
       },
       footer: {
