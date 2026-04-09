@@ -19,7 +19,8 @@ const urlToPageKey = {
   '/no-passive-aggressive': 'nopassiveaggressive',
   '/no-ghost-deleting': 'noghostdeleting',
   '/no-long-voice-notes': 'nolongvoicenotes',
-  '/no-voice-notes': 'novoicenotes'
+  '/no-voice-notes': 'novoicenotes',
+  '/no-deleting-thread-starter': 'nodeletingthreadstarter'
 }
 
 function createCard(pageTranslations, url) {
