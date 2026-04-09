@@ -31,7 +31,8 @@ export const pages = {
           { url: "/no-dry-ok", text: "No dry ok - Don't reply \"ok\" to something that deserves more" },
           { url: "/no-passive-aggressive", text: "No passive-aggressive - Don't hide frustration behind polite phrases" },
           { url: "/no-ghost-deleting", text: "No ghost deleting - Don't silently delete messages after people read them" },
-          { url: "/no-long-voice-notes", text: "No long voice notes - Don't send 5-minute voice notes when a sentence would do" }
+          { url: "/no-long-voice-notes", text: "No long voice notes - Don't send 5-minute voice notes when a sentence would do" },
+          { url: "/no-voice-notes", text: "No voice notes - Don't send a voice note when the info should be text" }
         ]
       },
       footer: {
@@ -74,7 +75,8 @@ export const pages = {
           { url: "/no-dry-ok", text: "No dry ok - No respondas \"ok\" a algo que merece m\u00e1s" },
           { url: "/no-passive-aggressive", text: "No passive-aggressive - No escondas tu frustraci\u00f3n detr\u00e1s de frases educadas" },
           { url: "/no-ghost-deleting", text: "No ghost deleting - No borres mensajes en silencio despu\u00e9s de que los lean" },
-          { url: "/no-long-voice-notes", text: "No long voice notes - No mandes notas de voz de 5 minutos cuando basta una frase" }
+          { url: "/no-long-voice-notes", text: "No long voice notes - No mandes notas de voz de 5 minutos cuando basta una frase" },
+          { url: "/no-voice-notes", text: "No voice notes - No mandes una nota de voz cuando la info deber\u00eda ser texto" }
         ]
       },
       footer: {
@@ -1853,6 +1855,112 @@ export const pages = {
         },
         explanation: {
           text: "<p><strong>Un mensaje escrito se lee en 10 segundos, se puede ojear y referenciar despu\u00e9s</strong> \u2014 una nota de voz de 5 minutos no puede hacer nada de eso.</p>\n\n<p>En lugar de una nota de voz larga, intenta:</p>\n<ul>\n  <li>Escribe un resumen con los puntos clave</li>\n  <li>Si es complejo, escr\u00edbelo en un doc y comparte el enlace</li>\n  <li>Usa vi\u00f1etas para m\u00faltiples temas</li>\n  <li>Si necesitas mandar audio, que sea de menos de 30 segundos y a\u00f1ade un resumen en texto</li>\n</ul>\n\n<p><strong>El texto es buscable, ojeable y as\u00edncrono.</strong> Tus compa\u00f1eros recibir\u00e1n la info m\u00e1s r\u00e1pido, podr\u00e1n consultarla despu\u00e9s, y no tendr\u00e1n que susurrar \"\u00bfqu\u00e9 dec\u00eda esa nota de voz?\" en una reuni\u00f3n.</p>\n\n<p>Cuando se hace bien, <strong>todos se enteran sin necesitar auriculares</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "Esto es solo medio en serio (medio \ud83d\udc40), as\u00ed que no te enojes con la persona que te envi\u00f3 aqu\u00ed.",
+          "Dicho esto, si ves la URL de este sitio en el estado/bio de alguien, prep\u00e1rate para ser ignorado si solo respondes con \"?\".",
+          "Inspirado en el maravilloso <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatares tomados de Silicon Valley. C\u00f3digo abierto en <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Hecho por <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "Este sitio est\u00e1 disponible en: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    }
+  },
+  novoicenotes: {
+    en: {
+      seo: {
+        title: "Don't send voice notes instead of text \u2014 ChatCrimes",
+        description: "Please don't send voice notes when the information would be better as text. URLs, names, numbers, and instructions belong in writing.",
+        slug: "no-voice-notes"
+      },
+      header: {
+        title: "No voice notes",
+        subtitle: "please don't send a voice note when the info should be text",
+        animations: ["just listen", "it's faster", "audio pls", "can't type rn", "check my audio", "voice msg"]
+      },
+      intro: {
+        text: "Imagine needing a URL, a password, or a meeting ID, and someone sends it to you buried inside a voice note... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c Don't do this",
+        chat: {
+          messages: [
+            { name: "Thomas Middleditch", text: "hey, can you send me the staging URL and the API key?", time: "10:00 AM" },
+            { name: "T.J Miller", text: "", time: "10:20 AM", voiceNote: { duration: "1:47" } },
+            { name: "Thomas Middleditch", text: "I can't copy-paste a voice note... can you type the URL?", time: "10:35 AM" },
+            { name: "T.J Miller", text: "", time: "10:36 AM", voiceNote: { duration: "0:23" } }
+          ]
+        },
+        explanation: {
+          text: "<p>T.J Miller thought voice was more convenient: <em>it's faster for me to just say it</em>. <strong>But sending a URL, a password, or technical details inside a voice note makes the info impossible to use</strong> \u2014 the recipient can't copy, paste, search, or bookmark it.</p>\n\n<p>Most people who do this <strong>don't realize the friction they're creating</strong>. It feels efficient: <em>\"I'll just dictate it real quick.\"</em></p>\n\n<p>But certain information <strong>only works as text</strong>. Voice notes for data, links, or instructions force the other person to <strong>listen, transcribe by hand, and pray they got it right</strong>.</p>\n\n<p>The same goes for:</p>\n<ul>\n  <li>URLs and links dictated in audio</li>\n  <li>Passwords or credentials spoken out loud</li>\n  <li>Meeting IDs, phone numbers, or codes</li>\n  <li>Step-by-step instructions that need to be followed later</li>\n  <li>Names, email addresses, or anything that needs exact spelling</li>\n</ul>\n\n<p><strong>If it needs to be copied, type it!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 Instead, try this",
+        chat: {
+          messages: [
+            { name: "Thomas Middleditch", text: "hey, can you send me the staging URL and the API key?", time: "10:00 AM" },
+            { name: "T.J Miller", text: "sure! staging: https://staging.example.com and API key: sk-a1b2c3d4e5f6", time: "10:02 AM" },
+            { name: "Thomas Middleditch", text: "perfect, just copied both. thanks!", time: "10:03 AM" },
+            { name: "T.J Miller", text: "no problem, they're also in the shared vault under \"staging\"", time: "10:04 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Typed information can be copied, pasted, bookmarked, and searched</strong> \u2014 a voice note saying \"the URL is aitch tee tee pee ess colon slash slash...\" can't.</p>\n\n<p>Instead of a voice note for data, try:</p>\n<ul>\n  <li>Type URLs, keys, and credentials directly in chat</li>\n  <li>Use a shared vault or doc for sensitive data</li>\n  <li>For complex instructions, write numbered steps</li>\n  <li>Save voice for emotional or nuanced conversations, not data transfer</li>\n</ul>\n\n<p><strong>Voice is for tone, text is for data.</strong> Use each where it shines. Nobody wants to replay a voice note three times to transcribe a URL character by character.</p>\n\n<p>When done right, <strong>everyone can just copy and paste</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "This is kinda only half serious (kinda \ud83d\udc40) so please don't get mad at the person who sent you here.",
+          "That said, if you see this site's URL as someone's status/bio, be prepared to be ignored if you only reply with \"?\".",
+          "Inspired by the wonderful <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatars taken from Silicon Valley. Open-source on <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Made by <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "This site is available in: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    },
+    es: {
+      seo: {
+        title: "No mandes notas de voz en vez de texto \u2014 ChatCrimes",
+        description: "Por favor no mandes notas de voz cuando la informaci\u00f3n deber\u00eda ir en texto. URLs, nombres, n\u00fameros e instrucciones van por escrito.",
+        slug: "no-voice-notes"
+      },
+      header: {
+        title: "No voice notes",
+        subtitle: "por favor no mandes una nota de voz cuando la info deber\u00eda ser texto",
+        animations: ["solo escucha", "es m\u00e1s r\u00e1pido", "audio porfa", "no puedo escribir", "mira mi audio", "nota de voz"]
+      },
+      intro: {
+        text: "Imagina necesitar una URL, una contrase\u00f1a o un ID de reuni\u00f3n, y que alguien te lo mande enterrado dentro de una nota de voz... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c No hagas esto",
+        chat: {
+          messages: [
+            { name: "Thomas Middleditch", text: "ey, \u00bfme puedes mandar la URL de staging y la API key?", time: "10:00 AM" },
+            { name: "T.J Miller", text: "", time: "10:20 AM", voiceNote: { duration: "1:47" } },
+            { name: "Thomas Middleditch", text: "no puedo copiar y pegar una nota de voz... \u00bfpuedes escribir la URL?", time: "10:35 AM" },
+            { name: "T.J Miller", text: "", time: "10:36 AM", voiceNote: { duration: "0:23" } }
+          ]
+        },
+        explanation: {
+          text: "<p>T.J Miller pens\u00f3 que la voz era m\u00e1s c\u00f3moda: <em>es m\u00e1s r\u00e1pido si lo digo</em>. <strong>Pero mandar una URL, una contrase\u00f1a o datos t\u00e9cnicos dentro de una nota de voz hace que la info sea imposible de usar</strong> \u2014 el receptor no puede copiar, pegar, buscar ni guardarla.</p>\n\n<p>La mayor\u00eda de las personas que hacen esto <strong>no se dan cuenta de la fricci\u00f3n que generan</strong>. Se siente eficiente: <em>\"Se lo dicto r\u00e1pido.\"</em></p>\n\n<p>Pero cierta informaci\u00f3n <strong>solo funciona como texto</strong>. Las notas de voz para datos, enlaces o instrucciones obligan a la otra persona a <strong>escuchar, transcribir a mano y rezar para que lo haya pillado bien</strong>.</p>\n\n<p>Lo mismo va para:</p>\n<ul>\n  <li>URLs y enlaces dictados en audio</li>\n  <li>Contrase\u00f1as o credenciales dichas en voz alta</li>\n  <li>IDs de reuni\u00f3n, n\u00fameros de tel\u00e9fono o c\u00f3digos</li>\n  <li>Instrucciones paso a paso que hay que seguir despu\u00e9s</li>\n  <li>Nombres, direcciones de email o cualquier cosa que requiera deletreo exacto</li>\n</ul>\n\n<p><strong>\u00a1Si hay que copiarlo, escr\u00edbelo!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 En su lugar, intenta esto",
+        chat: {
+          messages: [
+            { name: "Thomas Middleditch", text: "ey, \u00bfme puedes mandar la URL de staging y la API key?", time: "10:00 AM" },
+            { name: "T.J Miller", text: "\u00a1claro! staging: https://staging.example.com y API key: sk-a1b2c3d4e5f6", time: "10:02 AM" },
+            { name: "Thomas Middleditch", text: "perfecto, acabo de copiar ambos. \u00a1gracias!", time: "10:03 AM" },
+            { name: "T.J Miller", text: "de nada, tambi\u00e9n est\u00e1n en el vault compartido en \"staging\"", time: "10:04 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>La informaci\u00f3n escrita se puede copiar, pegar, guardar y buscar</strong> \u2014 una nota de voz diciendo \"la URL es hache te te pe ese dos puntos barra barra...\" no.</p>\n\n<p>En lugar de una nota de voz para datos, intenta:</p>\n<ul>\n  <li>Escribe URLs, claves y credenciales directamente en el chat</li>\n  <li>Usa un vault compartido o un doc para datos sensibles</li>\n  <li>Para instrucciones complejas, escribe pasos numerados</li>\n  <li>Reserva la voz para conversaciones emocionales o con matices, no para transferir datos</li>\n</ul>\n\n<p><strong>La voz es para el tono, el texto es para los datos.</strong> Usa cada uno donde brille. Nadie quiere reproducir una nota de voz tres veces para transcribir una URL car\u00e1cter a car\u00e1cter.</p>\n\n<p>Cuando se hace bien, <strong>todos pueden simplemente copiar y pegar</strong>. \ud83c\udf89</p>"
         }
       },
       footer: {
