@@ -20,7 +20,8 @@ const urlToPageKey = {
   '/no-ghost-deleting': 'noghostdeleting',
   '/no-long-voice-notes': 'nolongvoicenotes',
   '/no-voice-notes': 'novoicenotes',
-  '/no-deleting-thread-starter': 'nodeletingthreadstarter'
+  '/no-deleting-thread-starter': 'nodeletingthreadstarter',
+  '/no-tldr': 'notldr'
 }
 
 function createCard(pageTranslations, url) {

@@ -33,7 +33,8 @@ export const pages = {
           { url: "/no-ghost-deleting", text: "No ghost deleting - Don't silently delete messages after people read them" },
           { url: "/no-long-voice-notes", text: "No long voice notes - Don't send 5-minute voice notes when a sentence would do" },
           { url: "/no-voice-notes", text: "No voice notes - Don't send a voice note when the info should be text" },
-          { url: "/no-deleting-thread-starter", text: "No deleting thread starters - Don't delete the message that started a thread" }
+          { url: "/no-deleting-thread-starter", text: "No deleting thread starters - Don't delete the message that started a thread" },
+          { url: "/no-tldr", text: "No TLDR - Don't ask for a summary instead of reading the message" }
         ]
       },
       footer: {
@@ -78,7 +79,8 @@ export const pages = {
           { url: "/no-ghost-deleting", text: "No ghost deleting - No borres mensajes en silencio despu\u00e9s de que los lean" },
           { url: "/no-long-voice-notes", text: "No long voice notes - No mandes notas de voz de 5 minutos cuando basta una frase" },
           { url: "/no-voice-notes", text: "No voice notes - No mandes una nota de voz cuando la info deber\u00eda ser texto" },
-          { url: "/no-deleting-thread-starter", text: "No deleting thread starters - No borres el mensaje que inici\u00f3 un thread" }
+          { url: "/no-deleting-thread-starter", text: "No deleting thread starters - No borres el mensaje que inici\u00f3 un thread" },
+          { url: "/no-tldr", text: "No TLDR - No pidas un resumen en vez de leer el mensaje" }
         ]
       },
       footer: {
@@ -2061,6 +2063,112 @@ export const pages = {
         },
         explanation: {
           text: "<p><strong>Editar el mensaje con una actualizaci\u00f3n preserva todo el contexto</strong> \u2014 los futuros lectores pueden ver la pregunta original, la discusi\u00f3n y la resoluci\u00f3n en un solo lugar.</p>\n\n<p>En lugar de borrar el inicio de un thread, intenta:</p>\n<ul>\n  <li>Edita con una nota: \"(resuelto \u2014 ver thread para la decisi\u00f3n)\"</li>\n  <li>A\u00f1ade una respuesta al final resumiendo el resultado</li>\n  <li>Si la info es incorrecta, t\u00e1chala y a\u00f1ade la correcci\u00f3n</li>\n  <li>Si es algo sensible, explica por qu\u00e9 lo est\u00e1s redactando</li>\n</ul>\n\n<p><strong>Los threads son documentos vivos.</strong> El mensaje inicial es el t\u00edtulo del cap\u00edtulo \u2014 b\u00f3rralo y toda la historia se desmorona.</p>\n\n<p>Cuando se hace bien, <strong>cada thread cuenta su historia completa</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "Esto es solo medio en serio (medio \ud83d\udc40), as\u00ed que no te enojes con la persona que te envi\u00f3 aqu\u00ed.",
+          "Dicho esto, si ves la URL de este sitio en el estado/bio de alguien, prep\u00e1rate para ser ignorado si solo respondes con \"?\".",
+          "Inspirado en el maravilloso <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatares tomados de Silicon Valley. C\u00f3digo abierto en <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Hecho por <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "Este sitio est\u00e1 disponible en: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    }
+  },
+  notldr: {
+    en: {
+      seo: {
+        title: "Don't ask for a TLDR instead of reading \u2014 ChatCrimes",
+        description: "Please don't ask someone to summarize a message you could have just read. Respect the effort people put into writing clear context.",
+        slug: "no-tldr"
+      },
+      header: {
+        title: "No TLDR",
+        subtitle: "please don't ask for a summary instead of reading the message",
+        animations: ["tldr?", "too long", "summary pls", "can you shorten?", "didn't read", "bullet points?"]
+      },
+      intro: {
+        text: "Imagine spending ten minutes writing a clear, structured message, and someone replies with \"tldr?\"... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c Don't do this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "here's the plan: I'll migrate the DB on Thursday, you handle rollback scripts, QA signs off Friday morning, and we deploy at 2 PM. If anything breaks, I'll roll back and we retry Monday.", time: "10:00 AM" },
+            { name: "Thomas Middleditch", text: "tldr?", time: "10:25 AM" },
+            { name: "T.J Miller", text: "...it's 3 lines", time: "10:26 AM" },
+            { name: "Thomas Middleditch", text: "just give me the short version", time: "10:45 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p>Thomas Middleditch thought he was being efficient: <em>I don't have time for this, give me the gist</em>. <strong>But asking \"tldr?\" to a short, well-structured message tells the other person their effort was wasted</strong>.</p>\n\n<p>Most people who do this <strong>don't mean to be dismissive</strong>. It's a reflex: <em>\"I'm busy, I'll just ask for the summary.\"</em></p>\n\n<p>But in work chat, <strong>asking for a TLDR on something that's already concise is disrespectful</strong>. It signals <strong>\"I didn't bother reading\"</strong> and forces the sender to <em>do extra work summarizing something that was already summarized</em>.</p>\n\n<p>The same goes for:</p>\n<ul>\n  <li>tldr? on a 3-sentence message</li>\n  <li>\"can you just give me bullet points?\" (it already is bullet points)</li>\n  <li>\"too long, didn't read\" as an actual response</li>\n  <li>Asking someone to re-explain what they already wrote clearly</li>\n  <li>Skipping the message and asking the same question it answers</li>\n</ul>\n\n<p><strong>Just read it!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 Instead, try this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "here's the plan: I'll migrate the DB on Thursday, you handle rollback scripts, QA signs off Friday morning, and we deploy at 2 PM. If anything breaks, I'll roll back and we retry Monday.", time: "10:00 AM" },
+            { name: "Thomas Middleditch", text: "got it. I'll have the rollback scripts ready Thursday EOD. Friday 2 PM works", time: "10:02 AM" },
+            { name: "T.J Miller", text: "perfect, let's sync briefly before the deploy", time: "10:03 AM" },
+            { name: "Thomas Middleditch", text: "sounds good, I'll block 1:30 PM on the calendar", time: "10:04 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Reading a well-written message and responding to its content is the bare minimum of communication</strong> \u2014 and it takes less time than writing \"tldr?\" and waiting for a response.</p>\n\n<p>Instead of asking for a summary, try:</p>\n<ul>\n  <li>Actually read the message \u2014 it's probably shorter than you think</li>\n  <li>Reply to specific points to show you engaged</li>\n  <li>If it's genuinely too long, ask about a specific part you need</li>\n  <li>If you're truly swamped, say \"I'll read this in detail after my meeting\"</li>\n</ul>\n\n<p><strong>Reading is participating.</strong> When someone writes context, they're saving you a meeting. The least you can do is read it.</p>\n\n<p>When done right, <strong>written communication actually works</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "This is kinda only half serious (kinda \ud83d\udc40) so please don't get mad at the person who sent you here.",
+          "That said, if you see this site's URL as someone's status/bio, be prepared to be ignored if you only reply with \"?\".",
+          "Inspired by the wonderful <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatars taken from Silicon Valley. Open-source on <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Made by <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "This site is available in: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    },
+    es: {
+      seo: {
+        title: "No pidas un TLDR en vez de leer \u2014 ChatCrimes",
+        description: "Por favor no pidas que te resuman un mensaje que podr\u00edas haber le\u00eddo. Respeta el esfuerzo que la gente pone en escribir contexto claro.",
+        slug: "no-tldr"
+      },
+      header: {
+        title: "No TLDR",
+        subtitle: "por favor no pidas un resumen en vez de leer el mensaje",
+        animations: ["tldr?", "muy largo", "resumen porfa", "\u00bflo acortas?", "no lo le\u00ed", "\u00bfpuntos clave?"]
+      },
+      intro: {
+        text: "Imagina dedicar diez minutos a escribir un mensaje claro y estructurado, y que alguien responda \"tldr?\"... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c No hagas esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "aqu\u00ed va el plan: yo migro la DB el jueves, t\u00fa te encargas de los scripts de rollback, QA da el visto bueno el viernes por la ma\u00f1ana y desplegamos a las 2 PM. Si algo falla, hago rollback y lo reintentamos el lunes.", time: "10:00 AM" },
+            { name: "Thomas Middleditch", text: "tldr?", time: "10:25 AM" },
+            { name: "T.J Miller", text: "...son 3 l\u00edneas", time: "10:26 AM" },
+            { name: "Thomas Middleditch", text: "dame la versi\u00f3n corta", time: "10:45 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p>Thomas Middleditch pens\u00f3 que estaba siendo eficiente: <em>no tengo tiempo para esto, dame lo esencial</em>. <strong>Pero pedir \"tldr?\" a un mensaje corto y bien estructurado le dice a la otra persona que su esfuerzo fue in\u00fatil</strong>.</p>\n\n<p>La mayor\u00eda de las personas que hacen esto <strong>no pretenden ser despectivas</strong>. Es un reflejo: <em>\"Estoy ocupado, pedir\u00e9 el resumen.\"</em></p>\n\n<p>Pero en el chat de trabajo, <strong>pedir un TLDR de algo que ya es conciso es una falta de respeto</strong>. Se\u00f1ala <strong>\"no me molest\u00e9 en leer\"</strong> y obliga al remitente a <em>hacer trabajo extra resumiendo algo que ya estaba resumido</em>.</p>\n\n<p>Lo mismo va para:</p>\n<ul>\n  <li>tldr? a un mensaje de 3 frases</li>\n  <li>\"\u00bfme lo pones en puntos?\" (ya est\u00e1 en puntos)</li>\n  <li>\"muy largo, no lo le\u00ed\" como respuesta real</li>\n  <li>Pedir que te reexpliquen lo que ya escribieron claro</li>\n  <li>Saltarse el mensaje y preguntar lo mismo que ya responde</li>\n</ul>\n\n<p><strong>\u00a1Simplemente l\u00e9elo!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 En su lugar, intenta esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "aqu\u00ed va el plan: yo migro la DB el jueves, t\u00fa te encargas de los scripts de rollback, QA da el visto bueno el viernes por la ma\u00f1ana y desplegamos a las 2 PM. Si algo falla, hago rollback y lo reintentamos el lunes.", time: "10:00 AM" },
+            { name: "Thomas Middleditch", text: "enterado. tendr\u00e9 los scripts de rollback listos el jueves al final del d\u00eda. El viernes a las 2 PM me va bien", time: "10:02 AM" },
+            { name: "T.J Miller", text: "perfecto, hacemos un sync r\u00e1pido antes del deploy", time: "10:03 AM" },
+            { name: "Thomas Middleditch", text: "hecho, bloqueo la 1:30 PM en el calendario", time: "10:04 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Leer un mensaje bien escrito y responder a su contenido es lo m\u00ednimo de la comunicaci\u00f3n</strong> \u2014 y toma menos tiempo que escribir \"tldr?\" y esperar una respuesta.</p>\n\n<p>En lugar de pedir un resumen, intenta:</p>\n<ul>\n  <li>Lee el mensaje de verdad \u2014 probablemente es m\u00e1s corto de lo que crees</li>\n  <li>Responde a puntos espec\u00edficos para mostrar que lo le\u00edste</li>\n  <li>Si realmente es muy largo, pregunta por la parte espec\u00edfica que necesitas</li>\n  <li>Si est\u00e1s muy liado, di \"lo leo con detalle despu\u00e9s de mi reuni\u00f3n\"</li>\n</ul>\n\n<p><strong>Leer es participar.</strong> Cuando alguien escribe contexto, te est\u00e1 ahorrando una reuni\u00f3n. Lo m\u00ednimo que puedes hacer es leerlo.</p>\n\n<p>Cuando se hace bien, <strong>la comunicaci\u00f3n escrita funciona de verdad</strong>. \ud83c\udf89</p>"
         }
       },
       footer: {

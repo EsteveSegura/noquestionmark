@@ -70,4 +70,8 @@ export const routes = {
   '/no-deleting-thread-starter': { page: 'nodeletingthreadstarter', view: StandardView },
   '/en/no-deleting-thread-starter': { page: 'nodeletingthreadstarter', view: StandardView },
   '/es/no-deleting-thread-starter': { page: 'nodeletingthreadstarter', view: StandardView },
+  // no-tldr
+  '/no-tldr': { page: 'notldr', view: StandardView },
+  '/en/no-tldr': { page: 'notldr', view: StandardView },
+  '/es/no-tldr': { page: 'notldr', view: StandardView },
 }
