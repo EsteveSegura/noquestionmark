@@ -62,4 +62,8 @@ export const routes = {
   '/no-long-voice-notes': { page: 'nolongvoicenotes', view: StandardView },
   '/en/no-long-voice-notes': { page: 'nolongvoicenotes', view: StandardView },
   '/es/no-long-voice-notes': { page: 'nolongvoicenotes', view: StandardView },
+  // no-voice-notes
+  '/no-voice-notes': { page: 'novoicenotes', view: StandardView },
+  '/en/no-voice-notes': { page: 'novoicenotes', view: StandardView },
+  '/es/no-voice-notes': { page: 'novoicenotes', view: StandardView },
 }

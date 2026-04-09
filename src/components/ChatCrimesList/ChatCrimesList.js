@@ -18,7 +18,8 @@ const urlToPageKey = {
   '/no-dry-ok': 'nodryok',
   '/no-passive-aggressive': 'nopassiveaggressive',
   '/no-ghost-deleting': 'noghostdeleting',
-  '/no-long-voice-notes': 'nolongvoicenotes'
+  '/no-long-voice-notes': 'nolongvoicenotes',
+  '/no-voice-notes': 'novoicenotes'
 }
 
 function createCard(pageTranslations, url) {
