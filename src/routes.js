@@ -66,4 +66,8 @@ export const routes = {
   '/no-voice-notes': { page: 'novoicenotes', view: StandardView },
   '/en/no-voice-notes': { page: 'novoicenotes', view: StandardView },
   '/es/no-voice-notes': { page: 'novoicenotes', view: StandardView },
+  // no-deleting-thread-starter
+  '/no-deleting-thread-starter': { page: 'nodeletingthreadstarter', view: StandardView },
+  '/en/no-deleting-thread-starter': { page: 'nodeletingthreadstarter', view: StandardView },
+  '/es/no-deleting-thread-starter': { page: 'nodeletingthreadstarter', view: StandardView },
 }

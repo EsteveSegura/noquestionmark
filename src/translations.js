@@ -32,7 +32,8 @@ export const pages = {
           { url: "/no-passive-aggressive", text: "No passive-aggressive - Don't hide frustration behind polite phrases" },
           { url: "/no-ghost-deleting", text: "No ghost deleting - Don't silently delete messages after people read them" },
           { url: "/no-long-voice-notes", text: "No long voice notes - Don't send 5-minute voice notes when a sentence would do" },
-          { url: "/no-voice-notes", text: "No voice notes - Don't send a voice note when the info should be text" }
+          { url: "/no-voice-notes", text: "No voice notes - Don't send a voice note when the info should be text" },
+          { url: "/no-deleting-thread-starter", text: "No deleting thread starters - Don't delete the message that started a thread" }
         ]
       },
       footer: {
@@ -76,7 +77,8 @@ export const pages = {
           { url: "/no-passive-aggressive", text: "No passive-aggressive - No escondas tu frustraci\u00f3n detr\u00e1s de frases educadas" },
           { url: "/no-ghost-deleting", text: "No ghost deleting - No borres mensajes en silencio despu\u00e9s de que los lean" },
           { url: "/no-long-voice-notes", text: "No long voice notes - No mandes notas de voz de 5 minutos cuando basta una frase" },
-          { url: "/no-voice-notes", text: "No voice notes - No mandes una nota de voz cuando la info deber\u00eda ser texto" }
+          { url: "/no-voice-notes", text: "No voice notes - No mandes una nota de voz cuando la info deber\u00eda ser texto" },
+          { url: "/no-deleting-thread-starter", text: "No deleting thread starters - No borres el mensaje que inici\u00f3 un thread" }
         ]
       },
       footer: {
@@ -1961,6 +1963,104 @@ export const pages = {
         },
         explanation: {
           text: "<p><strong>La informaci\u00f3n escrita se puede copiar, pegar, guardar y buscar</strong> \u2014 una nota de voz diciendo \"la URL es hache te te pe ese dos puntos barra barra...\" no.</p>\n\n<p>En lugar de una nota de voz para datos, intenta:</p>\n<ul>\n  <li>Escribe URLs, claves y credenciales directamente en el chat</li>\n  <li>Usa un vault compartido o un doc para datos sensibles</li>\n  <li>Para instrucciones complejas, escribe pasos numerados</li>\n  <li>Reserva la voz para conversaciones emocionales o con matices, no para transferir datos</li>\n</ul>\n\n<p><strong>La voz es para el tono, el texto es para los datos.</strong> Usa cada uno donde brille. Nadie quiere reproducir una nota de voz tres veces para transcribir una URL car\u00e1cter a car\u00e1cter.</p>\n\n<p>Cuando se hace bien, <strong>todos pueden simplemente copiar y pegar</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "Esto es solo medio en serio (medio \ud83d\udc40), as\u00ed que no te enojes con la persona que te envi\u00f3 aqu\u00ed.",
+          "Dicho esto, si ves la URL de este sitio en el estado/bio de alguien, prep\u00e1rate para ser ignorado si solo respondes con \"?\".",
+          "Inspirado en el maravilloso <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatares tomados de Silicon Valley. C\u00f3digo abierto en <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Hecho por <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "Este sitio est\u00e1 disponible en: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    }
+  },
+  nodeletingthreadstarter: {
+    en: {
+      seo: {
+        title: "Don't delete the message that started a thread \u2014 ChatCrimes",
+        description: "Please don't delete the original message of a thread. It removes all context and leaves the replies floating in the void.",
+        slug: "no-deleting-thread-starter"
+      },
+      header: {
+        title: "No deleting thread starters",
+        subtitle: "please don't delete the original message that started a thread",
+        animations: ["*deleted*", "7 replies to nothing", "what thread?", "context gone", "orphan replies", "the void"]
+      },
+      intro: {
+        text: "Imagine opening a thread with 12 replies and the original message that started it all has been deleted... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c Don't do this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "Should we migrate the database before or after the deploy?", time: "9:00 AM", deleted: true, thread: { replies: 7, lastReply: "Last reply 1 hour ago" } },
+            { name: "Thomas Middleditch", text: "wait, what was the original question? the message is gone", time: "11:00 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p>T.J Miller decided to delete his original question: <em>maybe it was dumb, let me just remove it</em>. <strong>But that message was the root of an entire thread</strong> \u2014 7 replies now reference a question that no longer exists.</p>\n\n<p>Most people who do this <strong>don't realize the collateral damage</strong>. It's a reflex: <em>\"I'll clean up my message, nobody will notice.\"</em></p>\n\n<p>But in threaded conversations, <strong>the starter message is the context for everything below it</strong>. Without it, replies become <strong>cryptic fragments, decisions lose their reasoning</strong>, and anyone who opens the thread later has <em>zero idea what's being discussed</em>.</p>\n\n<p>The same goes for:</p>\n<ul>\n  <li>Deleting a question after it's been answered in a thread</li>\n  <li>Removing an announcement that has follow-up replies</li>\n  <li>Editing the starter to say something completely different</li>\n  <li>Deleting a decision message with a thread of approvals</li>\n  <li>Removing a shared link that people discussed below</li>\n</ul>\n\n<p><strong>The thread dies without its root!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 Instead, try this",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "Should we migrate the database before or after the deploy? (edit: resolved \u2014 we're going with before, see thread)", time: "9:00 AM", thread: { replies: 7, lastReply: "Last reply 1 hour ago" } },
+            { name: "Thomas Middleditch", text: "nice, the thread has all the context. easy to catch up", time: "11:00 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Editing the message with an update preserves all context</strong> \u2014 future readers can see the original question, the discussion, and the resolution in one place.</p>\n\n<p>Instead of deleting a thread starter, try:</p>\n<ul>\n  <li>Edit with a note: \"(resolved \u2014 see thread for decision)\"</li>\n  <li>Add a reply at the bottom summarizing the outcome</li>\n  <li>If the info is wrong, strike it through and add the correction</li>\n  <li>If it's sensitive, explain why you're redacting it</li>\n</ul>\n\n<p><strong>Threads are living documents.</strong> The starter is the title of the chapter \u2014 delete it and the whole story falls apart.</p>\n\n<p>When done right, <strong>every thread tells its full story</strong>. \ud83c\udf89</p>"
+        }
+      },
+      footer: {
+        paragraphs: [
+          "This is kinda only half serious (kinda \ud83d\udc40) so please don't get mad at the person who sent you here.",
+          "That said, if you see this site's URL as someone's status/bio, be prepared to be ignored if you only reply with \"?\".",
+          "Inspired by the wonderful <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatars taken from Silicon Valley. Open-source on <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+          "Made by <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
+          "This site is available in: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    },
+    es: {
+      seo: {
+        title: "No borres el mensaje que inici\u00f3 un thread \u2014 ChatCrimes",
+        description: "Por favor no borres el mensaje original de un thread. Elimina todo el contexto y deja las respuestas flotando en el vac\u00edo.",
+        slug: "no-deleting-thread-starter"
+      },
+      header: {
+        title: "No deleting thread starters",
+        subtitle: "por favor no borres el mensaje original que inici\u00f3 un thread",
+        animations: ["*borrado*", "7 respuestas a nada", "\u00bfqu\u00e9 thread?", "contexto perdido", "respuestas hu\u00e9rfanas", "el vac\u00edo"]
+      },
+      intro: {
+        text: "Imagina abrir un thread con 12 respuestas y que el mensaje original que lo inici\u00f3 todo haya sido borrado... \ud83e\udd26\u200d\u2640\ufe0f"
+      },
+      dontDoThis: {
+        title: "\u274c No hagas esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "\u00bfDeber\u00edamos migrar la base de datos antes o despu\u00e9s del deploy?", time: "9:00 AM", deleted: true, thread: { replies: 7, lastReply: "\u00daltima respuesta hace 1 hora" } },
+            { name: "Thomas Middleditch", text: "espera, \u00bfcu\u00e1l era la pregunta original? el mensaje desapareci\u00f3", time: "11:00 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p>T.J Miller decidi\u00f3 borrar su pregunta original: <em>quiz\u00e1s era tonta, mejor la quito</em>. <strong>Pero ese mensaje era la ra\u00edz de todo un thread</strong> \u2014 7 respuestas ahora referencian una pregunta que ya no existe.</p>\n\n<p>La mayor\u00eda de las personas que hacen esto <strong>no se dan cuenta del da\u00f1o colateral</strong>. Es un reflejo: <em>\"Limpio mi mensaje, nadie se va a dar cuenta.\"</em></p>\n\n<p>Pero en conversaciones con threads, <strong>el mensaje inicial es el contexto de todo lo que hay debajo</strong>. Sin \u00e9l, las respuestas se convierten en <strong>fragmentos cr\u00edpticos, las decisiones pierden su razonamiento</strong>, y cualquiera que abra el thread despu\u00e9s no tiene <em>ni idea de qu\u00e9 se est\u00e1 hablando</em>.</p>\n\n<p>Lo mismo va para:</p>\n<ul>\n  <li>Borrar una pregunta despu\u00e9s de que la respondieron en un thread</li>\n  <li>Eliminar un anuncio que tiene respuestas de seguimiento</li>\n  <li>Editar el mensaje inicial para decir algo completamente diferente</li>\n  <li>Borrar un mensaje de decisi\u00f3n con un thread de aprobaciones</li>\n  <li>Eliminar un enlace compartido que la gente coment\u00f3 debajo</li>\n</ul>\n\n<p><strong>\u00a1El thread muere sin su ra\u00edz!</strong></p>"
+        }
+      },
+      doThis: {
+        title: "\u2705 En su lugar, intenta esto",
+        chat: {
+          messages: [
+            { name: "T.J Miller", text: "\u00bfDeber\u00edamos migrar la base de datos antes o despu\u00e9s del deploy? (edit: resuelto \u2014 vamos con antes, ver thread)", time: "9:00 AM", thread: { replies: 7, lastReply: "\u00daltima respuesta hace 1 hora" } },
+            { name: "Thomas Middleditch", text: "genial, el thread tiene todo el contexto. f\u00e1cil ponerse al d\u00eda", time: "11:00 AM" }
+          ]
+        },
+        explanation: {
+          text: "<p><strong>Editar el mensaje con una actualizaci\u00f3n preserva todo el contexto</strong> \u2014 los futuros lectores pueden ver la pregunta original, la discusi\u00f3n y la resoluci\u00f3n en un solo lugar.</p>\n\n<p>En lugar de borrar el inicio de un thread, intenta:</p>\n<ul>\n  <li>Edita con una nota: \"(resuelto \u2014 ver thread para la decisi\u00f3n)\"</li>\n  <li>A\u00f1ade una respuesta al final resumiendo el resultado</li>\n  <li>Si la info es incorrecta, t\u00e1chala y a\u00f1ade la correcci\u00f3n</li>\n  <li>Si es algo sensible, explica por qu\u00e9 lo est\u00e1s redactando</li>\n</ul>\n\n<p><strong>Los threads son documentos vivos.</strong> El mensaje inicial es el t\u00edtulo del cap\u00edtulo \u2014 b\u00f3rralo y toda la historia se desmorona.</p>\n\n<p>Cuando se hace bien, <strong>cada thread cuenta su historia completa</strong>. \ud83c\udf89</p>"
         }
       },
       footer: {
