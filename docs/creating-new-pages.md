@@ -171,7 +171,7 @@ There are two view types:
 - [ ] Page key in routes matches the key in translations
 - [ ] Added the new crime to `home.en.crimesList.items` and `home.es.crimesList.items`
 - [ ] Header has exactly 6 animation strings
-- [ ] Chat messages use the correct character names (T.J Miller, Thomas Middleditch)
+- [ ] Chat messages use the correct character names (T.J Miller, Thomas Middleditch, or Monica Hall)
 - [ ] Footer paragraphs are consistent with other pages
 - [ ] Tested both `/en/my-new-crime` and `/es/my-new-crime`
 - [ ] `npm test` passes with all tests green
@@ -236,7 +236,7 @@ The footer is **identical on every page** per language. Copy the 5 paragraphs ve
 
 ### 8. Chat messages only use existing characters
 
-Only use `"T.J Miller"` and `"Thomas Middleditch"` as message authors. The avatar is resolved automatically from the name. Using any other name will result in a broken avatar.
+Only use `"T.J Miller"`, `"Thomas Middleditch"` or `"Monica Hall"` as message authors. The avatar is resolved automatically from the name. Using any other name will result in a broken avatar. Most pages stick to the first two — bring Monica Hall in only when the crime genuinely needs a third voice (e.g. a peer-vs-peer dynamic).
 
 ### 9. Header animations must have exactly 6 items
 
@@ -332,7 +332,8 @@ animations: ['?', '??']  // Only 2, need 6
 - **Time format:** `"H:MM AM/PM"` (e.g., `"2:15 PM"`, `"9:00 AM"`).
 - The "bad" example should have **awkward pauses** between timestamps (e.g., 20-minute gaps) to emphasize wasted time.
 - The "good" example should have **fast replies** (1–2 minute gaps) to show efficiency.
-- Always use **2 characters only**: `"T.J Miller"` (initiator) and `"Thomas Middleditch"` (responder). Typically 3–4 messages per chat.
+- Default to **2 characters**: `"T.J Miller"` (initiator) and `"Thomas Middleditch"` (responder). Typically 3–4 messages per chat.
+- A **third character** (`"Monica Hall"`) is available when the crime needs a peer-vs-peer or interrupting-third-party dynamic. Don't add her just to vary the cast — only when the scenario genuinely requires it.
 
 #### Explanation text (`explanation.text`)
 
@@ -484,7 +485,7 @@ All chat examples use characters from the TV show **Silicon Valley**:
 |---|---|---|
 | `T.J Miller` | `/img/T_J_Miller.png` | Initiator / asker |
 | `Thomas Middleditch` | `/img/Thomas_Middleditch.png` | Responder (bad and good) |
-| `Monica Hall` | `/img/Monica_Hall.png` | Thread avatar indicator only |
+| `Monica Hall` | `/img/Monica_Hall.png` | Optional third voice + thread avatar indicator |
 
 Avatar mapping is automatic in `ChatExample.js`. **Do not use other names** unless you add new avatar images and update the mapping.
 
