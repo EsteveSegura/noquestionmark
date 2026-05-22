@@ -74,4 +74,8 @@ export const routes = {
   '/no-tldr': { page: 'notldr', view: StandardView },
   '/en/no-tldr': { page: 'notldr', view: StandardView },
   '/es/no-tldr': { page: 'notldr', view: StandardView },
+  // no-power-moves
+  '/no-power-moves': { page: 'nopowermoves', view: StandardView },
+  '/en/no-power-moves': { page: 'nopowermoves', view: StandardView },
+  '/es/no-power-moves': { page: 'nopowermoves', view: StandardView },
 }

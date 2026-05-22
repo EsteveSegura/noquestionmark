@@ -1,7 +1,7 @@
 import { pages, supportedLanguages } from '../translations.js'
 
 // Characters allowed per Rule 8 (docs/creating-new-pages.md)
-const ALLOWED_CHARACTERS = ['T.J Miller', 'Thomas Middleditch']
+const ALLOWED_CHARACTERS = ['T.J Miller', 'Thomas Middleditch', 'Monica Hall']
 
 // Required keys per Rule 12
 const CRIME_REQUIRED_KEYS = ['header', 'intro', 'dontDoThis', 'doThis', 'footer']

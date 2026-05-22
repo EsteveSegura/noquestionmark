@@ -34,7 +34,8 @@ export const pages = {
           { url: "/no-long-voice-notes", text: "No long voice notes - Don't send 5-minute voice notes when a sentence would do" },
           { url: "/no-voice-notes", text: "No voice notes - Don't send a voice note when the info should be text" },
           { url: "/no-deleting-thread-starter", text: "No deleting thread starters - Don't delete the message that started a thread" },
-          { url: "/no-tldr", text: "No TLDR - Don't ask for a summary instead of reading the message" }
+          { url: "/no-tldr", text: "No TLDR - Don't ask for a summary instead of reading the message" },
+          { url: "/no-power-moves", text: "No power moves - Don't override a peer's priority with a passive-aggressive timestamp" }
         ]
       },
       footer: {
@@ -80,7 +81,8 @@ export const pages = {
           { url: "/no-long-voice-notes", text: "No long voice notes - No mandes notas de voz de 5 minutos cuando basta una frase" },
           { url: "/no-voice-notes", text: "No voice notes - No mandes una nota de voz cuando la info deber\u00eda ser texto" },
           { url: "/no-deleting-thread-starter", text: "No deleting thread starters - No borres el mensaje que inici\u00f3 un thread" },
-          { url: "/no-tldr", text: "No TLDR - No pidas un resumen en vez de leer el mensaje" }
+          { url: "/no-tldr", text: "No TLDR - No pidas un resumen en vez de leer el mensaje" },
+          { url: "/no-power-moves", text: "No power moves - No anules la prioridad de un compañero con un timestamp pasivo-agresivo" }
         ]
       },
       footer: {
@@ -2178,6 +2180,186 @@ export const pages = {
           "Inspirado en el maravilloso <a href=\"https://nohello.net\" target=\"_blank\" rel=\"noopener noreferrer\">nohello.net</a>. Avatares tomados de Silicon Valley. C\u00f3digo abierto en <a href=\"https://github.com/EsteveSegura/noquestionmark\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
           "Hecho por <a href=\"https://girlazo.com\" target=\"_blank\" rel=\"noopener noreferrer\">Esteve Segura</a>.",
           "Este sitio est\u00e1 disponible en: <a href=\"/en\">English</a>, <a href=\"/es\">Espa\u00f1ol</a>"
+        ]
+      }
+    }
+  },
+  nopowermoves: {
+    en: {
+      seo: {
+        title: "Don't undermine priorities with a power move — ChatCrimes",
+        description: "Stop replying to high-priority requests with a passive-aggressive timestamp. Learn why \"Friday 16:15\" is a power move, not a status update.",
+        slug: "no-power-moves"
+      },
+      header: {
+        title: 'No power moves',
+        subtitle: 'please don\'t override a teammate\'s priority by pointing at the clock',
+        animations: ['Friday 16:15', 'it\'s late', 'EOD?', 'next week?', 'really now?', 'on a Friday?']
+      },
+      intro: {
+        text: 'Imagine a manager calls something urgent, the dev jumps on it, and another manager replies with just the day and time to silently say \"no\"... 🤦‍♀️'
+      },
+      dontDoThis: {
+        title: '❌ Don\'t do this',
+        chat: {
+          messages: [
+            { name: 'T.J Miller', text: 'hey, we need to fix the upload limit asap — the server only accepts 500MB and we just closed the deal with Hooli, they need to push a much bigger file today', time: '4:10 PM' },
+            { name: 'Thomas Middleditch', text: 'on it. what\'s the priority?', time: '4:12 PM' },
+            { name: 'T.J Miller', text: '"Dump whatever we are doing and help with this" kind of high', time: '4:13 PM' },
+            { name: 'Thomas Middleditch', text: 'ok, jumping on it now', time: '4:14 PM' },
+            { name: 'Monica Hall', text: 'Friday 16:15', time: '4:15 PM' }
+          ]
+        },
+        explanation: {
+          text: `<p>Monica Hall didn\'t write "this isn\'t urgent" or "let\'s push it to Monday". She just dropped a timestamp. <strong>"Friday 16:15" isn\'t a status update, it\'s a power move dressed up as one</strong>.</p>
+
+<p>It\'s a sentence with no verb and no opinion, so there\'s nothing to argue with. <em>But everyone reads it the same way:</em> "we shouldn\'t be doing this right now", with the bonus of <strong>making the other manager look unreasonable</strong> for calling it urgent in the first place.</p>
+
+<p>Most people who do this <strong>wouldn\'t say the same thing out loud in a meeting</strong>. In chat it feels light, almost neutral. But it isn\'t. It does three things at once:</p>
+<ul>
+  <li>Overrides a peer\'s prioritization without actually proposing anything</li>
+  <li>Puts the dev in the middle of a turf moment they didn\'t sign up for</li>
+  <li>Makes any reply ("it\'s fine, let\'s ship it") sound defensive</li>
+</ul>
+
+<p>The same goes for:</p>
+<ul>
+  <li>"EOD on a Friday 👀"</li>
+  <li>"interesting timing"</li>
+  <li>"this couldn\'t wait until Monday?"</li>
+  <li>Pinning the clock instead of the decision</li>
+  <li>Quoting work-life balance to win a scope argument</li>
+</ul>
+
+<p><strong>If you disagree with the priority, say so. Don\'t weaponize the timestamp.</strong></p>`
+        }
+      },
+      doThis: {
+        title: '✅ Instead, try this',
+        chat: {
+          messages: [
+            { name: 'T.J Miller', text: 'hey, we need to fix the upload limit asap — the server only accepts 500MB and we just closed the deal with Hooli, they need to push a much bigger file today', time: '4:10 PM' },
+            { name: 'Thomas Middleditch', text: 'on it. what\'s the priority?', time: '4:12 PM' },
+            { name: 'T.J Miller', text: '"Dump whatever we are doing and help with this" kind of high', time: '4:13 PM' },
+            { name: 'Thomas Middleditch', text: 'ok, jumping on it now', time: '4:14 PM' },
+            { name: 'Monica Hall', text: 'go for it, I\'m around if you need anything — DevOps is here to help', time: '4:15 PM' }
+          ]
+        },
+        explanation: {
+          text: `<p><strong>Backing a peer\'s call costs nothing</strong> and turns a tense moment into a team moving in the same direction.</p>
+
+<p>If you actually think the priority is wrong, that\'s a real conversation — have it. Don\'t fire a timestamp into the channel and let the dev sort out the politics.</p>
+
+<p>Instead of dropping the clock, try:</p>
+<ul>
+  <li>"go for it, ping me if you need a hand"</li>
+  <li>"I can pair with you on the infra side"</li>
+  <li>"DM me if you hit anything blocking, I\'ll unblock"</li>
+  <li>"if you want, I can take the customer comms while you focus"</li>
+  <li>"I disagree on priority, let\'s sync 5 min before you start" (privately, not in the channel)</li>
+</ul>
+
+<p><strong>Support in public, debate in private.</strong> Disagreements between managers belong in a quick DM or a call, not as a passive-aggressive timestamp dropped on the engineer who\'s already opening their editor.</p>
+
+<p>When done right, <strong>the team feels covered, not caught in the middle</strong>. 🎉</p>`
+        }
+      },
+      footer: {
+        paragraphs: [
+          'This is kinda only half serious (kinda 👀) so please don\'t get mad at the person who sent you here.',
+          'That said, if you see this site\'s URL as someone\'s status/bio, be prepared to be ignored if you only reply with "?".',
+          'Inspired by the wonderful <a href="https://nohello.net" target="_blank" rel="noopener noreferrer">nohello.net</a>. Avatars taken from Silicon Valley. Open-source on <a href="https://github.com/EsteveSegura/noquestionmark" target="_blank" rel="noopener noreferrer">GitHub</a>.',
+          'Made by <a href="https://girlazo.com" target="_blank" rel="noopener noreferrer">Esteve Segura</a>.',
+          'This site is available in: <a href="/en">English</a>, <a href="/es">Español</a>'
+        ]
+      }
+    },
+    es: {
+      seo: {
+        title: "No socaves la prioridad con un power move — ChatCrimes",
+        description: "Deja de responder a peticiones urgentes con un timestamp pasivo-agresivo. Aprende por qué \"Friday 16:15\" es un power move, no una actualización.",
+        slug: "no-power-moves"
+      },
+      header: {
+        title: 'No power moves',
+        subtitle: 'por favor no anules la prioridad de otro señalando el reloj',
+        animations: ['Friday 16:15', 'es tarde', '¿a estas horas?', '¿hasta el lunes?', '¿en serio ahora?', '¿un viernes?']
+      },
+      intro: {
+        text: 'Imagina que un manager marca algo como urgente, el dev se pone con ello, y otro manager responde solo con el día y la hora para decir \"no\" sin decirlo... 🤦‍♀️'
+      },
+      dontDoThis: {
+        title: '❌ No hagas esto',
+        chat: {
+          messages: [
+            { name: 'T.J Miller', text: 'oye, hay que arreglar el límite de subida ya — el server solo acepta 500MB y acabamos de cerrar el deal con Hooli, necesitan subir un archivo mucho más grande hoy', time: '4:10 PM' },
+            { name: 'Thomas Middleditch', text: 'me pongo. ¿qué prioridad?', time: '4:12 PM' },
+            { name: 'T.J Miller', text: '"Dump whatever we are doing and help with this" kind of high', time: '4:13 PM' },
+            { name: 'Thomas Middleditch', text: 'ok, me pongo con ello', time: '4:14 PM' },
+            { name: 'Monica Hall', text: 'Friday 16:15', time: '4:15 PM' }
+          ]
+        },
+        explanation: {
+          text: `<p>Monica Hall no escribió "esto no es urgente" ni "déjalo para el lunes". Solo soltó un timestamp. <strong>"Friday 16:15" no es una actualización, es un power move disfrazado de actualización</strong>.</p>
+
+<p>Es una frase sin verbo y sin opinión, así que no hay nada que rebatir. <em>Pero todos la leemos igual:</em> "no deberíamos estar haciendo esto ahora", con el bonus de <strong>hacer quedar mal al otro manager</strong> por haberlo marcado como urgente.</p>
+
+<p>La mayoría de las personas que hacen esto <strong>no lo dirían en voz alta en una reunión</strong>. En el chat parece ligero, casi neutral. Pero no lo es. Hace tres cosas a la vez:</p>
+<ul>
+  <li>Anula la priorización de un compañero sin proponer nada concreto</li>
+  <li>Mete al dev en medio de un pulso de manager que él no eligió</li>
+  <li>Hace que cualquier respuesta ("tranquilo, lo sacamos") suene defensiva</li>
+</ul>
+
+<p>Lo mismo va para:</p>
+<ul>
+  <li>"¿a punto de cerrar un viernes? 👀"</li>
+  <li>"qué horas..."</li>
+  <li>"¿esto no aguantaba hasta el lunes?"</li>
+  <li>Señalar el reloj en lugar de la decisión</li>
+  <li>Usar el work-life balance como arma para ganar una discusión de scope</li>
+</ul>
+
+<p><strong>Si no estás de acuerdo con la prioridad, dilo. No conviertas el timestamp en un arma.</strong></p>`
+        }
+      },
+      doThis: {
+        title: '✅ En su lugar, intenta esto',
+        chat: {
+          messages: [
+            { name: 'T.J Miller', text: 'oye, hay que arreglar el límite de subida ya — el server solo acepta 500MB y acabamos de cerrar el deal con Hooli, necesitan subir un archivo mucho más grande hoy', time: '4:10 PM' },
+            { name: 'Thomas Middleditch', text: 'me pongo. ¿qué prioridad?', time: '4:12 PM' },
+            { name: 'T.J Miller', text: '"Dump whatever we are doing and help with this" kind of high', time: '4:13 PM' },
+            { name: 'Thomas Middleditch', text: 'ok, me pongo con ello', time: '4:14 PM' },
+            { name: 'Monica Hall', text: 'adelante, estoy atento para lo que haga falta — en DevOps estamos para ayudar', time: '4:15 PM' }
+          ]
+        },
+        explanation: {
+          text: `<p><strong>Apoyar la decisión de otro manager no cuesta nada</strong> y convierte un momento tenso en un equipo remando en la misma dirección.</p>
+
+<p>Si de verdad piensas que la prioridad está mal, eso es una conversación real — tenla. No tires un timestamp en el canal y dejes que el dev se coma la política.</p>
+
+<p>En lugar de soltar el reloj, intenta:</p>
+<ul>
+  <li>"adelante, dime si necesitas algo"</li>
+  <li>"puedo hacer pairing contigo en la parte de infra"</li>
+  <li>"si te bloqueas en algo, DM y lo desbloqueo"</li>
+  <li>"si quieres, yo me encargo de hablar con cliente mientras tú te enfocas"</li>
+  <li>"no estoy de acuerdo con la prioridad, sync de 5 min antes de empezar" (en privado, no en el canal)</li>
+</ul>
+
+<p><strong>Apoya en público, debate en privado.</strong> Las discrepancias entre managers van en un DM rápido o una call, no en un timestamp pasivo-agresivo lanzado al ingeniero que ya está abriendo el editor.</p>
+
+<p>Cuando se hace bien, <strong>el equipo se siente respaldado, no atrapado en medio</strong>. 🎉</p>`
+        }
+      },
+      footer: {
+        paragraphs: [
+          'Esto es solo medio en serio (medio 👀), así que no te enojes con la persona que te envió aquí.',
+          'Dicho esto, si ves la URL de este sitio en el estado/bio de alguien, prepárate para ser ignorado si solo respondes con "?".',
+          'Inspirado en el maravilloso <a href="https://nohello.net" target="_blank" rel="noopener noreferrer">nohello.net</a>. Avatares tomados de Silicon Valley. Código abierto en <a href="https://github.com/EsteveSegura/noquestionmark" target="_blank" rel="noopener noreferrer">GitHub</a>.',
+          'Hecho por <a href="https://girlazo.com" target="_blank" rel="noopener noreferrer">Esteve Segura</a>.',
+          'Este sitio está disponible en: <a href="/en">English</a>, <a href="/es">Español</a>'
         ]
       }
     }

@@ -15,9 +15,12 @@ export function ChatExample(section, isPositive = false) {
   // Create chat messages
   section.chat.messages.forEach((msg, index) => {
     // Map name to image file
-    const avatarImage = msg.name === 'T.J Miller'
-      ? '/img/T_J_Miller.png'
-      : '/img/Thomas_Middleditch.png'
+    const avatarMap = {
+      'T.J Miller': '/img/T_J_Miller.png',
+      'Thomas Middleditch': '/img/Thomas_Middleditch.png',
+      'Monica Hall': '/img/Monica_Hall.png'
+    }
+    const avatarImage = avatarMap[msg.name] || '/img/Thomas_Middleditch.png'
 
     chatContainer.appendChild(ChatMessage({
       name: msg.name,
