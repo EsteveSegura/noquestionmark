@@ -35,7 +35,8 @@ export const pages = {
           { url: "/no-voice-notes", text: "No voice notes - Don't send a voice note when the info should be text" },
           { url: "/no-deleting-thread-starter", text: "No deleting thread starters - Don't delete the message that started a thread" },
           { url: "/no-tldr", text: "No TLDR - Don't ask for a summary instead of reading the message" },
-          { url: "/no-power-moves", text: "No power moves - Don't override a peer's priority with a passive-aggressive timestamp" }
+          { url: "/no-power-moves", text: "No power moves - Don't override a peer's priority with a passive-aggressive timestamp" },
+          { url: "/no-emoji-only-reply", text: "No emoji-only reply - Don't answer a real question with just \"😐\"" }
         ]
       },
       footer: {
@@ -82,7 +83,8 @@ export const pages = {
           { url: "/no-voice-notes", text: "No voice notes - No mandes una nota de voz cuando la info deber\u00eda ser texto" },
           { url: "/no-deleting-thread-starter", text: "No deleting thread starters - No borres el mensaje que inici\u00f3 un thread" },
           { url: "/no-tldr", text: "No TLDR - No pidas un resumen en vez de leer el mensaje" },
-          { url: "/no-power-moves", text: "No power moves - No anules la prioridad de un compañero con un timestamp pasivo-agresivo" }
+          { url: "/no-power-moves", text: "No power moves - No anules la prioridad de un compañero con un timestamp pasivo-agresivo" },
+          { url: "/no-emoji-only-reply", text: "No emoji-only reply - No respondas a una pregunta real solo con \"😐\"" }
         ]
       },
       footer: {
@@ -2351,6 +2353,172 @@ export const pages = {
 <p><strong>Apoya en público, debate en privado.</strong> Las discrepancias entre managers van en un DM rápido o una call, no en un timestamp pasivo-agresivo lanzado al ingeniero que ya está abriendo el editor.</p>
 
 <p>Cuando se hace bien, <strong>el equipo se siente respaldado, no atrapado en medio</strong>. 🎉</p>`
+        }
+      },
+      footer: {
+        paragraphs: [
+          'Esto es solo medio en serio (medio 👀), así que no te enojes con la persona que te envió aquí.',
+          'Dicho esto, si ves la URL de este sitio en el estado/bio de alguien, prepárate para ser ignorado si solo respondes con "?".',
+          'Inspirado en el maravilloso <a href="https://nohello.net" target="_blank" rel="noopener noreferrer">nohello.net</a>. Avatares tomados de Silicon Valley. Código abierto en <a href="https://github.com/EsteveSegura/noquestionmark" target="_blank" rel="noopener noreferrer">GitHub</a>.',
+          'Hecho por <a href="https://girlazo.com" target="_blank" rel="noopener noreferrer">Esteve Segura</a>.',
+          'Este sitio está disponible en: <a href="/en">English</a>, <a href="/es">Español</a>'
+        ]
+      }
+    }
+  },
+  noemojionlyreply: {
+    en: {
+      seo: {
+        title: "Don't reply with just an emoji — ChatCrimes",
+        description: "Stop answering real questions in chat with a lonely \"😐\" or another single emoji. Learn why emoji-only replies leave everyone guessing.",
+        slug: "no-emoji-only-reply"
+      },
+      header: {
+        title: 'No emoji-only reply',
+        subtitle: 'please don\'t answer a real question with just an emoji',
+        animations: ['😐', '🙃', '🫠', '🤔', '🤷', '👀']
+      },
+      intro: {
+        text: 'Imagine you ask a real, work-blocking question, and the only thing that comes back is a single "😐"... 🤦‍♀️'
+      },
+      dontDoThis: {
+        title: '❌ Don\'t do this',
+        chat: {
+          messages: [
+            { name: 'T.J Miller', text: 'hey, the migration script is ready. can you review the rollback section before I push? it\'s the one we kept hitting issues with', time: '3:12 PM' },
+            { name: 'Thomas Middleditch', text: '😐', time: '3:25 PM' },
+            { name: 'T.J Miller', text: '...is that a yes or a no?', time: '3:31 PM' },
+            { name: 'T.J Miller', text: 'should I wait or push it?', time: '3:50 PM' }
+          ]
+        },
+        explanation: {
+          text: `<p>Thomas Middleditch thought a "😐" said enough: <em>"I have feelings about this and I trust you'll figure them out"</em>. <strong>But a lone emoji isn\'t an answer, it\'s a Rorschach test</strong>.</p>
+
+<p>Most people who do this <strong>don\'t mean to be dismissive</strong>. It\'s a reflex: <em>"I don\'t have time for a full reply, the emoji will do."</em></p>
+
+<p>But the person on the other side now has to <strong>reverse-engineer your emotional state</strong> instead of getting an answer. Is "😐" skepticism? Boredom? Disagreement? Mild approval? <em>Nobody knows, including, sometimes, the sender.</em></p>
+
+<p>Don\'t confuse this with <strong>reactions</strong> — those are a different chat crime (see <a href="/no-reaction-as-answer">no reaction as answer</a>). This one is worse, because the emoji is being used as the entire <em>message</em>, not as an acknowledgement.</p>
+
+<p>The same goes for:</p>
+<ul>
+  <li>🙃 to a serious question</li>
+  <li>🫠 to a deadline check</li>
+  <li>🤷 instead of "I don\'t know, let me find out"</li>
+  <li>🤔 with no follow-up sentence</li>
+  <li>👀 to "are you free at 3?"</li>
+</ul>
+
+<p><strong>Use your words. The emoji can come after.</strong></p>`
+        }
+      },
+      doThis: {
+        title: '✅ Instead, try this',
+        chat: {
+          messages: [
+            { name: 'T.J Miller', text: 'hey, the migration script is ready. can you review the rollback section before I push? it\'s the one we kept hitting issues with', time: '3:12 PM' },
+            { name: 'Thomas Middleditch', text: 'looking at it now — the rollback looks fine but the error handler on line 42 swallows exceptions silently, add a log there and you\'re good 😐 (the previous version of this still haunts me)', time: '3:14 PM' },
+            { name: 'T.J Miller', text: 'good catch, fixing now', time: '3:15 PM' },
+            { name: 'Thomas Middleditch', text: 'ping me when it\'s pushed and I\'ll keep an eye on prod', time: '3:16 PM' }
+          ]
+        },
+        explanation: {
+          text: `<p><strong>A real sentence takes maybe ten seconds</strong>, and it turns a guessing game into actual collaboration.</p>
+
+<p>Instead of dropping a face, try:</p>
+<ul>
+  <li>"looks good, ship it"</li>
+  <li>"I\'d wait, here\'s why..."</li>
+  <li>"not sure yet, give me 10 min"</li>
+  <li>"hmm, the X part worries me a bit — can we sync?"</li>
+  <li>"I don\'t love this approach, can I suggest something?"</li>
+</ul>
+
+<p><strong>Emojis are seasoning, not the main course.</strong> Add one at the end if you want to soften the tone — but the message has to carry actual meaning first.</p>
+
+<p>When done right, <strong>nobody has to interpret your face</strong>. 🎉</p>`
+        }
+      },
+      footer: {
+        paragraphs: [
+          'This is kinda only half serious (kinda 👀) so please don\'t get mad at the person who sent you here.',
+          'That said, if you see this site\'s URL as someone\'s status/bio, be prepared to be ignored if you only reply with "?".',
+          'Inspired by the wonderful <a href="https://nohello.net" target="_blank" rel="noopener noreferrer">nohello.net</a>. Avatars taken from Silicon Valley. Open-source on <a href="https://github.com/EsteveSegura/noquestionmark" target="_blank" rel="noopener noreferrer">GitHub</a>.',
+          'Made by <a href="https://girlazo.com" target="_blank" rel="noopener noreferrer">Esteve Segura</a>.',
+          'This site is available in: <a href="/en">English</a>, <a href="/es">Español</a>'
+        ]
+      }
+    },
+    es: {
+      seo: {
+        title: "No respondas solo con un emoji — ChatCrimes",
+        description: "Deja de contestar preguntas reales en el chat con un solitario \"😐\" u otro emoji suelto. Aprende por qué responder solo con emoji deja a todos adivinando.",
+        slug: "no-emoji-only-reply"
+      },
+      header: {
+        title: 'No emoji-only reply',
+        subtitle: 'por favor no respondas a una pregunta real solo con un emoji',
+        animations: ['😐', '🙃', '🫠', '🤔', '🤷', '👀']
+      },
+      intro: {
+        text: 'Imagina que haces una pregunta real, que te bloquea, y lo único que recibes a cambio es un solitario "😐"... 🤦‍♀️'
+      },
+      dontDoThis: {
+        title: '❌ No hagas esto',
+        chat: {
+          messages: [
+            { name: 'T.J Miller', text: 'oye, el script de la migración ya está. ¿puedes revisar la sección de rollback antes de que lo suba? es la que nos estaba dando problemas', time: '3:12 PM' },
+            { name: 'Thomas Middleditch', text: '😐', time: '3:25 PM' },
+            { name: 'T.J Miller', text: '...¿eso es un sí o un no?', time: '3:31 PM' },
+            { name: 'T.J Miller', text: '¿espero o lo subo?', time: '3:50 PM' }
+          ]
+        },
+        explanation: {
+          text: `<p>Thomas Middleditch pensó que un "😐" decía lo suficiente: <em>"tengo sentimientos sobre esto y confío en que tú los descifres"</em>. <strong>Pero un emoji suelto no es una respuesta, es un test de Rorschach</strong>.</p>
+
+<p>La mayoría de las personas que hacen esto <strong>no quieren parecer despectivas</strong>. Es un reflejo: <em>"no tengo tiempo para una respuesta larga, el emoji vale."</em></p>
+
+<p>Pero la persona al otro lado ahora tiene que <strong>hacer ingeniería inversa de tu estado emocional</strong> en lugar de recibir una respuesta. ¿Ese "😐" es escepticismo? ¿Aburrimiento? ¿Desacuerdo? ¿Aprobación leve? <em>Nadie lo sabe, incluyendo, a veces, al que lo manda.</em></p>
+
+<p>No lo confundas con las <strong>reacciones</strong> — eso es otro crimen distinto (mira <a href="/no-reaction-as-answer">no reaction as answer</a>). Este es peor, porque el emoji se está usando como el <em>mensaje entero</em>, no como un acuse de recibo.</p>
+
+<p>Lo mismo va para:</p>
+<ul>
+  <li>🙃 ante una pregunta seria</li>
+  <li>🫠 cuando te preguntan por un deadline</li>
+  <li>🤷 en lugar de "no sé, voy a averiguarlo"</li>
+  <li>🤔 sin una frase después</li>
+  <li>👀 a "¿estás libre a las 3?"</li>
+</ul>
+
+<p><strong>Usa palabras. El emoji puede ir después.</strong></p>`
+        }
+      },
+      doThis: {
+        title: '✅ En su lugar, intenta esto',
+        chat: {
+          messages: [
+            { name: 'T.J Miller', text: 'oye, el script de la migración ya está. ¿puedes revisar la sección de rollback antes de que lo suba? es la que nos estaba dando problemas', time: '3:12 PM' },
+            { name: 'Thomas Middleditch', text: 'lo miro ahora — el rollback está bien, pero el handler de error de la línea 42 se traga las excepciones en silencio, añade un log ahí y listo 😐 (la versión anterior aún me persigue)', time: '3:14 PM' },
+            { name: 'T.J Miller', text: 'buen ojo, lo arreglo ya', time: '3:15 PM' },
+            { name: 'Thomas Middleditch', text: 'avísame cuando lo hayas subido y vigilo prod un rato', time: '3:16 PM' }
+          ]
+        },
+        explanation: {
+          text: `<p><strong>Una frase real cuesta unos diez segundos</strong> y convierte un juego de adivinanza en colaboración de verdad.</p>
+
+<p>En lugar de soltar una cara, intenta:</p>
+<ul>
+  <li>"se ve bien, súbelo"</li>
+  <li>"yo esperaría, te cuento por qué..."</li>
+  <li>"aún no estoy seguro, dame 10 min"</li>
+  <li>"mmm, la parte de X me preocupa un poco — ¿hacemos sync?"</li>
+  <li>"no me convence este enfoque, ¿puedo proponer otra cosa?"</li>
+</ul>
+
+<p><strong>Los emojis son condimento, no el plato principal.</strong> Añade uno al final si quieres suavizar el tono — pero el mensaje tiene que llevar significado de verdad primero.</p>
+
+<p>Cuando se hace bien, <strong>nadie tiene que interpretar tu cara</strong>. 🎉</p>`
         }
       },
       footer: {
