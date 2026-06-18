@@ -78,4 +78,8 @@ export const routes = {
   '/no-power-moves': { page: 'nopowermoves', view: StandardView },
   '/en/no-power-moves': { page: 'nopowermoves', view: StandardView },
   '/es/no-power-moves': { page: 'nopowermoves', view: StandardView },
+  // no-emoji-only-reply
+  '/no-emoji-only-reply': { page: 'noemojionlyreply', view: StandardView },
+  '/en/no-emoji-only-reply': { page: 'noemojionlyreply', view: StandardView },
+  '/es/no-emoji-only-reply': { page: 'noemojionlyreply', view: StandardView },
 }
